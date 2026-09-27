@@ -1,0 +1,15 @@
+# Bounded independent-seed replication protocol
+
+Fixed before new training or inspecting new outcomes, 27 September 2026.
+
+Compare recurrent PPO entropy coefficient **0 versus .01**, keeping GAE .95 and every other scientific setting at the existing 300,032-step budget. Train both arms for five fresh initialization seeds **21–25**, ten models and 3,000,320 new transitions total. Each pair shares initial weights and simulator stream seeds, while training seeds have disjoint environment streams. The unchanged training and simulator implementations remain the scientific core; managed wrappers affect persistence and validation only. No old fitted checkpoint supplies a new arm.
+
+This is a bounded replication with five new independent seed pairs, not a high-powered equivalence test or a guarantee of detecting the development effect. The primary estimand is the mean paired objective difference across training seeds. Evaluate every final checkpoint on the same **2,048 episodes beginning at 15,000,000**; also evaluate fixed wide quoting and Bayesian myopic. Reserve 1,024 development episodes at 13,000,000 and 1,024 potential replication representation episodes at 16,000,000; neither is needed unless separately justified. The separate nonlinear-control study uses 14,000,000 with the original frozen treatment seeds 11–15. None of these cohorts overlaps the existing experiments or new training streams.
+
+Report all seeds, a Student t4 interval for paired seed means, and a separate whole-episode bootstrap after averaging paired differences across the five fitted policies. Do not pool timesteps or treat common episodes as independent across seeds. No new architecture advantage is tested. Reference policies contextualize economics but are not a finite-horizon optimum.
+
+Use the following operational criterion before calling the entropy improvement replicated: paired mean improvement at least **0.25 objective units**, seed-interval lower endpoint above zero, treatment-minus-fixed-wide seed-interval lower endpoint above zero, and at least three treatment seeds exceeding fixed-wide with within-time action-probability variation above **.01**. The variation cutoff is a descriptive heuristic, not an identified memory measure. Failure means the criterion is not met at this budget; it does not prove entropy has no effect. Keep the threshold fixed even if the result narrowly misses it.
+
+No coefficient sweep, budget extension, favorable seed selection or checkpoint selection. Failed jobs may restart from the same initialization as fresh attempts; partial optimizer state is not resumed. The managed runner rejects changed inputs or corrupted completed artifacts, locks concurrent attempts, retains failed attempts and publishes complete directories atomically. Checkpoint hashes are recorded before and after evaluation. Training config, code hashes and dependencies determine portable run IDs.
+
+New training stops after these ten models. Stronger causal interventions remain outside this iteration. Publish results including failures and update the claim boundary explicitly.

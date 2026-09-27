@@ -20,18 +20,26 @@ The three useful seeds met the predeclared qualitative gate for exploratory deco
 
 The 11,000,000 economic and 12,000,000 probe cohorts are now consumed. The 10,000,000 development cohort remains unused. Keep the five fitted policies frozen; do not select only the three good seeds for subsequent analysis.
 
-## 1. Replicate the fixed entropy configuration with fresh training seeds
+## Completed: independent-seed replication
 
-Before another hyperparameter sweep, preregister a new set of training seeds with disjoint environment streams and an untouched economic cohort. Compare entropy 0 versus .01 at the same 300,032-step budget, GAE .95 and architecture, retaining every final model. Determine the replication count and useful-effect criterion before training. The current five-seed result is heterogeneous and informed development; it is not an untouched confirmation that .01 reliably improves learning. This replication has not run.
+Both entropy arms ran at 300,032 steps for fresh seeds 21–25, with 2,048 paired evaluation episodes beginning at 15,000,000. Mean objective increased from **.635 to 1.540**, paired gain **+.905**, training-seed interval **[−.162, 1.972]**. Four of five pairs improved, but the predeclared criterion was not met: both the treatment-effect and treatment-minus-fixed seed intervals include zero. The criterion was not relaxed and the development results were not pooled into confirmation. [Replication memo](replication_memo.md).
 
-## 2. Strengthen the representation comparison
+## Completed: nonlinear recent-history control
 
-Add a nonlinear recent-history decoder using the same public features, with model capacity and tuning budget fixed in advance. Match whole-episode splits, train-only preprocessing and validation-only selection. Include basic summaries and the untrained-state controls, report all targets and all five policy seeds, and preserve separate training-seed and episode uncertainty. Existing probe-test results have now been inspected; use a fresh episode cohort to evaluate a newly chosen comparator.
+All five original entropy-.01 policies were evaluated on fresh probe episodes beginning at 14,000,000. A fixed nonlinear history-8 decoder outperformed the trained-state ridge panels on all six targets on average. Mean buy/sell adverse-selection R² was **.847/.830**, versus **.717/.699** for history plus trained-state ridge. All five adverse-selection contrasts favored nonlinear history. Capacity and tuning budgets differ, so this is a stronger comparator, not a complete test of conditional information. The historical linear-decoding advantage no longer supports a uniquely older-memory interpretation. [Nonlinear-control memo](nonlinear_memo.md).
 
-This control is needed before attributing the linear-probe gain to information beyond the recent window. Inventory and previous policy actions already carry some history. Estimate how often decision-relevant earlier evidence occurs on actual trajectories; the constructed Gate 1 pair only establishes existence. This stronger comparison has not run.
+The 14,000,000 and 15,000,000 cohorts are now consumed. Replication development at 13,000,000 and potential replication probes at 16,000,000 remain unused. Do not select only successful seeds or reuse inspected cohorts as untouched confirmation.
 
-## 3. Design causal interventions only after the stronger controls
+## 1. Plan precision before further training
 
-Use the existing state-patching adapter only with a predeclared matching design. Match inventory, time, current observation and approximately posterior expected value, while varying estimated adverse-selection risk. Examine immediate action probabilities with same-belief donors and matched random interventions across trained seeds. Treat hidden and cell patches separately and test off-distribution effects; full-state patches change several beliefs simultaneously. Decoding in the poorly performing seed makes these controls especially necessary. No causal intervention has run.
+Define the smallest useful effect and desired interval width before choosing another fixed replication budget. Use the observed seed variability for sensitivity calculations, explicitly allowing estimation uncertainty from five pairs. More evaluation episodes alone will not remove initialization uncertainty. Any additional confirmatory design needs fresh training seeds and an untouched cohort. No further training has been started.
 
-Keep simulator mechanics unchanged unless a diagnosed issue warrants revision. Public repository preparation is a separate task; its current status is documented in [repository readiness](repository_readiness.md).
+## 2. Measure decision relevance on actual trajectories
+
+The constructed Gate 1 example proves existence, not prevalence. Quantify how often histories with similar current state and recent observations imply materially different posterior risks and preferred reference actions. Predeclare matching tolerances, overlap diagnostics and the unit of replication. Inventory and earlier policy actions already carry history; account for these channels before attributing any difference to recurrent memory. Start with a diagnostic study of retained trajectories, labeled as exploratory.
+
+## 3. Add a compact calibration and shift regression suite
+
+Use fixed support changes and compare retained versus correctly specified Bayesian references. Check calibration, regret against the stated reference, accounting and uncertainty as well as average objective. Keep simulator mechanics separate from inference misspecification. A matched architecture comparison would require its own cohort and budget; the entropy replication did not test a recurrence advantage.
+
+Causal state interventions remain deferred. A future design would need matched inventory/time/public state, same-belief and random donors, separate hidden/cell patches, and off-distribution diagnostics. Strong decoding alone is insufficient. See the [engineering roadmap](engineering_roadmap.md) for completed execution guarantees and résumé framing.

@@ -1,0 +1,63 @@
+{
+  "target_names": [
+    "value",
+    "alpha",
+    "p",
+    "entropy",
+    "as_buy_ref",
+    "as_sell_ref"
+  ],
+  "reference_quote_action": 5,
+  "timing": "after current observation, before actor MLP/action head",
+  "shapes": {
+    "episode": [
+      65536
+    ],
+    "t": [
+      65536
+    ],
+    "hidden": [
+      65536,
+      64
+    ],
+    "cell": [
+      65536,
+      64
+    ],
+    "obs": [
+      65536,
+      9
+    ],
+    "history": [
+      65536,
+      72
+    ],
+    "basic": [
+      65536,
+      8
+    ],
+    "action": [
+      65536
+    ],
+    "probabilities": [
+      65536,
+      10
+    ],
+    "posterior": [
+      65536,
+      12
+    ],
+    "targets": [
+      65536,
+      6
+    ],
+    "regime": [
+      65536,
+      3
+    ]
+  },
+  "diagnostic_only": [
+    "regime"
+  ],
+  "format": "NumPy compressed NPZ, no pickled objects"
+}

@@ -5,15 +5,19 @@
 
 A reproducible research pilot on belief formation in a recurrent market-making policy. The question is whether a dealer distinguishes informed flow from ordinary directional demand, and whether its recurrent state represents the observation-supported adverse-selection risk. This simulator is an inference and sequential-decision experiment, with no live trading connection or profitability claim.
 
-**Code and public evidence:** [DB825/adverse-selection-rl-market-makers](https://github.com/DB825/adverse-selection-rl-market-makers), under the MIT license. Start with the [latest research memo](reports/entropy_memo.md), [engineering roadmap and résumé framing](reports/engineering_roadmap.md), and [publication/reproduction notes](reports/repository_readiness.md).
+**Code and public evidence:** [DB825/adverse-selection-rl-market-makers](https://github.com/DB825/adverse-selection-rl-market-makers), under the MIT license. Start with the [independent replication](reports/replication_memo.md), [nonlinear history control](reports/nonlinear_memo.md), [engineering roadmap and résumé framing](reports/engineering_roadmap.md), and [publication/reproduction notes](reports/repository_readiness.md).
 
 The engineering contribution is a 12-regime partially observed simulator with exact action-conditioned Bayesian inference, accounting invariants, paired experiments across four learned policy families, and tested recurrent reset/gradient behavior. A fused LSTM path improves the measured short CPU benchmark from 95.7 to 722.0 steps/second at unchanged minibatch settings; this is a local microbenchmark, not an end-to-end speed guarantee. The research separates useful behavior, decodable beliefs and causal use rather than treating probe accuracy as proof of learning.
 
-**Public data layout:** `published-results/` is a frozen text-evidence snapshot with local paths sanitized. `results/` is ignored and reserved for your own runs. Historic manifests refer to original run bytes and omitted checkpoints; the [publication manifest](published-results/publication_manifest.json) maps original hashes to public bytes. Run `python -m scripts.verify_publication` to verify the published evidence. Full checkpoint audits require retraining; copying sanitized records into `results/` is not a substitute.
+New experiments use [managed execution](reports/managed_execution.md): portable run IDs, checkpoint hashes recorded at evaluation time, process locks, immutable artifact checks and atomic completion. Interrupted work restarts from its declared seed; this does not claim mid-optimizer resumption. A [five-minute technical walkthrough](reports/technical_walkthrough.md) explains the information boundaries and failure tests.
 
-Read the latest [entropy experiment memo](reports/entropy_memo.md), the [GAE experiment memo](reports/gae_memo.md), [budget follow-up memo](reports/followup_memo.md), [initial research memo](reports/research_memo.md), [model and Gate 1 derivation](reports/model_design.md), and [compute benchmark](reports/compute_benchmark.md). Small aggregate results, episode CSVs, configurations, and figures are retained; checkpoint and activation binaries are ignored by Git.
+**Public data layout:** `published-results/` contains two frozen text-evidence snapshots (782 files total), with local paths sanitized. The new [iteration snapshot](published-results/iteration-v1/publication_manifest.json) preserves the replication and nonlinear-control evidence separately from the original archive. `results/` is ignored and reserved for your own runs. Historic manifests refer to original run bytes and omitted checkpoints; the [publication manifest](published-results/publication_manifest.json) maps original hashes to public bytes. Run `python -m scripts.verify_publication` to verify the published evidence. Full checkpoint audits require retraining; copying sanitized records into `results/` is not a substitute.
 
-**Latest completed entropy experiment:** 138 passing tests; five new recurrent runs at 300,032 steps, totaling 1,500,160 new transitions. On 2,048 fresh episodes beginning at 11,000,000, recurrent objective was **0.630 with entropy coefficient 0** and **1.345 with .01**, retaining GAE .95. The paired effect **+0.715** has training-seed 95% interval **[−0.638, 2.069]**. Three seeds beat fixed wide **0.940** with input-dependent actions, while two worsened. History-8 earned **2.723** and myopic **3.602**. All five models underwent exploratory representation probes on separate episodes; reliable learning, recurrence benefit and causal use remain unestablished. See the memo for complete outcomes and decoding controls.
+Read the earlier [entropy experiment memo](reports/entropy_memo.md), the [GAE experiment memo](reports/gae_memo.md), [budget follow-up memo](reports/followup_memo.md), [initial research memo](reports/research_memo.md), [model and Gate 1 derivation](reports/model_design.md), and [compute benchmark](reports/compute_benchmark.md). Small aggregate results, episode CSVs, configurations, and figures are retained; checkpoint and activation binaries are ignored by Git.
+
+**Latest completed iteration:** **157 passing tests** and ten fresh recurrent runs totaling **3,000,320 new transitions**. On a new 2,048-episode cohort, entropy .01 raised mean objective from **0.635 to 1.540**, a paired gain of **+0.905**; four of five pairs improved. The training-seed interval **[−0.162, 1.972]** includes zero, so the predeclared replication criterion was **not met**. On a separate fresh cohort of the original policies, nonlinear history-8 decoding reached mean buy/sell adverse-selection R² **.847/.830**, versus **.717/.699** for history plus trained-state ridge. This weakens the older-memory interpretation of the historical linear-probe advantage. See the [replication memo](reports/replication_memo.md) and [nonlinear-control memo](reports/nonlinear_memo.md); reliable learning and causal use remain unestablished.
+
+**Completed development entropy experiment:** 138 passing tests; five new recurrent runs at 300,032 steps, totaling 1,500,160 new transitions. On 2,048 fresh episodes beginning at 11,000,000, recurrent objective was **0.630 with entropy coefficient 0** and **1.345 with .01**, retaining GAE .95. The paired effect **+0.715** has training-seed 95% interval **[−0.638, 2.069]**. Three seeds beat fixed wide **0.940** with input-dependent actions, while two worsened. History-8 earned **2.723** and myopic **3.602**. All five models underwent exploratory representation probes on separate episodes; reliable learning, recurrence benefit and causal use remain unestablished. See the memo for complete outcomes and decoding controls.
 
 **Completed GAE experiment:** 126 tests passed at that stage; five new recurrent runs at 300,032 steps totaled 1,500,160 new transitions. On its separate cohort beginning at 8,000,000, recurrent objective was **0.479 with GAE .95** and **0.497 with GAE 1.0**. The paired effect **+0.018** had training-seed interval **[−0.434, 0.470]**. None beat fixed wide **0.790**; probes were deferred for that family. Those historical results remain in the GAE memo.
 
@@ -22,6 +26,14 @@ Read the latest [entropy experiment memo](reports/entropy_memo.md), the [GAE exp
 **Original pilot:** 82 tests passed at that stage; 20 runs totaled 2,007,040 training transitions. Its separate 1,024-episode cohort gave recurrent **0.486**, feedforward **1.081**, history-8 **1.860**, belief-input **2.612**, fixed-wide **0.884**, and Bayesian myopic **3.460**. Those historical results and shift checks remain unchanged. Smoke probe outputs are pipeline checks only.
 
 ## Reproduce a small experiment
+
+For new experiments, prefer the managed entry points below after installing dependencies. An identical rerun verifies and reuses completed output; changed inputs require a new destination. Historical commands later in this README remain available for the original experiment layout.
+
+```powershell
+python -m scripts.run_managed train --config configs/smoke.yaml --seed 11 --output results/example_train
+python -m scripts.run_managed evaluate --policy recurrent --checkpoint results/example_train/model.zip --episodes 128 --seed-start 900000 --output results/example_eval
+python -m scripts.run_managed verify results/example_eval
+```
 
 The recorded environment is **Windows, Python 3.13.7, CPU PyTorch 2.8.0**. `requirements-lock.txt` pins every installed distribution; `requirements.txt` lists direct dependencies. Python and platform versions are also saved with each checkpoint. Commands below assume the repository root and an activated virtual environment.
 
@@ -106,7 +118,30 @@ python -m scripts.analyze_entropy_probes
 
 Probe analysis checks the saved gate decision, complete trajectories, held-out targets and predictions, target variance, frozen checkpoint hashes and untrained controls. It reports all six targets with separate seed and episode uncertainty in `results/entropy_probe_summary.json`. It does not establish information beyond nonlinear recent-history features or causal use.
 
+## Independent replication and nonlinear control
+
+The [replication protocol](reports/replication_protocol.md) freezes seeds 21–25, both entropy arms and 300,032 steps per model. It needs no historical checkpoints:
+
+```powershell
+python -m scripts.run_replication preflight
+python -m scripts.run_replication train --workers 3
+python -m scripts.run_replication evaluate --workers 3
+python -m scripts.analyze_iteration replication
+```
+
+The separate [nonlinear protocol](reports/nonlinear_protocol.md) uses the original five entropy-.01 checkpoints, so reproduce that development experiment first:
+
+```powershell
+python -m scripts.run_nonlinear_control
+python -m scripts.analyze_iteration nonlinear
+python -m scripts.verify_publication
+```
+
+These stages verify completed outputs before reuse. Code, configuration and dependency fingerprints bind local runs to their declared protocol. See [managed execution](reports/managed_execution.md) for portability and restart limits. Public text evidence is in `published-results/iteration-v1/`; omitted checkpoints and arrays must be regenerated for full audits.
+
 ## Conditional representation analysis
+
+The original entropy policies have now undergone a [nonlinear recent-history control](reports/nonlinear_memo.md) on fresh episodes. Nonlinear history outperformed the linear trained-state decoder on all six targets on average. Read that result before interpreting the historical linear probes as an older-memory advantage.
 
 Only after inspecting economic behavior, collect representations on a separate set of episodes:
 
@@ -183,7 +218,7 @@ The fused recurrent subclass changes only how a sequence with resets at its firs
 
 ## Statistical protocol and artifacts
 
-Training initializations use seeds 11–15. Vector-environment randomness uses disjoint seed ranges derived from each run seed; actual ranges are recorded in metadata. Development/smoke evaluation starts at 900,000; final in-distribution evaluation at 1,000,000; shift evaluation at 2,000,000; representation collection at 3,000,000. Action-sampling uniforms use a separate offset stream. Common evaluation seeds pair the regime and complete customer tape across policies.
+The historical studies use training seeds 11–15; the independent replication uses 21–25 and its own predeclared cohorts. The original pilot uses the following ranges. Vector-environment randomness uses disjoint seed ranges derived from each run seed; actual ranges are recorded in metadata. Development/smoke evaluation starts at 900,000; final in-distribution evaluation at 1,000,000; shift evaluation at 2,000,000; representation collection at 3,000,000. Action-sampling uniforms use a separate offset stream. Common evaluation seeds pair the regime and complete customer tape across policies.
 
 Episode CSVs contain objective, raw profit, lower-tail inputs, inventory exposure, participation, buy/sell rates, spreads/centers, action counts, true regime, and profit conditional on informed/uninformed executions. Hidden labels are diagnostic columns only. Summary JSON includes regime breakdowns. Aggregate analysis separates uncertainty across evaluation episodes from uncertainty across five training seeds; timesteps are never treated as independent replicates.
 

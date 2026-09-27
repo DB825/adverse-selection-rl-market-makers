@@ -34,5 +34,7 @@ jobs:
         run: python -m scripts.verify_publication
       - name: Exercise training and evaluation
         run: |
-          python -m src.train --config configs/smoke.yaml --policy recurrent --seed 11 --output results/ci_smoke
-          python -m src.evaluate --policy recurrent --checkpoint results/ci_smoke/model.zip --episodes 16 --seed-start 900000 --output results/ci_smoke_eval
+          python -m scripts.run_managed train --config configs/smoke.yaml --policy recurrent --seed 11 --output results/ci_smoke
+          python -m scripts.run_managed evaluate --policy recurrent --checkpoint results/ci_smoke/model.zip --episodes 16 --seed-start 900000 --output results/ci_smoke_eval
+          python -m scripts.run_managed evaluate --policy recurrent --checkpoint results/ci_smoke/model.zip --episodes 16 --seed-start 900000 --output results/ci_smoke_eval
+          python -m scripts.run_managed verify results/ci_smoke_eval

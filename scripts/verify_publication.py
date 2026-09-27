@@ -20,4 +20,8 @@ def verify(folder=Path('published-results')):
 
 
 if __name__ == '__main__':
-    print(f'Verified {verify()} published evidence files')
+    manifests = sorted(Path('published-results').rglob('publication_manifest.json'))
+    if not manifests:
+        raise ValueError('No publication manifest found')
+    total = sum(verify(path.parent) for path in manifests)
+    print(f'Verified {total} published evidence files across {len(manifests)} snapshots')
