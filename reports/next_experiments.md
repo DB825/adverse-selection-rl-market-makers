@@ -30,16 +30,10 @@ All five original entropy-.01 policies were evaluated on fresh probe episodes be
 
 The 14,000,000 and 15,000,000 cohorts are now consumed. Replication development at 13,000,000 and potential replication probes at 16,000,000 remain unused. Do not select only successful seeds or reuse inspected cohorts as untouched confirmation.
 
-## 1. Plan precision before further training
+## Next: establish decision relevance before more compute
 
-Define the smallest useful effect and desired interval width before choosing another fixed replication budget. Use the observed seed variability for sensitivity calculations, explicitly allowing estimation uncertainty from five pairs. More evaluation episodes alone will not remove initialization uncertainty. Any additional confirmatory design needs fresh training seeds and an untouched cohort. No further training has been started.
+The constructed Gate 1 example proves existence, not prevalence. On retained trajectories, quantify how often histories with similar current state and recent observations imply materially different posterior risks and preferred reference actions. Predeclare matching tolerances, overlap diagnostics and the unit of replication. Inventory and earlier policy actions already carry history; account for these channels before attributing any difference to recurrent memory. This is an exploratory diagnostic using existing data, not untouched confirmation.
 
-## 2. Measure decision relevance on actual trajectories
+Only if that diagnostic supports a specific learning question, define the smallest useful effect and desired interval width before selecting another fixed training budget. Allow for uncertainty in the seed variability estimated from five pairs. More evaluation episodes alone will not remove initialization uncertainty. A new confirmatory experiment would need fresh training seeds and an untouched cohort. No additional training has started.
 
-The constructed Gate 1 example proves existence, not prevalence. Quantify how often histories with similar current state and recent observations imply materially different posterior risks and preferred reference actions. Predeclare matching tolerances, overlap diagnostics and the unit of replication. Inventory and earlier policy actions already carry history; account for these channels before attributing any difference to recurrent memory. Start with a diagnostic study of retained trajectories, labeled as exploratory.
-
-## 3. Add a compact calibration and shift regression suite
-
-Use fixed support changes and compare retained versus correctly specified Bayesian references. Check calibration, regret against the stated reference, accounting and uncertainty as well as average objective. Keep simulator mechanics separate from inference misspecification. A matched architecture comparison would require its own cohort and budget; the entropy replication did not test a recurrence advantage.
-
-Causal state interventions remain deferred. A future design would need matched inventory/time/public state, same-belief and random donors, separate hidden/cell patches, and off-distribution diagnostics. Strong decoding alone is insufficient. See the [engineering roadmap](engineering_roadmap.md) for completed execution guarantees and résumé framing.
+Keep the scope narrow. Additional architectures, infrastructure and shift suites are deferred. Causal state interventions would need matched inventory/time/public state, same-belief and random donors, separate hidden/cell patches, and off-distribution diagnostics. Strong decoding alone is insufficient. See the [engineering roadmap](engineering_roadmap.md) for the project focus and résumé framing.

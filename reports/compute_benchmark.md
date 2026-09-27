@@ -98,3 +98,19 @@ Official API documentation was checked before implementation:
 [recurrent policy source](https://sb3-contrib.readthedocs.io/en/master/_modules/sb3_contrib/common/recurrent/policies.html).
 The currently served documentation was version 2.9.0; the actual installed
 2.7.0 signatures and source were inspected separately before adapter use.
+
+
+## Probe-audit efficiency refinement
+
+The nonlinear-control audit was compared against commit `c656018` on the same Windows CPU environment and the same five saved policy panels. Three before/after pairs alternated execution order within one process. Timing includes artifact hashing, trajectory checks, all decoder metrics, bootstrap summaries and figure rendering; it excludes Python import startup. Each complete output was compared after removing only its destination-dependent figure paths: all numerical values and provenance fields matched exactly.
+
+| Run | Previous audit (s) | Refined audit (s) |
+|---|---:|---:|
+| 1 | 10.043 | 2.151 |
+| 2 | 10.703 | 2.162 |
+| 3 | 7.171 | .969 |
+| Median | **10.043** | **2.151** |
+
+The observed median ratio is **4.67×**. These are local timings with filesystem caching and ordinary machine-load variability, not a portable performance guarantee or a training-speed result. No models were retrained.
+
+The change removes repeated NPZ member decompression inside episode loops and replaces repeated full-array loss scans with stable episode grouping. Stable grouping preserves each episode's summation order. The audit additionally recomputes R² from the predictions rather than trusting the saved score. Regression tests cover interleaved rows, exact agreement with the previous loss calculation, missing decisions, duplicate timestamps and stale R² with valid MSE. Historical protocols and public evidence bytes remain unchanged.

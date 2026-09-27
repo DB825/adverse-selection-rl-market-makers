@@ -124,9 +124,32 @@ def analyze_replication():
 def aggregate_episode_losses(episode, truth, prediction, expected_ids):
     require(truth.shape == prediction.shape and truth.shape == (len(episode),6), 'Wrong prediction shape')
     require(np.isfinite(truth).all() and np.isfinite(prediction).all(), 'Nonfinite probe output')
-    require(np.array_equal(np.unique(episode), expected_ids), 'Probe episode IDs differ')
-    require(all(np.count_nonzero(episode == e) == 56 for e in expected_ids), 'Missing probe decisions')
-    return np.stack([((truth[episode == e]-prediction[episode == e])**2).mean(0) for e in expected_ids])
+    ids, counts = np.unique(episode, return_counts=True)
+    require(np.array_equal(ids, expected_ids), 'Probe episode IDs differ')
+    require(np.all(counts == 56), 'Missing probe decisions')
+    # Stable sorting preserves within-episode summation order, including for
+    # interleaved vector-environment rows. Each row is grouped only once.
+    order = np.argsort(episode, kind='stable')
+    squared = (truth[order]-prediction[order])**2
+    return squared.reshape(len(ids), 56, 6).mean(axis=1)
+
+
+def validate_trajectories(episode, time, expected_ids):
+    require(episode.ndim == time.ndim == 1 and episode.shape == time.shape,
+            'Wrong trajectory shape')
+    require(np.array_equal(np.unique(episode), expected_ids), 'Wrong activation cohort')
+    order = np.lexsort((time, episode))
+    require(np.array_equal(episode[order], np.repeat(expected_ids, 64))
+            and np.array_equal(time[order], np.tile(np.arange(64), len(expected_ids))),
+            'Incomplete activation trajectories')
+
+
+def validate_probe_metrics(truth, prediction, record):
+    variance = truth.var(axis=0)
+    require(np.all(variance > 0), 'Degenerate held-out target')
+    mse = ((truth-prediction)**2).mean(axis=0)
+    require(np.allclose(mse, [record['test_mse'][t] for t in TARGETS]), 'Probe MSE mismatch')
+    require(np.allclose(1-mse/variance, [record['test_r2'][t] for t in TARGETS]), 'Probe R2 mismatch')
 
 
 def analyze_nonlinear():
@@ -152,27 +175,30 @@ def analyze_nonlinear():
                 and record['fit']['epochs_per_candidate'] == 40 and len(record['fit']['trials']) == 16,
                 'Decoder tuning budget changed')
         with np.load(folder/'activations.npz', allow_pickle=False) as a:
-            require(np.array_equal(np.unique(a['episode']), np.arange(14_000_000,14_001_024)), 'Wrong activation cohort')
-            require(all(np.array_equal(np.sort(a['t'][a['episode'] == e]),np.arange(64))
-                        for e in np.unique(a['episode'])), 'Incomplete activation trajectories')
-            selected = (a['t'] >= 8) & np.isin(a['episode'],test_ids)
-            expected_truth, expected_episode = a['targets'][selected], a['episode'][selected]
+            # NpzFile does not cache decompressed members. Read each once.
+            episode, time = a['episode'], a['t']
+            validate_trajectories(episode, time, np.arange(14_000_000,14_001_024))
+            selected = (time >= 8) & np.isin(episode,test_ids)
+            expected_truth, expected_episode = a['targets'][selected], episode[selected]
             require(np.all(expected_truth.var(0) > 0), 'Degenerate held-out target')
         with np.load(folder/'predictions.npz', allow_pickle=False) as predictions:
-            require(np.array_equal(predictions['truth'],expected_truth)
-                    and np.array_equal(predictions['episode'],expected_episode), 'Prediction truth differs from collection')
+            truth, episode = predictions['truth'], predictions['episode']
+            require(np.array_equal(truth,expected_truth)
+                    and np.array_equal(episode,expected_episode), 'Prediction truth differs from collection')
             with np.load(folder/'nonlinear_predictions.npz', allow_pickle=False) as nonlinear:
-                require(np.array_equal(predictions['episode'], nonlinear['episode'])
-                        and np.array_equal(predictions['truth'], nonlinear['truth']), 'Decoder targets are unpaired')
+                require(np.array_equal(episode, nonlinear['episode'])
+                        and np.array_equal(truth, nonlinear['truth']), 'Decoder targets are unpaired')
                 for name in ridge['results']:
-                    values = aggregate_episode_losses(predictions['episode'], predictions['truth'], predictions[name], test_ids)
+                    prediction = predictions[name]
+                    values = aggregate_episode_losses(episode, truth, prediction, test_ids)
+                    validate_probe_metrics(truth, prediction, ridge['results'][name])
                     losses.setdefault(name, []).append(values)
                     r2.setdefault(name, []).append([ridge['results'][name]['test_r2'][t] for t in TARGETS])
-                    require(np.allclose(values.mean(0), [ridge['results'][name]['test_mse'][t] for t in TARGETS]), 'Ridge MSE mismatch')
-                values = aggregate_episode_losses(nonlinear['episode'], nonlinear['truth'], nonlinear['prediction'], test_ids)
+                prediction = nonlinear['prediction']
+                values = aggregate_episode_losses(episode, truth, prediction, test_ids)
+                validate_probe_metrics(truth, prediction, record)
                 losses.setdefault('nonlinear_history8', []).append(values)
                 r2.setdefault('nonlinear_history8', []).append([record['test_r2'][t] for t in TARGETS])
-                require(np.allclose(values.mean(0), [record['test_mse'][t] for t in TARGETS]), 'MLP MSE mismatch')
         audits.append({'seed': seed, 'run_id': manifest['run_id'], 'manifest_sha256': file_hash(folder/'run_manifest.json'),
                        'fit': record['fit'], 'test_target_variance': record['test_target_variance']})
     losses = {k: np.stack(v) for k,v in losses.items()}
