@@ -1,59 +1,51 @@
-# Does the Agent Know When It's Being Picked Off?
+# Adverse-Selection Inference in Recurrent Market Makers
 
 [![Tests](https://github.com/DB825/adverse-selection-rl-market-makers/actions/workflows/tests.yml/badge.svg)](https://github.com/DB825/adverse-selection-rl-market-makers/actions/workflows/tests.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-A reproducible research pilot on belief formation in a recurrent market-making policy. The question is whether a dealer distinguishes informed flow from ordinary directional demand, and whether its recurrent state represents the observation-supported adverse-selection risk. This simulator is an inference and sequential-decision experiment, with no live trading connection or profitability claim.
+A finite-horizon market-making experiment testing whether recurrent PPO represents adverse-selection risk conditional on its own quotes and observed executions. A joint Bayesian filter over 12 latent regimes supplies posterior targets and a myopic quoting reference. The simulator separates informed trading from uninformed directional demand; no market data or exchange connection is used.
 
-**Code and public evidence:** [DB825/adverse-selection-rl-market-makers](https://github.com/DB825/adverse-selection-rl-market-makers), under the MIT license. Start with the [independent replication](reports/replication_memo.md), [nonlinear history control](reports/nonlinear_memo.md), [engineering roadmap and résumé framing](reports/engineering_roadmap.md), and [publication/reproduction notes](reports/repository_readiness.md).
+Each episode fixes asset value `V`, informed-arrival probability `alpha`, and uninformed buy preference `p`. The dealer observes quote/outcome history, inventory and time. Active no-trade events update the posterior; abstention supplies no evidence. The analysis distinguishes economic performance, posterior decodability, information beyond recent observations, and causal policy use.
 
-The engineering contribution is a 12-regime partially observed simulator with exact action-conditioned Bayesian inference, accounting invariants, paired experiments across four learned policy families, and tested recurrent reset/gradient behavior. A fused LSTM path improves the measured short CPU benchmark from 95.7 to 722.0 steps/second at unchanged minibatch settings; this is a local microbenchmark, not an end-to-end speed guarantee. The research separates useful behavior, decodable beliefs and causal use rather than treating probe accuracy as proof of learning.
+[Model and likelihood derivation](reports/model_design.md) · [Information flow and estimands](reports/technical_walkthrough.md) · [Research priorities](reports/engineering_roadmap.md)
 
-New experiments use [managed execution](reports/managed_execution.md): portable run IDs, checkpoint hashes recorded at evaluation time, process locks, immutable artifact checks and atomic completion. Interrupted work restarts from its declared seed; this does not claim mid-optimizer resumption. A [five-minute technical walkthrough](reports/technical_walkthrough.md) explains the information boundaries and failure tests.
+## Results
 
-**Current focus:** adverse-selection inference under partial observation, with measured efficiency and auditable scientific comparisons. The current suite has **160 tests**. A [probe-audit refinement](reports/compute_benchmark.md#probe-audit-efficiency-refinement) reduced local median analysis time from 10.04 to 2.15 seconds while preserving numerical outputs and adding prediction-based R² validation. See the [narrowed roadmap](reports/engineering_roadmap.md#focus-adverse-selection-inference-under-partial-observation).
+| Experiment | Design | Finding |
+|---|---|---|
+| [Independent entropy replication](reports/replication_memo.md) | Five fresh seed pairs; 300,032 steps/model; 2,048 paired evaluation episodes | Entropy .01 increased objective from .635 to 1.540. Paired gain .905; seed 95% interval [−.162, 1.972]. The predeclared criterion was not met. |
+| [Nonlinear history control](reports/nonlinear_memo.md) | All five frozen development policies; 1,024 fresh episodes; whole-episode splits | History-8 MLP buy/sell adverse-selection R² .847/.830; history plus recurrent-state ridge .717/.699. Linear decoding gains do not establish information unique to older recurrent memory. |
+| [Development entropy comparison](reports/entropy_memo.md) | Entropy 0 versus .01; seeds 11–15 | Paired objective gain .715; seed interval [−.638, 2.069]. |
+| [GAE comparison](reports/gae_memo.md) | GAE .95 versus 1.0; seeds 11–15 | Paired objective gain .018; seed interval [−.434, .470]. |
+| [Budget extension](reports/followup_memo.md) | Four policy families; 100,352 versus 300,032 steps | Recurrent gain uncertain; feedforward and history policies improved consistently across the five seeds. |
 
-**Public data layout:** `published-results/` contains two frozen text-evidence snapshots (782 files total), with local paths sanitized. The new [iteration snapshot](published-results/iteration-v1/publication_manifest.json) preserves the replication and nonlinear-control evidence separately from the original archive. `results/` is ignored and reserved for your own runs. Historic manifests refer to original run bytes and omitted checkpoints; the [publication manifest](published-results/publication_manifest.json) maps original hashes to public bytes. Run `python -m scripts.verify_publication` to verify the published evidence. Full checkpoint audits require retraining; copying sanitized records into `results/` is not a substitute.
-
-Read the earlier [entropy experiment memo](reports/entropy_memo.md), the [GAE experiment memo](reports/gae_memo.md), [budget follow-up memo](reports/followup_memo.md), [initial research memo](reports/research_memo.md), [model and Gate 1 derivation](reports/model_design.md), and [compute benchmark](reports/compute_benchmark.md). Small aggregate results, episode CSVs, configurations, and figures are retained; checkpoint and activation binaries are ignored by Git.
-
-**Latest completed iteration:** **157 passing tests** and ten fresh recurrent runs totaling **3,000,320 new transitions**. On a new 2,048-episode cohort, entropy .01 raised mean objective from **0.635 to 1.540**, a paired gain of **+0.905**; four of five pairs improved. The training-seed interval **[−0.162, 1.972]** includes zero, so the predeclared replication criterion was **not met**. On a separate fresh cohort of the original policies, nonlinear history-8 decoding reached mean buy/sell adverse-selection R² **.847/.830**, versus **.717/.699** for history plus trained-state ridge. This weakens the older-memory interpretation of the historical linear-probe advantage. See the [replication memo](reports/replication_memo.md) and [nonlinear-control memo](reports/nonlinear_memo.md); reliable learning and causal use remain unestablished.
-
-**Completed development entropy experiment:** 138 passing tests; five new recurrent runs at 300,032 steps, totaling 1,500,160 new transitions. On 2,048 fresh episodes beginning at 11,000,000, recurrent objective was **0.630 with entropy coefficient 0** and **1.345 with .01**, retaining GAE .95. The paired effect **+0.715** has training-seed 95% interval **[−0.638, 2.069]**. Three seeds beat fixed wide **0.940** with input-dependent actions, while two worsened. History-8 earned **2.723** and myopic **3.602**. All five models underwent exploratory representation probes on separate episodes; reliable learning, recurrence benefit and causal use remain unestablished. See the memo for complete outcomes and decoding controls.
-
-**Completed GAE experiment:** 126 tests passed at that stage; five new recurrent runs at 300,032 steps totaled 1,500,160 new transitions. On its separate cohort beginning at 8,000,000, recurrent objective was **0.479 with GAE .95** and **0.497 with GAE 1.0**. The paired effect **+0.018** had training-seed interval **[−0.434, 0.470]**. None beat fixed wide **0.790**; probes were deferred for that family. Those historical results remain in the GAE memo.
-
-**Completed budget follow-up:** 111 tests passed at that stage; all 20 runs used 300,032 steps, totaling 6,000,640 transitions including repeated initial prefixes. Its separate cohort beginning at 5,000,000 gave recurrent **0.657**, feedforward **2.500**, history-8 **2.700**, belief-input **2.871**, fixed-wide **0.946**, and Bayesian myopic **3.513**. Paired reevaluation of shorter checkpoints showed consistent feedforward/history gains but uncertain recurrent gains across training seeds. Those results remain in the budget memo.
-
-**Original pilot:** 82 tests passed at that stage; 20 runs totaled 2,007,040 training transitions. Its separate 1,024-episode cohort gave recurrent **0.486**, feedforward **1.081**, history-8 **1.860**, belief-input **2.612**, fixed-wide **0.884**, and Bayesian myopic **3.460**. Those historical results and shift checks remain unchanged. Smoke probe outputs are pipeline checks only.
+Rows use separate evaluation cohorts. The [original pilot](reports/research_memo.md) and subsequent protocols retain their configurations, episode ranges and per-seed outcomes. Episode intervals condition on fitted policies; seed intervals condition on the evaluation cohort. Neither combines both sources of uncertainty. Decoder comparisons are exploratory and do not establish causal use.
 
 ## Reproduce a small experiment
 
-For new experiments, prefer the managed entry points below after installing dependencies. An identical rerun verifies and reuses completed output; changed inputs require a new destination. Historical commands later in this README remain available for the original experiment layout.
+Commands run from the repository root. CI uses Python 3.13, CPU PyTorch 2.8.0 and the direct pinned dependencies:
 
 ```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install torch==2.8.0 --index-url https://download.pytorch.org/whl/cpu
+python -m pip install -r requirements.txt
+python -m pytest -q
+python -m scripts.verify_publication
 python -m scripts.run_managed train --config configs/smoke.yaml --seed 11 --output results/example_train
 python -m scripts.run_managed evaluate --policy recurrent --checkpoint results/example_train/model.zip --episodes 128 --seed-start 900000 --output results/example_eval
 python -m scripts.run_managed verify results/example_eval
 ```
 
-The recorded environment is **Windows, Python 3.13.7, CPU PyTorch 2.8.0**. `requirements-lock.txt` pins every installed distribution; `requirements.txt` lists direct dependencies. Python and platform versions are also saved with each checkpoint. Commands below assume the repository root and an activated virtual environment.
+On Linux, activate with `source .venv/bin/activate`. If PowerShell activation is disabled, invoke `.\.venv\Scripts\python.exe` directly. `requirements-lock.txt` records the original Windows/Python 3.13.7 environment; it is separate from the portable CI installation above. The smoke run checks execution and accounting, not learning performance.
 
-```powershell
-python -m venv .venv
-.\.venv\Scripts\Activate.ps1
-python -m pip install -r requirements-lock.txt
-python -m pytest -q
-python -m scripts.decision_relevance
-python -m src.train --config configs/smoke.yaml --policy recurrent --seed 11 --output results/my_smoke
-python -m src.evaluate --policy recurrent --checkpoint results/my_smoke/model.zip --episodes 128 --seed-start 900000 --output results/my_smoke_eval
-```
+[Managed execution](reports/managed_execution.md) binds runs to configuration, source and dependency hashes. Identical reruns verify and reuse completed output. Incomplete runs restart from their declared seeds; optimizer/RNG continuation is not implemented. Process locks and atomic directory publication assume a single host and local filesystem.
 
-On systems that prevent PowerShell activation, use `.\.venv\Scripts\python.exe` in place of `python`. Training refuses to overwrite an existing checkpoint. Choose a new output directory for a fresh experiment.
+## Evidence and implementation
 
-For a fresh environment using the same setup as CI, install `torch==2.8.0` from `https://download.pytorch.org/whl/cpu`, then `python -m pip install -r requirements.txt`. On Linux, activate with `source .venv/bin/activate`. CI tests Windows and Linux functionality using direct pinned requirements. The full lock records the historical research environment; portable installation and exact historical replay are different checks.
+`published-results/` contains two immutable text snapshots covering 782 files. Their [original](published-results/publication_manifest.json) and [iteration](published-results/iteration-v1/publication_manifest.json) manifests map original hashes to sanitized public bytes. `results/` contains ignored local runs. Checkpoints, activation arrays and event logs are excluded; full audits require regenerating those artifacts. See [artifact provenance](reports/repository_readiness.md).
 
-The smoke run checks execution and accounting; its learning and probe outputs are not scientific evidence. The default smoke configuration uses stock SB3's recurrent policy. The pilot uses a tested, numerically equivalent fused LSTM reset path to improve CPU throughput.
+Tests cover accounting, action-conditioned likelihoods, recurrent resets and gradients, episode grouping, decoder metrics, checkpoint identity and interrupted runs. [CPU benchmarks](reports/compute_benchmark.md) report a fused-LSTM microbenchmark of 95.7 to 722.0 steps/s and a full probe-audit median of 10.04 to 2.15 seconds. These are local measurements with distinct workloads.
 
 ## Full recorded pilot
 

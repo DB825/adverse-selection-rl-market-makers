@@ -152,6 +152,21 @@ def validate_probe_metrics(truth, prediction, record):
     require(np.allclose(1-mse/variance, [record['test_r2'][t] for t in TARGETS]), 'Probe R2 mismatch')
 
 
+def validate_probe_design(ridge, nonlinear, splits):
+    expected_panels = {'basic', 'history8', 'hidden_cell', 'basic_hidden_cell',
+                       'history8_hidden_cell', 'untrained_hidden_cell', 'history8_untrained_hidden_cell'}
+    require(set(ridge['results']) == expected_panels, 'Missing or unplanned ridge controls')
+    for record in (ridge, nonlinear):
+        require(set(record['episode_splits']) == set(splits)
+                and all(np.array_equal(record['episode_splits'][k], v) for k, v in splits.items()),
+                'Changed episode split')
+        require(record['split_counts'] == {k: len(v) for k, v in splits.items()}, 'Wrong split counts')
+        require(record['rows'] == 56 * sum(map(len, splits.values())) and record['min_time'] == 8,
+                'Wrong probe decision window')
+    require(ridge['reference_quote'] == {'action': 5, 'bid': .2, 'ask': .8},
+            'Changed adverse-selection reference quote')
+
+
 def analyze_nonlinear():
     from src.probes import episode_split
     from scripts.summarize_results import training_seed_statistics
@@ -169,7 +184,7 @@ def analyze_nonlinear():
         require(spec['protocol_sha256'] == file_hash('reports/nonlinear_protocol.md'), 'Nonlinear protocol changed')
         require(all(spec[k] == v for k,v in provenance(SOURCES).items()), 'Nonlinear implementation changed')
         record, ridge = read(folder/'nonlinear.json'), read(folder/'probes.json')
-        require(all(np.array_equal(record['episode_splits'][k], v) for k,v in splits.items()), 'Changed episode split')
+        validate_probe_design(ridge, record, splits)
         require(record['fit']['test_used_for_selection'] is False, 'Test-based selection')
         require(record['fit']['architecture'] == [72,64,64,6] and record['fit']['seed'] == 2026+seed
                 and record['fit']['epochs_per_candidate'] == 40 and len(record['fit']['trials']) == 16,

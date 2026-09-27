@@ -2,7 +2,7 @@ import numpy as np
 import pytest
 
 from scripts.analyze_iteration import (aggregate_episode_losses, replication_gate,
-                                       validate_trajectories, validate_probe_metrics, TARGETS)
+                                       validate_trajectories, validate_probe_metrics, validate_probe_design, TARGETS)
 
 
 def statistic(mean, lower):
@@ -59,3 +59,30 @@ def test_probe_metrics_reject_stale_r2_with_valid_mse():
     record['test_r2'][TARGETS[0]] += .01
     with pytest.raises(ValueError, match='Probe R2 mismatch'):
         validate_probe_metrics(truth, prediction, record)
+
+
+def test_probe_design_rejects_omitted_controls_and_training_split_changes():
+    import copy
+    import json
+    from pathlib import Path
+    # Use the archived design: valid metrics or hashes alone cannot establish
+    # that a comparator used the required fitting split and control panels.
+    folder = Path('published-results/iteration-v1/nonlinear/seed_11')
+    ridge = json.loads((folder/'probes.json').read_text(encoding='utf-8'))
+    nonlinear = json.loads((folder/'nonlinear.json').read_text(encoding='utf-8'))
+    from src.probes import episode_split
+    splits, _ = episode_split(np.arange(14_000_000, 14_001_024))
+    validate_probe_design(ridge, nonlinear, splits)
+    omitted = copy.deepcopy(ridge)
+    del omitted['results']['basic']
+    with pytest.raises(ValueError, match='ridge controls'):
+        validate_probe_design(omitted, nonlinear, splits)
+    changed = copy.deepcopy(ridge)
+    a, b = changed['episode_splits']['train'], changed['episode_splits']['validation']
+    a[0], b[0] = b[0], a[0]  # Test rows and all split sizes remain unchanged.
+    with pytest.raises(ValueError, match='Changed episode split'):
+        validate_probe_design(changed, nonlinear, splits)
+    changed = copy.deepcopy(ridge)
+    changed['reference_quote']['bid'] = .3
+    with pytest.raises(ValueError, match='reference quote'):
+        validate_probe_design(changed, nonlinear, splits)
