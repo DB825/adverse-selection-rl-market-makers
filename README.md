@@ -13,13 +13,14 @@ Each episode fixes asset value `V`, informed-arrival probability `alpha`, and un
 
 | Experiment | Design | Finding |
 |---|---|---|
+| [Retained-trajectory decision audit](reports/decision_quality.md) | Five frozen policies; 1,024 retained episodes each | Quote-center choice accounts for 81.5% of the mean myopic score gap. AS decoding R² does not consistently track quoting quality. |
 | [Independent entropy replication](reports/replication_memo.md) | Five fresh seed pairs; 300,032 steps/model; 2,048 paired evaluation episodes | Entropy .01 increased objective from .635 to 1.540. Paired gain .905; seed 95% interval [−.162, 1.972]. The predeclared criterion was not met. |
 | [Nonlinear history control](reports/nonlinear_memo.md) | All five frozen development policies; 1,024 fresh episodes; whole-episode splits | History-8 MLP buy/sell adverse-selection R² .847/.830; history plus recurrent-state ridge .717/.699. Linear decoding gains do not establish information unique to older recurrent memory. |
 | [Development entropy comparison](reports/entropy_memo.md) | Entropy 0 versus .01; seeds 11–15 | Paired objective gain .715; seed interval [−.638, 2.069]. |
 | [GAE comparison](reports/gae_memo.md) | GAE .95 versus 1.0; seeds 11–15 | Paired objective gain .018; seed interval [−.434, .470]. |
 | [Budget extension](reports/followup_memo.md) | Four policy families; 100,352 versus 300,032 steps | Recurrent gain uncertain; feedforward and history policies improved consistently across the five seeds. |
 
-Rows use separate evaluation cohorts. The [original pilot](reports/research_memo.md) and subsequent protocols retain their configurations, episode ranges and per-seed outcomes. Episode intervals condition on fitted policies; seed intervals condition on the evaluation cohort. Neither combines both sources of uncertainty. Decoder comparisons are exploratory and do not establish causal use.
+Economic experiments use separate evaluation cohorts; the decision audit reuses the nonlinear-control trajectories. The [original pilot](reports/research_memo.md) and subsequent protocols retain their configurations, episode ranges and per-seed outcomes. Episode intervals condition on fitted policies; seed intervals condition on the evaluation cohort. Neither combines both sources of uncertainty. Decoder comparisons are exploratory and do not establish causal use.
 
 ## Reproduce a small experiment
 
@@ -43,7 +44,7 @@ On Linux, activate with `source .venv/bin/activate`. If PowerShell activation is
 
 ## Evidence and implementation
 
-`published-results/` contains two immutable text snapshots covering 782 files. Their [original](published-results/publication_manifest.json) and [iteration](published-results/iteration-v1/publication_manifest.json) manifests map original hashes to sanitized public bytes. `results/` contains ignored local runs. Checkpoints, activation arrays and event logs are excluded; full audits require regenerating those artifacts. See [artifact provenance](reports/repository_readiness.md).
+`published-results/` contains three immutable evidence snapshots covering 789 files. Their [original](published-results/publication_manifest.json) and [iteration](published-results/iteration-v1/publication_manifest.json) manifests map original hashes to sanitized public bytes. The [decision-audit snapshot](published-results/decision-quality-v1/publication_manifest.json) adds episode aggregates and two figures. `results/` contains ignored local runs. Checkpoints, activation arrays and event logs are excluded; full audits require regenerating those artifacts. See [artifact provenance](reports/repository_readiness.md).
 
 Tests cover accounting, action-conditioned likelihoods, recurrent resets and gradients, episode grouping, decoder metrics, checkpoint identity and interrupted runs. [CPU benchmarks](reports/compute_benchmark.md) report a fused-LSTM microbenchmark of 95.7 to 722.0 steps/s and a full probe-audit median of 10.04 to 2.15 seconds. These are local measurements with distinct workloads.
 

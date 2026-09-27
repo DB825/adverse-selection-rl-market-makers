@@ -8,7 +8,13 @@ The [independent replication](replication_memo.md) found a mean entropy-treatmen
 
 The reference filter, reward accounting and recurrent sequence implementation have independent numerical checks. Experiment records retain all planned seeds, paired customer tapes, collection-time checkpoint hashes and separate seed/episode uncertainty. [Execution semantics](managed_execution.md) specify atomic completion and restart from initialization.
 
-## Next analysis: prevalence of decision-relevant history
+## Retained-trajectory diagnosis
+
+The [decision audit](decision_quality.md) attributes 81.5% of the mean myopic score gap to quote-center choice across the five original entropy policies. Seed 14 combines the highest adverse-selection R² with poor quoting; its absolute decoding error is also the largest. This narrows the immediate problem to decision-relevant information and actor readout, without isolating a causal source.
+
+A candidate next experiment is a small supervised action-score readout of frozen recurrent state, with matched history-only inputs and a fixed evaluation design. It should test center selection directly. This is a proposal, not a completed experiment or evidence that replacing the actor head will improve episode returns.
+
+## Unresolved: prevalence of decision-relevant older history
 
 The [constructed history pair](model_design.md#gate-1-earlier-quote-evidence-changes-the-reference-response) establishes existence. It does not measure prevalence under the fitted policies. The next diagnostic should use retained trajectories and report:
 

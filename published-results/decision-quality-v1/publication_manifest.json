@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "files": {
+    "attempt.json": {
+      "original_sha256": "1e9713a94a067ac6f806cbc86966589cd0d67a5f8e6a2832dfe58f4e0e564b03",
+      "public_sha256": "1e9713a94a067ac6f806cbc86966589cd0d67a5f8e6a2832dfe58f4e0e564b03",
+      "bytes": 97,
+      "local_paths_sanitized": false
+    },
+    "decision_gaps.png": {
+      "original_sha256": "e17106e95cbc1dd49e29db58453871698d6137a814fe319a256626a04813b893",
+      "public_sha256": "e17106e95cbc1dd49e29db58453871698d6137a814fe319a256626a04813b893",
+      "bytes": 277900,
+      "local_paths_sanitized": false
+    },
+    "decoding_and_decisions.png": {
+      "original_sha256": "e2f231a149258c7344bed27dd3a59258fcd639732b199a2d75c8e8303a7a8ae6",
+      "public_sha256": "e2f231a149258c7344bed27dd3a59258fcd639732b199a2d75c8e8303a7a8ae6",
+      "bytes": 57019,
+      "local_paths_sanitized": false
+    },
+    "episodes.csv": {
+      "original_sha256": "953d3bfa49bee1fe7964a569b9cd5fc668380130777ba47680e291f6d04fa7d7",
+      "public_sha256": "953d3bfa49bee1fe7964a569b9cd5fc668380130777ba47680e291f6d04fa7d7",
+      "bytes": 730431,
+      "local_paths_sanitized": false
+    },
+    "run_manifest.json": {
+      "original_sha256": "244efa46da6094d79728f72d36f09df14e0d12addd5e9403c88e7cc627780296",
+      "public_sha256": "244efa46da6094d79728f72d36f09df14e0d12addd5e9403c88e7cc627780296",
+      "bytes": 4193,
+      "local_paths_sanitized": false
+    },
+    "summary.json": {
+      "original_sha256": "197d4ef58030774be7ddeaf82950fe389d85f24ee56156e75c8cd0b5e9ee85dd",
+      "public_sha256": "197d4ef58030774be7ddeaf82950fe389d85f24ee56156e75c8cd0b5e9ee85dd",
+      "bytes": 17246,
+      "local_paths_sanitized": false
+    },
+    "tests.xml": {
+      "original_sha256": "07630d1bf6e7a01c05c675a537c70a16204f044ef3887a72c6d2bdf7e799eab6",
+      "public_sha256": "07630d1bf6e7a01c05c675a537c70a16204f044ef3887a72c6d2bdf7e799eab6",
+      "bytes": 21489,
+      "local_paths_sanitized": false
+    }
+  },
+  "tests": {
+    "test_cases": 168,
+    "passed": 168,
+    "skipped": 0,
+    "failures": 0,
+    "errors": 0,
+    "sha256": "07630d1bf6e7a01c05c675a537c70a16204f044ef3887a72c6d2bdf7e799eab6"
+  },
+  "scope": "Retained-trajectory myopic decision analysis: whole-episode aggregates, conditional summaries, two figures and run provenance. No new training or collection.",
+  "provenance": "Original records remain under results/decision_quality_v1. Input manifests identify previously published nonlinear-control panels; their omitted arrays are needed for full replay."
+}

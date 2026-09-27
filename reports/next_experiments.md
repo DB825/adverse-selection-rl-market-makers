@@ -30,7 +30,11 @@ All five original entropy-.01 policies were evaluated on fresh probe episodes be
 
 The 14,000,000 and 15,000,000 cohorts are now consumed. Replication development at 13,000,000 and potential replication probes at 16,000,000 remain unused. Do not select only successful seeds or reuse inspected cohorts as untouched confirmation.
 
-## Next: establish decision relevance before more compute
+## Completed: retained-trajectory decision audit
+
+The [myopic score-gap analysis](decision_quality.md) used the five existing nonlinear-control panels. Center choice contributes 81.5% of the mean gap, with substantial extra abstention for seed 14. Decoder R² and absolute error give different cross-policy rankings. The result motivates a bounded frozen-state action-score readout comparison; that experiment remains unrun. No new training or data collection was needed for the audit.
+
+## Unresolved: earlier-history prevalence
 
 The constructed Gate 1 example proves existence, not prevalence. On retained trajectories, quantify how often histories with similar current state and recent observations imply materially different posterior risks and preferred reference actions. Predeclare matching tolerances, overlap diagnostics and the unit of replication. Inventory and earlier policy actions already carry history; account for these channels before attributing any difference to recurrent memory. This is an exploratory diagnostic using existing data, not untouched confirmation.
 
