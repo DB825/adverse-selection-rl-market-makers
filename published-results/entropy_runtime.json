@@ -1,0 +1,9 @@
+{
+  "training_stage_wall_seconds": 861.4,
+  "summed_training_process_seconds": 2133.458969499916,
+  "workers": 3,
+  "new_runs": 5,
+  "new_transitions": 1500160,
+  "source": "Completed run_pilot train stdout: train stage elapsed 861.4s",
+  "scope": "Training stage only; evaluation and auditing shared CPU concurrently."
+}

@@ -1,0 +1,151 @@
+{
+  "policy": "recurrent",
+  "checkpoint": "results\\pilot\\recurrent\\seed_15\\model.zip",
+  "episodes": 1024,
+  "seed_start": 1000000,
+  "seed_stop_exclusive": 1001024,
+  "deterministic": false,
+  "shift": false,
+  "correct_filter": false,
+  "horizon": 64,
+  "inventory_penalty": 0.001,
+  "fee": 0.0,
+  "objective_mean": 0.812156341552736,
+  "objective_episode_se": 0.11141742109628083,
+  "objective_p05": -4.7636046874999955,
+  "objective_lower5_mean": -5.521947115384611,
+  "profit_mean": 0.8873535156250016,
+  "inventory_penalty_mean": 0.07519717407226564,
+  "action_fractions": [
+    0.00152587890625,
+    0.000579833984375,
+    0.012298583984375,
+    0.0011444091796875,
+    0.00750732421875,
+    0.95257568359375,
+    0.00238037109375,
+    0.0012969970703125,
+    0.002044677734375,
+    0.018646240234375
+  ],
+  "elapsed_seconds": 3.93952660006471,
+  "mean_abs_inventory": 6.23785400390625,
+  "mean_q2": 75.19717407226562,
+  "buy_rate": 0.167327880859375,
+  "sell_rate": 0.1668548583984375,
+  "abstain_rate": 0.018646240234375,
+  "mean_spread": 0.5960286295275878,
+  "mean_center": 0.49867640133442004,
+  "informed_profit_per_execution": -0.20193084867534805,
+  "uninformed_profit_per_execution": 0.2932519041426713,
+  "regimes": [
+    {
+      "value": 0.0,
+      "alpha": 0.05,
+      "p": 0.25,
+      "objective": -0.3368292279411765,
+      "profit": -0.2952941176470588,
+      "abstain_rate": 0.019301470588235295,
+      "mean_abs_inventory": 5.028125
+    },
+    {
+      "value": 0.0,
+      "alpha": 0.05,
+      "p": 0.5,
+      "objective": 2.7553664253048775,
+      "profit": 2.7676829268292678,
+      "abstain_rate": 0.019626524390243903,
+      "mean_abs_inventory": 2.5543064024390243
+    },
+    {
+      "value": 0.0,
+      "alpha": 0.05,
+      "p": 0.75,
+      "objective": 5.990516666666666,
+      "profit": 6.00111111111111,
+      "abstain_rate": 0.0203125,
+      "mean_abs_inventory": 2.381597222222222
+    },
+    {
+      "value": 0.0,
+      "alpha": 0.3,
+      "p": 0.25,
+      "objective": -4.126783447265627,
+      "profit": -3.9101562500000018,
+      "abstain_rate": 0.016845703125,
+      "mean_abs_inventory": 12.409423828125
+    },
+    {
+      "value": 0.0,
+      "alpha": 0.3,
+      "p": 0.5,
+      "objective": -1.4402244162087916,
+      "profit": -1.3131868131868134,
+      "abstain_rate": 0.01768543956043956,
+      "mean_abs_inventory": 9.371737637362637
+    },
+    {
+      "value": 0.0,
+      "alpha": 0.3,
+      "p": 0.75,
+      "objective": 1.1814069010416663,
+      "profit": 1.259895833333333,
+      "abstain_rate": 0.020345052083333332,
+      "mean_abs_inventory": 7.088541666666667
+    },
+    {
+      "value": 1.0,
+      "alpha": 0.05,
+      "p": 0.25,
+      "objective": 5.61396375,
+      "profit": 5.623333333333332,
+      "abstain_rate": 0.02125,
+      "mean_abs_inventory": 2.24625
+    },
+    {
+      "value": 1.0,
+      "alpha": 0.05,
+      "p": 0.5,
+      "objective": 2.8576004464285707,
+      "profit": 2.8683673469387747,
+      "abstain_rate": 0.015625,
+      "mean_abs_inventory": 2.366390306122449
+    },
+    {
+      "value": 1.0,
+      "alpha": 0.05,
+      "p": 0.75,
+      "objective": -0.25859570312499963,
+      "profit": -0.22272727272727239,
+      "abstain_rate": 0.019176136363636364,
+      "mean_abs_inventory": 4.773970170454546
+    },
+    {
+      "value": 1.0,
+      "alpha": 0.3,
+      "p": 0.25,
+      "objective": 1.2005727237654389,
+      "profit": 1.27654320987655,
+      "abstain_rate": 0.019097222222222224,
+      "mean_abs_inventory": 6.9778163580246915
+    },
+    {
+      "value": 1.0,
+      "alpha": 0.3,
+      "p": 0.5,
+      "objective": -1.4322742346938695,
+      "profit": -1.2989795918367266,
+      "abstain_rate": 0.014987244897959183,
+      "mean_abs_inventory": 9.54623724489796
+    },
+    {
+      "value": 1.0,
+      "alpha": 0.3,
+      "p": 0.75,
+      "objective": -3.398259046052623,
+      "profit": -3.2085526315789386,
+      "abstain_rate": 0.02035361842105263,
+      "mean_abs_inventory": 11.679276315789474
+    }
+  ]
+}

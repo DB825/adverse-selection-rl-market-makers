@@ -1,0 +1,151 @@
+{
+  "policy": "belief",
+  "checkpoint": "results\\pilot\\belief\\seed_12\\model.zip",
+  "episodes": 1024,
+  "seed_start": 1000000,
+  "seed_stop_exclusive": 1001024,
+  "deterministic": false,
+  "shift": false,
+  "correct_filter": false,
+  "horizon": 64,
+  "inventory_penalty": 0.001,
+  "fee": 0.0,
+  "objective_mean": 2.909218749999999,
+  "objective_episode_se": 0.0864655914578374,
+  "objective_p05": -1.3020664062500016,
+  "objective_lower5_mean": -1.933572415865385,
+  "profit_mean": 2.9531738281249993,
+  "inventory_penalty_mean": 0.043955078125000005,
+  "action_fractions": [
+    0.01171875,
+    0.0123291015625,
+    0.3329010009765625,
+    0.0037841796875,
+    0.01123046875,
+    0.3661956787109375,
+    0.003082275390625,
+    0.0051422119140625,
+    0.2270965576171875,
+    0.026519775390625
+  ],
+  "elapsed_seconds": 2.466057899990119,
+  "mean_abs_inventory": 4.679901123046875,
+  "mean_q2": 43.955078125,
+  "buy_rate": 0.1733856201171875,
+  "sell_rate": 0.1595611572265625,
+  "abstain_rate": 0.026519775390625,
+  "mean_spread": 0.5861278214230433,
+  "mean_center": 0.48259346873032327,
+  "informed_profit_per_execution": -0.1021054037211787,
+  "uninformed_profit_per_execution": 0.3939737413809389,
+  "regimes": [
+    {
+      "value": 0.0,
+      "alpha": 0.05,
+      "p": 0.25,
+      "objective": 1.3897490808823527,
+      "profit": 1.4029411764705881,
+      "abstain_rate": 0.0023897058823529414,
+      "mean_abs_inventory": 2.8762867647058825
+    },
+    {
+      "value": 0.0,
+      "alpha": 0.05,
+      "p": 0.5,
+      "objective": 3.619128620426829,
+      "profit": 3.624999999999999,
+      "abstain_rate": 0.012195121951219513,
+      "mean_abs_inventory": 1.7437118902439024
+    },
+    {
+      "value": 0.0,
+      "alpha": 0.05,
+      "p": 0.75,
+      "objective": 5.946873437499999,
+      "profit": 5.955555555555554,
+      "abstain_rate": 0.041840277777777775,
+      "mean_abs_inventory": 2.226215277777778
+    },
+    {
+      "value": 0.0,
+      "alpha": 0.3,
+      "p": 0.25,
+      "objective": 0.2490380859374996,
+      "profit": 0.3781249999999996,
+      "abstain_rate": 0.000244140625,
+      "mean_abs_inventory": 9.453125
+    },
+    {
+      "value": 0.0,
+      "alpha": 0.3,
+      "p": 0.5,
+      "objective": 3.1527563530219784,
+      "profit": 3.221428571428572,
+      "abstain_rate": 0.0,
+      "mean_abs_inventory": 6.73643543956044
+    },
+    {
+      "value": 0.0,
+      "alpha": 0.3,
+      "p": 0.75,
+      "objective": 5.756300455729168,
+      "profit": 5.794270833333335,
+      "abstain_rate": 0.00048828125,
+      "mean_abs_inventory": 4.771158854166667
+    },
+    {
+      "value": 1.0,
+      "alpha": 0.05,
+      "p": 0.25,
+      "objective": 4.606028749999999,
+      "profit": 4.610666666666666,
+      "abstain_rate": 0.0075,
+      "mean_abs_inventory": 1.58125
+    },
+    {
+      "value": 1.0,
+      "alpha": 0.05,
+      "p": 0.5,
+      "objective": 2.3898600127551015,
+      "profit": 2.3979591836734686,
+      "abstain_rate": 0.0390625,
+      "mean_abs_inventory": 2.069515306122449
+    },
+    {
+      "value": 1.0,
+      "alpha": 0.05,
+      "p": 0.75,
+      "objective": -0.09423348721590959,
+      "profit": -0.07272727272727321,
+      "abstain_rate": 0.17045454545454544,
+      "mean_abs_inventory": 3.8247514204545454
+    },
+    {
+      "value": 1.0,
+      "alpha": 0.3,
+      "p": 0.25,
+      "objective": 5.098387924382713,
+      "profit": 5.140740740740738,
+      "abstain_rate": 0.004243827160493827,
+      "mean_abs_inventory": 4.9673996913580245
+    },
+    {
+      "value": 1.0,
+      "alpha": 0.3,
+      "p": 0.5,
+      "objective": 2.1957066326530583,
+      "profit": 2.280102040816324,
+      "abstain_rate": 0.010522959183673469,
+      "mean_abs_inventory": 7.558992346938775
+    },
+    {
+      "value": 1.0,
+      "alpha": 0.3,
+      "p": 0.75,
+      "objective": -0.3425592105263176,
+      "profit": -0.21447368421052806,
+      "abstain_rate": 0.017886513157894735,
+      "mean_abs_inventory": 9.568667763157896
+    }
+  ]
+}

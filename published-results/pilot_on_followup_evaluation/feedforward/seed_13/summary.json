@@ -1,0 +1,152 @@
+{
+  "policy": "feedforward",
+  "checkpoint": "results\\pilot\\feedforward\\seed_13\\model.zip",
+  "episodes": 2048,
+  "seed_start": 5000000,
+  "seed_stop_exclusive": 5002048,
+  "deterministic": false,
+  "shift": false,
+  "shift_control": false,
+  "correct_filter": false,
+  "horizon": 64,
+  "inventory_penalty": 0.001,
+  "fee": 0.0,
+  "objective_mean": 1.052245330810547,
+  "objective_episode_se": 0.06776032659969058,
+  "objective_p05": -3.621331250000001,
+  "objective_lower5_mean": -4.514916262135924,
+  "profit_mean": 1.1107666015625002,
+  "inventory_penalty_mean": 0.05852127075195314,
+  "action_fractions": [
+    0.00437164306640625,
+    0.0410614013671875,
+    0.035491943359375,
+    0.00408172607421875,
+    0.03746795654296875,
+    0.6073684692382812,
+    0.00078582763671875,
+    0.01091766357421875,
+    0.17193603515625,
+    0.086517333984375
+  ],
+  "elapsed_seconds": 5.107871399959549,
+  "mean_abs_inventory": 5.49493408203125,
+  "mean_q2": 58.521270751953125,
+  "buy_rate": 0.14900970458984375,
+  "sell_rate": 0.1632232666015625,
+  "abstain_rate": 0.086517333984375,
+  "mean_spread": 0.5763262084858615,
+  "mean_center": 0.5167223839410878,
+  "informed_profit_per_execution": -0.18733091306942512,
+  "uninformed_profit_per_execution": 0.290229139645482,
+  "regimes": [
+    {
+      "value": 0.0,
+      "alpha": 0.05,
+      "p": 0.25,
+      "objective": -0.4295020889037433,
+      "profit": -0.39866310160427804,
+      "abstain_rate": 0.09358288770053476,
+      "mean_abs_inventory": 4.425217245989304
+    },
+    {
+      "value": 0.0,
+      "alpha": 0.05,
+      "p": 0.5,
+      "objective": 2.243156432748538,
+      "profit": 2.254093567251462,
+      "abstain_rate": 0.09100877192982457,
+      "mean_abs_inventory": 2.3996710526315788
+    },
+    {
+      "value": 0.0,
+      "alpha": 0.05,
+      "p": 0.75,
+      "objective": 4.886689109848485,
+      "profit": 4.894545454545454,
+      "abstain_rate": 0.0856060606060606,
+      "mean_abs_inventory": 2.0800189393939394
+    },
+    {
+      "value": 0.0,
+      "alpha": 0.3,
+      "p": 0.25,
+      "objective": -3.3571321691176474,
+      "profit": -3.187941176470589,
+      "abstain_rate": 0.09301470588235294,
+      "mean_abs_inventory": 11.079044117647058
+    },
+    {
+      "value": 0.0,
+      "alpha": 0.3,
+      "p": 0.5,
+      "objective": -1.238931912878788,
+      "profit": -1.1293939393939394,
+      "abstain_rate": 0.09299242424242424,
+      "mean_abs_inventory": 8.721496212121211
+    },
+    {
+      "value": 0.0,
+      "alpha": 0.3,
+      "p": 0.75,
+      "objective": 0.5266517857142858,
+      "profit": 0.5916149068322982,
+      "abstain_rate": 0.09025621118012422,
+      "mean_abs_inventory": 6.545031055900621
+    },
+    {
+      "value": 1.0,
+      "alpha": 0.05,
+      "p": 0.25,
+      "objective": 5.276699238989637,
+      "profit": 5.2860103626943005,
+      "abstain_rate": 0.09180699481865284,
+      "mean_abs_inventory": 2.2413374352331608
+    },
+    {
+      "value": 1.0,
+      "alpha": 0.05,
+      "p": 0.5,
+      "objective": 2.7826835088315214,
+      "profit": 2.790489130434782,
+      "abstain_rate": 0.08508831521739131,
+      "mean_abs_inventory": 2.075492527173913
+    },
+    {
+      "value": 1.0,
+      "alpha": 0.05,
+      "p": 0.75,
+      "objective": 0.31180575478142064,
+      "profit": 0.33497267759562827,
+      "abstain_rate": 0.08538251366120218,
+      "mean_abs_inventory": 3.7878244535519126
+    },
+    {
+      "value": 1.0,
+      "alpha": 0.3,
+      "p": 0.25,
+      "objective": 2.5672795036764717,
+      "profit": 2.622352941176472,
+      "abstain_rate": 0.07858455882352941,
+      "mean_abs_inventory": 5.969761029411765
+    },
+    {
+      "value": 1.0,
+      "alpha": 0.3,
+      "p": 0.5,
+      "objective": 0.005599581866198399,
+      "profit": 0.10563380281690263,
+      "abstain_rate": 0.07185299295774648,
+      "mean_abs_inventory": 8.318772007042254
+    },
+    {
+      "value": 1.0,
+      "alpha": 0.3,
+      "p": 0.75,
+      "objective": -1.840335390127388,
+      "profit": -1.6964968152866235,
+      "abstain_rate": 0.07484076433121019,
+      "mean_abs_inventory": 10.143710191082803
+    }
+  ]
+}

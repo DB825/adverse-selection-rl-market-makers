@@ -1,0 +1,83 @@
+{
+  "dataset": "results\\entropy_analysis\\probes\\seed_11\\activations.npz",
+  "output": "results\\entropy_analysis\\probes\\seed_11\\untrained_states.npz",
+  "dataset_sha256": "6a11d5a393bc678098526b1651843e3854dd9618273d10edf67409cd89889e37",
+  "config": {
+    "environment": {
+      "horizon": 64,
+      "inventory_penalty": 0.001,
+      "fee": 0.0
+    },
+    "training": {
+      "total_timesteps": 300032,
+      "seeds": [
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "n_envs": 8,
+      "n_steps": 128,
+      "batch_size": 64,
+      "n_epochs": 10,
+      "learning_rate": 0.0003,
+      "gamma": 1.0,
+      "gae_lambda": 0.95,
+      "clip_range": 0.2,
+      "ent_coef": 0.01,
+      "vf_coef": 0.5,
+      "max_grad_norm": 0.5,
+      "history_window": 8,
+      "torch_threads": 1,
+      "torch_mkldnn": true,
+      "fused_lstm_reset": true,
+      "device": "cpu"
+    },
+    "evaluation": {
+      "episodes": 2048,
+      "seed": 11000000
+    },
+    "analysis": {
+      "episodes": 1024,
+      "seed": 12000000
+    },
+    "development": {
+      "episodes": 1024,
+      "seed": 10000000
+    }
+  },
+  "initialization_seed": 11,
+  "training_timesteps": 0,
+  "rows": 65536,
+  "episodes": 1024,
+  "minimum_time": 0,
+  "maximum_time": 63,
+  "observation_inputs": [
+    "obs"
+  ],
+  "indexing_inputs": [
+    "episode",
+    "t"
+  ],
+  "source_row_order_preserved": true,
+  "timing": "after processing each current observation, before actor MLP/action head",
+  "trajectory_source": "Recorded trained-policy observations; control never selects actions",
+  "shapes": {
+    "untrained_hidden": [
+      65536,
+      64
+    ],
+    "untrained_cell": [
+      65536,
+      64
+    ]
+  },
+  "dependencies": {
+    "numpy": "2.2.6",
+    "torch": "2.8.0",
+    "stable-baselines3": "2.7.0",
+    "sb3-contrib": "2.7.0"
+  },
+  "elapsed_seconds": 1.9515037999954075
+}

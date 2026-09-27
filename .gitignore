@@ -1,0 +1,18 @@
+.venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+results/**/model.zip
+results/**/*.npz
+results/**/tensorboard/
+results/**/events.out.tfevents.*
+results/**/monitor*.csv
+.cache/
+
+# Original machine-local experiment archives. Public copies are separate.
+/results/
+.env
+.env.*
+!.env.example
+*.pem
+*.key

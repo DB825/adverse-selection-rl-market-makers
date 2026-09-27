@@ -1,0 +1,134 @@
+{
+  "checkpoint": "results\\followup_budget\\recurrent\\seed_13\\model.zip",
+  "episodes_checked": 4,
+  "decisions_checked": 256,
+  "max_absolute_errors": {
+    "predict_hidden": 0.0,
+    "predict_cell": 0.0,
+    "distribution": 0.0,
+    "upstream_hidden": 0.0,
+    "upstream_cell": 0.0,
+    "upstream_distribution": 0.0,
+    "reset_probability": 0.0
+  },
+  "greedy_action_mismatches": 0,
+  "full_evaluation_objective_replay_max_absolute_error": 1.7763568394002505e-15,
+  "episode_results": [
+    {
+      "episode": 5000000,
+      "objective": -11.554765625000007,
+      "reward_sum": -11.554765625,
+      "truncated": false
+    },
+    {
+      "episode": 5000001,
+      "objective": -8.598453124999995,
+      "reward_sum": -8.598453125000002,
+      "truncated": false
+    },
+    {
+      "episode": 5000002,
+      "objective": 6.294859375000001,
+      "reward_sum": 6.294859375,
+      "truncated": false
+    },
+    {
+      "episode": 5000003,
+      "objective": -7.612656249999994,
+      "reward_sum": -7.612656250000002,
+      "truncated": false
+    }
+  ],
+  "final_training_row": {
+    "economics/inventory_penalty_total_mean": 0.07319921875,
+    "time/total_timesteps": 300032.0,
+    "economics/episodes": 16.0,
+    "time/iterations": 293.0,
+    "rollout/ep_rew_mean": -0.5144734999999999,
+    "time/time_elapsed": 442.0,
+    "economics/objective_mean": 0.7018007812500006,
+    "economics/profit_mean": 0.7750000000000006,
+    "rollout/ep_len_mean": 64.0,
+    "time/fps": 677.0,
+    "train/policy_gradient_loss": -0.0003713966609211,
+    "train/post_clip_gradient_norm": 0.5000000521540647,
+    "train/clip_fraction": 0.00322265625,
+    "train/loss": 1.3270578384399414,
+    "train/learning_rate": 0.0003,
+    "train/entropy_loss": -0.0423238794319331,
+    "train/n_updates": 2920.0,
+    "train/value_loss": 8.80217667017132,
+    "train/clip_range": 0.2,
+    "train/explained_variance": 0.5559018850326538,
+    "train/approx_kl": 0.0002700651
+  },
+  "checkpoint_267264_row": {
+    "economics/inventory_penalty_total_mean": 0.0563720703125,
+    "time/total_timesteps": 267264.0,
+    "economics/episodes": 16.0,
+    "time/iterations": 261.0,
+    "rollout/ep_rew_mean": -0.1715167199999999,
+    "time/time_elapsed": 393.0,
+    "economics/objective_mean": 1.937377929687501,
+    "economics/profit_mean": 1.9937500000000008,
+    "rollout/ep_len_mean": 64.0,
+    "time/fps": 679.0,
+    "train/policy_gradient_loss": 0.0011630197433987,
+    "train/post_clip_gradient_norm": 0.5000000307336451,
+    "train/clip_fraction": 0.00380859375,
+    "train/loss": 0.0671872720122337,
+    "train/learning_rate": 0.0003,
+    "train/entropy_loss": -0.1210248068440705,
+    "train/n_updates": 2600.0,
+    "train/value_loss": 2.969108194950968,
+    "train/clip_range": 0.2,
+    "train/explained_variance": 0.7427008748054504,
+    "train/approx_kl": 0.0036171386
+  },
+  "last80k_blocks": [
+    {
+      "step_low": 220000,
+      "step_high_exclusive": 240000,
+      "rollouts": 20,
+      "completed_training_episodes": 320,
+      "objective_mean": -0.2071458496093741,
+      "rollout_mean_sample_sd": 0.8436003018117205,
+      "mean_entropy_nats": 0.31500335581600664,
+      "maximum_approx_kl": 0.012872391
+    },
+    {
+      "step_low": 240000,
+      "step_high_exclusive": 260000,
+      "rollouts": 19,
+      "completed_training_episodes": 304,
+      "objective_mean": -0.749916118421052,
+      "rollout_mean_sample_sd": 1.043321477921981,
+      "mean_entropy_nats": 0.1704352459649702,
+      "maximum_approx_kl": 0.022498427
+    },
+    {
+      "step_low": 260000,
+      "step_high_exclusive": 280000,
+      "rollouts": 20,
+      "completed_training_episodes": 320,
+      "objective_mean": -0.4937356445312492,
+      "rollout_mean_sample_sd": 1.7076551667756146,
+      "mean_entropy_nats": 0.10277491001994347,
+      "maximum_approx_kl": 0.03780774
+    },
+    {
+      "step_low": 280000,
+      "step_high_exclusive": 300033,
+      "rollouts": 20,
+      "completed_training_episodes": 320,
+      "objective_mean": 0.10443417968750082,
+      "rollout_mean_sample_sd": 1.5507757387774235,
+      "mean_entropy_nats": 0.04992304058512667,
+      "maximum_approx_kl": 0.012770982
+    }
+  ],
+  "last79_rollout_objective_mean": -0.3313588928995246,
+  "last10_rollout_objective_mean": -0.39917734374999936,
+  "final_checkpoint_only": true,
+  "limitations": "Four complete trajectories test implementation equivalence and exact episode replay, not performance. No intermediate checkpoint exists here to measure any earlier policy. Training rollout means use 16 episodes under changing policies; the 100-episode rolling mean is descriptive and overlaps across logs."
+}

@@ -1,0 +1,330 @@
+{
+  "completed_treatment_runs": 5,
+  "control_policy_runs": 20,
+  "audits": [
+    {
+      "seed": 11,
+      "serialized_control_treatment": [
+        {
+          "gae_lambda": 0.95,
+          "gamma": 1.0,
+          "entropy_coefficient": 0.0,
+          "steps": 300032
+        },
+        {
+          "gae_lambda": 1.0,
+          "gamma": 1.0,
+          "entropy_coefficient": 0.0,
+          "steps": 300032
+        }
+      ],
+      "training_seconds": 449.4435297999298,
+      "log_diagnostics": {
+        "undefined_explained_variance_rows": 0,
+        "other_nonfinite_logged_values": 0,
+        "interpretation": "NaN explained variance is allowed only in this diagnostic column. SB3 defines it for zero target variance; historical target variances were not archived, so counts alone do not reconstruct every cause."
+      },
+      "serialized_parameters_all_finite": true,
+      "first_preupdate_rollout_economics_identical": true,
+      "first_rollout_metrics": {
+        "economics/objective_mean": -3.5440683593750006,
+        "economics/profit_mean": -3.4406250000000007,
+        "economics/inventory_penalty_total_mean": 0.103443359375
+      }
+    },
+    {
+      "seed": 12,
+      "serialized_control_treatment": [
+        {
+          "gae_lambda": 0.95,
+          "gamma": 1.0,
+          "entropy_coefficient": 0.0,
+          "steps": 300032
+        },
+        {
+          "gae_lambda": 1.0,
+          "gamma": 1.0,
+          "entropy_coefficient": 0.0,
+          "steps": 300032
+        }
+      ],
+      "training_seconds": 448.7805030000163,
+      "log_diagnostics": {
+        "undefined_explained_variance_rows": 0,
+        "other_nonfinite_logged_values": 0,
+        "interpretation": "NaN explained variance is allowed only in this diagnostic column. SB3 defines it for zero target variance; historical target variances were not archived, so counts alone do not reconstruct every cause."
+      },
+      "serialized_parameters_all_finite": true,
+      "first_preupdate_rollout_economics_identical": true,
+      "first_rollout_metrics": {
+        "economics/objective_mean": -3.2676035156250007,
+        "economics/profit_mean": -3.1625000000000005,
+        "economics/inventory_penalty_total_mean": 0.105103515625
+      }
+    },
+    {
+      "seed": 13,
+      "serialized_control_treatment": [
+        {
+          "gae_lambda": 0.95,
+          "gamma": 1.0,
+          "entropy_coefficient": 0.0,
+          "steps": 300032
+        },
+        {
+          "gae_lambda": 1.0,
+          "gamma": 1.0,
+          "entropy_coefficient": 0.0,
+          "steps": 300032
+        }
+      ],
+      "training_seconds": 453.76995539991185,
+      "log_diagnostics": {
+        "undefined_explained_variance_rows": 171,
+        "other_nonfinite_logged_values": 0,
+        "interpretation": "NaN explained variance is allowed only in this diagnostic column. SB3 defines it for zero target variance; historical target variances were not archived, so counts alone do not reconstruct every cause."
+      },
+      "serialized_parameters_all_finite": true,
+      "first_preupdate_rollout_economics_identical": true,
+      "first_rollout_metrics": {
+        "economics/objective_mean": 0.7222314453124995,
+        "economics/profit_mean": 0.7656249999999994,
+        "economics/inventory_penalty_total_mean": 0.0433935546875
+      }
+    },
+    {
+      "seed": 14,
+      "serialized_control_treatment": [
+        {
+          "gae_lambda": 0.95,
+          "gamma": 1.0,
+          "entropy_coefficient": 0.0,
+          "steps": 300032
+        },
+        {
+          "gae_lambda": 1.0,
+          "gamma": 1.0,
+          "entropy_coefficient": 0.0,
+          "steps": 300032
+        }
+      ],
+      "training_seconds": 449.9773856000975,
+      "log_diagnostics": {
+        "undefined_explained_variance_rows": 0,
+        "other_nonfinite_logged_values": 0,
+        "interpretation": "NaN explained variance is allowed only in this diagnostic column. SB3 defines it for zero target variance; historical target variances were not archived, so counts alone do not reconstruct every cause."
+      },
+      "serialized_parameters_all_finite": true,
+      "first_preupdate_rollout_economics_identical": true,
+      "first_rollout_metrics": {
+        "economics/objective_mean": -0.1654130859375008,
+        "economics/profit_mean": -0.1093750000000008,
+        "economics/inventory_penalty_total_mean": 0.0560380859375
+      }
+    },
+    {
+      "seed": 15,
+      "serialized_control_treatment": [
+        {
+          "gae_lambda": 0.95,
+          "gamma": 1.0,
+          "entropy_coefficient": 0.0,
+          "steps": 300032
+        },
+        {
+          "gae_lambda": 1.0,
+          "gamma": 1.0,
+          "entropy_coefficient": 0.0,
+          "steps": 300032
+        }
+      ],
+      "training_seconds": 449.7702854999807,
+      "log_diagnostics": {
+        "undefined_explained_variance_rows": 0,
+        "other_nonfinite_logged_values": 0,
+        "interpretation": "NaN explained variance is allowed only in this diagnostic column. SB3 defines it for zero target variance; historical target variances were not archived, so counts alone do not reconstruct every cause."
+      },
+      "serialized_parameters_all_finite": true,
+      "first_preupdate_rollout_economics_identical": true,
+      "first_rollout_metrics": {
+        "economics/objective_mean": -0.779822265625,
+        "economics/profit_mean": -0.7187500000000001,
+        "economics/inventory_penalty_total_mean": 0.061072265625
+      }
+    }
+  ],
+  "total_new_training_transitions": 1500160,
+  "tests": {
+    "test_cases": 126,
+    "passed": 126,
+    "skipped": 0,
+    "failures": 0,
+    "errors": 0,
+    "sha256": "5520f85e547797f5bc9e043528d937b382e8e638da622b5a67d0b9705395fbc7"
+  },
+  "artifacts_sha256": {
+    "results\\followup_budget\\recurrent\\seed_11\\model.zip": "0c53bf088e64085d84a56eaf649cf8325684c50e3694ba90bb515fcd98511517",
+    "results\\followup_budget\\recurrent\\seed_11\\metadata.json": "c2799620bab1235f4fa7f25bc94aeee5228a55399dd724569fe127c84566f875",
+    "results\\gae_control_evaluation\\recurrent\\seed_11\\episodes.csv": "e6b207a3d7431b4fa043151bba03ae74b95e79c472b9a30b63874e8f6e9b999b",
+    "results\\gae_control_evaluation\\recurrent\\seed_11\\summary.json": "8096b25de9e5febc222ac8fd8bbad6cbceac28af8d5f2a4f548e159711864830",
+    "results\\followup_budget\\recurrent\\seed_12\\model.zip": "fe7b56fa94dfe2bf48245864713a0bc96fac8c93980b696d9cfc831172d22424",
+    "results\\followup_budget\\recurrent\\seed_12\\metadata.json": "57b0c2da6c8c1fe0497bddd9870599772b0befe01542b908cf111cc3e1d6021c",
+    "results\\gae_control_evaluation\\recurrent\\seed_12\\episodes.csv": "0fb510b8a94f24f35062551b77802c4d6d40873bb1e9a8740846c65e9b3c7224",
+    "results\\gae_control_evaluation\\recurrent\\seed_12\\summary.json": "b8ae3101f6f31cc05609be7b3cfab1b58480f4ed50334d978c75d3ad0efe9544",
+    "results\\followup_budget\\recurrent\\seed_13\\model.zip": "e9d99ad0d2f2e2c2b4bb004f15c2724a5d7197fe8f01a0dc91b24239bb8b52a6",
+    "results\\followup_budget\\recurrent\\seed_13\\metadata.json": "5e6b30243272e918e0b46d2e71398d6aa63c20ec2cbea9c99bedd09d81037545",
+    "results\\gae_control_evaluation\\recurrent\\seed_13\\episodes.csv": "c0a66482aa3f819dc3d8dc9e299b34daaf5520967af9cc6e3c8afec4149be884",
+    "results\\gae_control_evaluation\\recurrent\\seed_13\\summary.json": "9f4888cdc51d7be468bafc300f1faa6a9725d19c258eb668825d0ff22d80854e",
+    "results\\followup_budget\\recurrent\\seed_14\\model.zip": "b49d7e59ea8ac24031778f6239fc534b7ea31d3ec4c85e5e9113b04a2a414de7",
+    "results\\followup_budget\\recurrent\\seed_14\\metadata.json": "a54be818fcca26011d02648a1e046c0808b6f1232189dbfbe8ca9763c8e2f018",
+    "results\\gae_control_evaluation\\recurrent\\seed_14\\episodes.csv": "43afcb83bde654bcec71795a93874da98b9a7f91d69e68aaf3ed9efd3aa6f7a9",
+    "results\\gae_control_evaluation\\recurrent\\seed_14\\summary.json": "f485aa9424e6b7c202edeab3676c6e89480fb9bc3f5fb81520b13fa6fb7874e8",
+    "results\\followup_budget\\recurrent\\seed_15\\model.zip": "edf1cef01015a38a8face784555436269aa46a8416d0fb88a42338d7439584fa",
+    "results\\followup_budget\\recurrent\\seed_15\\metadata.json": "9f0d916c62ecf387e9b330af71ed534fd21f28aec8a3ed2669e7557b905203ea",
+    "results\\gae_control_evaluation\\recurrent\\seed_15\\episodes.csv": "fe327214298d7f8a0a46c16f5d2a5e51f71d2c31b47822eb768cc191f179a672",
+    "results\\gae_control_evaluation\\recurrent\\seed_15\\summary.json": "98837c36fe90f13fce64bb72c6a9b86eeb7b73f371f53df1386c187073030c9e",
+    "results\\followup_budget\\feedforward\\seed_11\\model.zip": "b7305c0963825befe0ff8aad2b0e683d270f94fa7fec8c5517824a8f3096a7c8",
+    "results\\followup_budget\\feedforward\\seed_11\\metadata.json": "52376fc0e19017300f1e3fe14e92fdcfa3af54476ad7aade0cf025940363739b",
+    "results\\gae_control_evaluation\\feedforward\\seed_11\\episodes.csv": "d1cea23891641ee67727e740567fe32fc3e36da77f09984f4aefa1be87605209",
+    "results\\gae_control_evaluation\\feedforward\\seed_11\\summary.json": "2aa444c2c45ae18d65aa58dd5444091d0665ac37317d4c26ed21ecbc45968a95",
+    "results\\followup_budget\\feedforward\\seed_12\\model.zip": "45d430b57297d96f28cc905176d402c1f84b4b7056eef272f7b6917c4c4919a6",
+    "results\\followup_budget\\feedforward\\seed_12\\metadata.json": "8d52c1c17f6333c2b1b696acb8f56c44bb5a0229a028fde4119cefe8dc361482",
+    "results\\gae_control_evaluation\\feedforward\\seed_12\\episodes.csv": "5b27ae204f29656c56be89e2bd602d759ab81cc58438351b32c7b5f8cb3a5db9",
+    "results\\gae_control_evaluation\\feedforward\\seed_12\\summary.json": "f37c9fa948a7672f8e2e2c5d45d927bc28dcf3f49ef7afb6ebfa9a6770a9edc7",
+    "results\\followup_budget\\feedforward\\seed_13\\model.zip": "1ef73277e1f1b7df05cec67117fb102b7af8a76243f91c016dd43bffad637aa6",
+    "results\\followup_budget\\feedforward\\seed_13\\metadata.json": "69aae7d571d88c904b472c4365317fba834e4f34fc31b1c4798f8173ed1190af",
+    "results\\gae_control_evaluation\\feedforward\\seed_13\\episodes.csv": "d88ddc679d49d33e82de38b043c344d421e6a4e4e6b766bfb51ea70edddc7907",
+    "results\\gae_control_evaluation\\feedforward\\seed_13\\summary.json": "f9fe49a6eb620b2a5a55745ecfc4dab2fd86ba7c28d6c92632a2956bc17fa3ca",
+    "results\\followup_budget\\feedforward\\seed_14\\model.zip": "d29a91beee42fdecadafa4279ecd7a5be4246190d6e74a45c1927730cf0f1076",
+    "results\\followup_budget\\feedforward\\seed_14\\metadata.json": "6dbf89c59b845896fee35e1b40c2828bd9afb21564df3147a9db0bbb43c5fc2a",
+    "results\\gae_control_evaluation\\feedforward\\seed_14\\episodes.csv": "852bbbd9b26696a241bbaea5ae747105ea9d97b722ad9a748e5a0596fe65d178",
+    "results\\gae_control_evaluation\\feedforward\\seed_14\\summary.json": "576cebcead9dd22c916e40e42b248a20228d5877e20e213d281d49c76f4f37b2",
+    "results\\followup_budget\\feedforward\\seed_15\\model.zip": "5d4c0da591e32e3ffbc917d4e84914b1449a85e61781a1ebc89a088982a8a117",
+    "results\\followup_budget\\feedforward\\seed_15\\metadata.json": "0d327ecdcd56a0d21324957728ed451a8665c43c78473fcb6be5c63fae962d70",
+    "results\\gae_control_evaluation\\feedforward\\seed_15\\episodes.csv": "c778ceb8a139b092cd57984e1f8eeddbc70d8209cb26229a86e8ede6056d40d5",
+    "results\\gae_control_evaluation\\feedforward\\seed_15\\summary.json": "e0bc97a708e167cc73fa789ecf60b436804505da44fa983db97287bf8b9a6752",
+    "results\\followup_budget\\history\\seed_11\\model.zip": "82eaca174a6c69fb35c8f929e68b871ddb866751ea3fb9696cfb068d82d1fca1",
+    "results\\followup_budget\\history\\seed_11\\metadata.json": "ba7b8a71e9a569d45dfb30f9936dfdecb88881710117c65efb3a1e94a8454da6",
+    "results\\gae_control_evaluation\\history\\seed_11\\episodes.csv": "45474a3f75c66c0ffc9d62daa8753e195b25730c68dd4cc4caf4e5f9dd045c0b",
+    "results\\gae_control_evaluation\\history\\seed_11\\summary.json": "4d111ff32140b9dcbd5b3255816d7be43ccc682fa2f0a1060aaa94a938a40c04",
+    "results\\followup_budget\\history\\seed_12\\model.zip": "37dca5c4c28feca1f25bb58d13e11f12f86d288ec5102769006579cdacf12237",
+    "results\\followup_budget\\history\\seed_12\\metadata.json": "623835d5e3febce549b3c014bebb87c19e4348a8681f0759075249e309a2a99d",
+    "results\\gae_control_evaluation\\history\\seed_12\\episodes.csv": "7c02def72fb24969781498909d8f50c2ac22dff8d52338822479c6b5857ff01f",
+    "results\\gae_control_evaluation\\history\\seed_12\\summary.json": "b0cc1b14813599155ffc8c281f2a14b6be64b1887329414489262ffd527e361c",
+    "results\\followup_budget\\history\\seed_13\\model.zip": "55595b3b22daba529b554d5938a207df399b82d78a43253d9fc7044e55a54b20",
+    "results\\followup_budget\\history\\seed_13\\metadata.json": "c087654814bba1ec0042df5c719bd79b066c27634f595402126d8d5ff0ca7d92",
+    "results\\gae_control_evaluation\\history\\seed_13\\episodes.csv": "4208de310429224c0629e1584397c066cd825c88fd5b2d4eae2dcc990f6a415e",
+    "results\\gae_control_evaluation\\history\\seed_13\\summary.json": "06302d4f5ea136281512112c98462895607247a96610c555f99b4d839aeb2059",
+    "results\\followup_budget\\history\\seed_14\\model.zip": "3c93c653bd090469755d19d048215dab5cb46ee470b199c211b945b62af09dd8",
+    "results\\followup_budget\\history\\seed_14\\metadata.json": "1e5982acb46813e8e1da40f0809bb38d4f730652bf10879ab6cd3c2c39c1acb2",
+    "results\\gae_control_evaluation\\history\\seed_14\\episodes.csv": "e6be7cdf4346e2f538b69a1f4f41957dfb44e913ca98b321f20dc96df1566afd",
+    "results\\gae_control_evaluation\\history\\seed_14\\summary.json": "75de41c027a3ed12d76ee7add5e306eccf17314fe15c371bbbaa8aee4bd11993",
+    "results\\followup_budget\\history\\seed_15\\model.zip": "f10682afd03718c8d554cd1237f6b3c43b39393d1df32db9b62b4fe029ee3b94",
+    "results\\followup_budget\\history\\seed_15\\metadata.json": "da1ea6d7646376eac736682128295b9910d066d1ca2349ca90cba8b412de9203",
+    "results\\gae_control_evaluation\\history\\seed_15\\episodes.csv": "109aa3e62590897246fd0ab0228f58ba12c6056d1c89b769ac819ecd2ca22771",
+    "results\\gae_control_evaluation\\history\\seed_15\\summary.json": "b09a6b59fd7b49c3674064ae6211b38b760473c32dab8280fbbf851be70d0b56",
+    "results\\followup_budget\\belief\\seed_11\\model.zip": "24c26e331337d4b741ff048a03521c57f806f2b7d36ba2f9a0c9cad584d6d35d",
+    "results\\followup_budget\\belief\\seed_11\\metadata.json": "238fbcbfa5984d407315e565f43193e52a7501214dc204fa781fb23c0a0d8336",
+    "results\\gae_control_evaluation\\belief\\seed_11\\episodes.csv": "de4e551fd9fe8cbc411696df42c2d044cacc2faf6da52e6c5af8b687d9ffe0ca",
+    "results\\gae_control_evaluation\\belief\\seed_11\\summary.json": "185497f251183b01c2f61e603f5832e6f391e32a7a5444cf9abcb90ad42f65ca",
+    "results\\followup_budget\\belief\\seed_12\\model.zip": "6720dcbe865aabf729250d5f215bc1ed7561014bb2346015e887209226d6573c",
+    "results\\followup_budget\\belief\\seed_12\\metadata.json": "0352eed78daa0d6f4de5f021491dca6960153ee9d7ec25162d0f9cc0a4c2c9ce",
+    "results\\gae_control_evaluation\\belief\\seed_12\\episodes.csv": "dfcf55c49883c8b01d303ea34ef14f3af746eec3ff0eb3001446b6371a4f7f0c",
+    "results\\gae_control_evaluation\\belief\\seed_12\\summary.json": "b475886e89142d630fd79df9f601617a490a353d06ca93b828dc0f1a2f5c90fb",
+    "results\\followup_budget\\belief\\seed_13\\model.zip": "05a567a95544da53220de6c36a728b770c411e406d5d6db710b58e4df33c61b5",
+    "results\\followup_budget\\belief\\seed_13\\metadata.json": "e46d86d5a0b65b5c611e0a5921d7f1097c9bdfff4efccc8ab8a21faa232c78e0",
+    "results\\gae_control_evaluation\\belief\\seed_13\\episodes.csv": "292ef42342813250a415da871d6f116b0a65f4d907bb47e6d25c042fd390d050",
+    "results\\gae_control_evaluation\\belief\\seed_13\\summary.json": "1f3182ef6e13b45e3f1916c5752baff2fea01766e52fcf55761d9665a1bce34b",
+    "results\\followup_budget\\belief\\seed_14\\model.zip": "c452c5b48e277af76e911e596f353b6f373a029347d04f679e1c35fc49b6c4b2",
+    "results\\followup_budget\\belief\\seed_14\\metadata.json": "5b5a30bae2a6c206cca7a1ff7a88714f18e7551d8fa446f87b2f66392338f444",
+    "results\\gae_control_evaluation\\belief\\seed_14\\episodes.csv": "916cf579554cccb5078c4135ba3da6e070c2da927de02fc599b4b02a00129b61",
+    "results\\gae_control_evaluation\\belief\\seed_14\\summary.json": "d05b996bdbb7eb1d4033a17fb58c3a6b4b5c6f1423a43821dc99f6e161a6f139",
+    "results\\followup_budget\\belief\\seed_15\\model.zip": "39006b38742182582700129d6c59357371594114f27459c13c3c60aa66c0d820",
+    "results\\followup_budget\\belief\\seed_15\\metadata.json": "5137e459b1b3bfe342bff6b7f598934d0c1ec2cd69767fb073f9075378adde83",
+    "results\\gae_control_evaluation\\belief\\seed_15\\episodes.csv": "45f891661d30cfccd4bbbcb71c3067b90460841e0384e6a2fa9fc641e60496e1",
+    "results\\gae_control_evaluation\\belief\\seed_15\\summary.json": "94bdd2332bcb06fbfd77cff672368ac3742ef2a4ce38a7ec6c3e219aa2caaef7",
+    "results\\gae_lambda_one\\recurrent\\seed_11\\model.zip": "84cc46584c3aacb3c09c655b86bd7b6f99cefa4f8bba5a0a9ea36b0cb0ffe076",
+    "results\\gae_lambda_one\\recurrent\\seed_11\\metadata.json": "c035acff57368f85149f6c6991050c112e15a0341c20a5626631046e4986699f",
+    "results\\gae_lambda_one\\recurrent\\seed_11\\config.json": "4dc082cbfdfa89d0f53464f685b5fc8aa8cb0cf8e6145c55d38c3210114a03a9",
+    "results\\gae_treatment_evaluation\\recurrent\\seed_11\\episodes.csv": "e1f41d9f3368a6e2b6b816b53da5b8a49de328953949b0c10b2f4068c4484eaa",
+    "results\\gae_treatment_evaluation\\recurrent\\seed_11\\summary.json": "4fc6ba7e69ed98e182596e7cedf93b635063b529d11c59849d2030a80a17b23c",
+    "results\\gae_lambda_one\\recurrent\\seed_12\\model.zip": "67e31a65790aa4ad56e3152d728886b1c48d0010e5f4639022694be9c76a6a04",
+    "results\\gae_lambda_one\\recurrent\\seed_12\\metadata.json": "932c4fc7a678b131fc8fbd28fa7f05f40334ab8dfb4118241d910dd22c6a6b20",
+    "results\\gae_lambda_one\\recurrent\\seed_12\\config.json": "4dc082cbfdfa89d0f53464f685b5fc8aa8cb0cf8e6145c55d38c3210114a03a9",
+    "results\\gae_treatment_evaluation\\recurrent\\seed_12\\episodes.csv": "6ee11f809eebc574432774a693f2c67e620588aa2c300e335a2f1de285b3a900",
+    "results\\gae_treatment_evaluation\\recurrent\\seed_12\\summary.json": "881d07c5c80eaff7cc3bd6be7fbe7ddaba5239027dcb97cd48490d07eb3f5d9d",
+    "results\\gae_lambda_one\\recurrent\\seed_13\\model.zip": "8addbad4d8777b8c021d60d0bee1059827d3e38abb5dcbdccdeb93ef384fe388",
+    "results\\gae_lambda_one\\recurrent\\seed_13\\metadata.json": "36b20a6abe3731d65b9e4defd6dcc512f9e19296ab8df3a01ed61373f4d24874",
+    "results\\gae_lambda_one\\recurrent\\seed_13\\config.json": "4dc082cbfdfa89d0f53464f685b5fc8aa8cb0cf8e6145c55d38c3210114a03a9",
+    "results\\gae_treatment_evaluation\\recurrent\\seed_13\\episodes.csv": "ca1570908ea97f67c0ffd34b690a4dfa3f60c1a7ae936a10478bc0c6daa09471",
+    "results\\gae_treatment_evaluation\\recurrent\\seed_13\\summary.json": "e9b2e517e3e277f46550f0d7ddc49b9f921768b2c1bb4e44dc5238699ff7d70b",
+    "results\\gae_lambda_one\\recurrent\\seed_14\\model.zip": "5634f76d839788cda3c193e9bf7a5b1a10f07e3726cbf5baa5419f70aa1616d3",
+    "results\\gae_lambda_one\\recurrent\\seed_14\\metadata.json": "bb023277aa2759db71ed38508b4239bb2edd07393b5372718f299fe2a26eb9fe",
+    "results\\gae_lambda_one\\recurrent\\seed_14\\config.json": "4dc082cbfdfa89d0f53464f685b5fc8aa8cb0cf8e6145c55d38c3210114a03a9",
+    "results\\gae_treatment_evaluation\\recurrent\\seed_14\\episodes.csv": "0cfd43e5d39099d86918219ec99c23d6cd412113636c39434b9efdc88bc84738",
+    "results\\gae_treatment_evaluation\\recurrent\\seed_14\\summary.json": "ea141fa2cbbfff6ab904e30a63879556e4f1f75b3992ac734b8f7d12e9907ad5",
+    "results\\gae_lambda_one\\recurrent\\seed_15\\model.zip": "6f70e3c0db0123c0e9509bc428dd3eeb000568ff04420e9726814025692df198",
+    "results\\gae_lambda_one\\recurrent\\seed_15\\metadata.json": "d9d3ed90c6a9e244e2f2cf2ae9760967240628eb000fa404ad4026ea7a55bd85",
+    "results\\gae_lambda_one\\recurrent\\seed_15\\config.json": "4dc082cbfdfa89d0f53464f685b5fc8aa8cb0cf8e6145c55d38c3210114a03a9",
+    "results\\gae_treatment_evaluation\\recurrent\\seed_15\\episodes.csv": "043a24f8513cd3ce7a61ef8160a57395fe1c68f2956fe244446be8f695e52356",
+    "results\\gae_treatment_evaluation\\recurrent\\seed_15\\summary.json": "1c3cd058952834eed26b409147d3dfdb164e6a1274a045c3aae5c786bf3b900e",
+    "results\\gae_control_evaluation\\fixed_2\\episodes.csv": "5ab0073136b92b47f2388b13146fed84a9b7bad2a133d22a4c7835b05535752d",
+    "results\\gae_control_evaluation\\fixed_4\\episodes.csv": "5015a87b31a58a4df528c818c3bed5320746507d44f87a9ffc2c07089aae4aaf",
+    "results\\gae_control_evaluation\\fixed_5\\episodes.csv": "83bb3cc51a1ffd4ff18763b5e368ec8d871245f144519d53f202de81ea74bb21",
+    "results\\gae_control_evaluation\\fixed_8\\episodes.csv": "f289c0f4d175dd2f8cca9772d9101a7039298eb5604d6457ab75ad49ac2261af",
+    "results\\gae_control_evaluation\\fixed_9\\episodes.csv": "59b0c1051d372e1377c33a95314c9c68a1a74f052f5e767ede6a5da59f6706b2",
+    "results\\gae_control_evaluation\\myopic\\episodes.csv": "8db72c328fbf02978e2a34ec25a2e342b2bcd3f2056530f03a74c9cf14b53c5e",
+    "results\\gae_preflight.json": "da8bedfeeaf2b3e2ddcfe17addd6c1132e1df2952d8522d6ee1863df24a43333",
+    "results\\gae_tests.xml": "5520f85e547797f5bc9e043528d937b382e8e638da622b5a67d0b9705395fbc7",
+    "results\\gae_summary.json": "c7968b1090c232ce8166a29c6b21ea266593bade93d58385213714eeddc3c9bd",
+    "reports\\gae_protocol.md": "03e7c7ff10d0df4f406da527e0dd673d7a4237a389e2975934b3a79c328d2d31",
+    "configs\\gae_lambda_one.yaml": "473b17e9488133266b9b11dfbe154490b2448bf3967028c99f84d14c2646d08e"
+  },
+  "source_hashes": {
+    "src/__init__.py": "4057183ab54fa597f6ed42091f33def72f29a7b007420ca0f9b63eeaebb77692",
+    "src/accounting.py": "ea49b0a70533db4f93fb044aa30495a8da55bc5837e06c23db9c9f469266397a",
+    "src/artifacts.py": "791c2219feeba03180f70ad57afb756622aa6e320082d0f9ae95f7bd41de99ac",
+    "src/baselines.py": "fb8b401b77afc05787be2f7ee8597921befb90ce298ca1e3d7f063a2100363ac",
+    "src/bayes_filter.py": "ca8e8a647c699f05594f5cdd4447149938fd3b42a32cf2924d54354aead5c946",
+    "src/behavior.py": "3e63bd4de1ffbfb4ff945f56cc8c5fe83325de2cbbdb913b91e77b80199650e7",
+    "src/collect_activations.py": "6a5d1d10990a5200a26f8da5f836af92f9ee6aeeb42eb06c5e238e5b009ede69",
+    "src/customer_model.py": "8531fc4050b243d40d732bbac28d0d25be73f50ec5ad31bb4d9e4f80155c091b",
+    "src/environment.py": "5fa970e38d4e69a297a0c281bd39b1231cb247864b447d30456a8d042ae9169b",
+    "src/evaluate.py": "999a984814936654fb5cf43434a7c94572e951123bd1fb71682335f55f4b6d66",
+    "src/fast_recurrent.py": "a8013641a4d467c3292d897b0228fee40e5018b4a43a8dea03be9a8c1c3c7063",
+    "src/interventions.py": "8e77b4cd4548b8b032b5c0452d76c3fb287e60b0c8cb1fb6d4dc32f14ae0484e",
+    "src/probes.py": "13a439bf84a9a42f8ce79a07e022a3ab0196f7bd79ef00d722463d0e1edc3723",
+    "src/train.py": "e1c60ac45fc236131c3061b0b33e92c05934f92e62ef7c8fb5ae3fab54e6294a",
+    "src/untrained_control.py": "97d3976b1fa3dfad31c413fc0ac51b76ada56be6fcf9f2ff86e5aaf9587e7856",
+    "src/wrappers.py": "06f76e646e3d1cca7f5452065048577551c7288046a521c7c5539bb36a913c7a",
+    "configs/followup_budget.yaml": "38d82989578cbccda6e7830f11c0583d6229268be1e2d3ede91ae0dd6e0da867",
+    "configs/gae_lambda_one.yaml": "473b17e9488133266b9b11dfbe154490b2448bf3967028c99f84d14c2646d08e",
+    "configs/large.yaml": "b7ab1c169e3bccf8ca04b600ab63cc23c69c1a82c5ff3910dcb31cb2314dc170",
+    "configs/pilot.yaml": "429d48f495281b43839c690585b91e7eb6d4296cb7337f189a0de4862d383bb1",
+    "configs/smoke.yaml": "3c8f38173764d69e740e8c02498e46a170a2048579442c4620a6964130071208",
+    "scripts/analyze_gae.py": "b136e86e93b3c20b20d843f1dd0e6324008e3345e9a1db4894b2088fdd5d59e5",
+    "scripts/analyze_shift.py": "d7483863c1b37235e4f91923f8d097ad397caaa3bb3c3a23124c76748af7752f",
+    "scripts/audit_followup.py": "c811d325352fd76897bd36b92037932228afedce72cb271da83dd987e37a3b7b",
+    "scripts/decision_relevance.py": "84b0a47216270516c760112ab933a4ea39cc50a48d493a4033582abfd6378d2f",
+    "scripts/gae_preflight.py": "c7bd5ae1b8fa84d883baeeb42c04c55ff6f0ddbbf78d8895262acc28f4b4ccdf",
+    "scripts/make_followup_manifest.py": "0acc26735b7b4ea554b034479bf48255da8e6363c68634fcafa6f14e06ed97c9",
+    "scripts/make_manifest.py": "97e1553b6d5777276014e4edc4f00ed44dcd0f831af350d2cb4841390827f419",
+    "scripts/run_pilot.py": "6da7d9d6dd9ecf3527cfe0ce1d78a7d2f03b15365ecd00a05b2646013a6d2700",
+    "scripts/summarize_followup.py": "f583a255afd180732a73fcc6f411687720da0f3cf8b0f0025b76dfbd96ffc6cd",
+    "scripts/summarize_results.py": "cc7d4eb56470c7f1ce4477aefd31eface05f512e2bf8f8e94d6692340bed15c7",
+    "tests/test_analysis.py": "912ad745fed73231169d27c18dfff2afbdf1ae91602cd705ada965dd9424ab22",
+    "tests/test_bayes.py": "a463ded6fb7fb0226b628b6d86b54efc5cee149015a3e5ef558f3f5f068ee3d1",
+    "tests/test_behavior.py": "0f3bdfd6f856c3e0695cf26e7da40d07a903bc6246d2738a4c06a9722e23d4da",
+    "tests/test_decision_relevance.py": "20df0c2f7e95f1f6c62ada54c5dd60c6aa5b44dc213d7b543303431d31524dd0",
+    "tests/test_environment.py": "be000edbcac622c284ca0a089ed0189afa25d39db4408b1ca2c9161d61f705de",
+    "tests/test_followup_manifest.py": "c41018aa61cf8a04c1b31b02abf8d83bc7e06caeb9a5cde9c92ab5992559b3aa",
+    "tests/test_followup_summary.py": "6971cc9e51e020686d51531e3637bb37bc529874a6a5d56d0b25f39bdc9d6574",
+    "tests/test_gae_experiment.py": "d0792c3d4403833f0b7eed0aa0173e840d0f8fcb116e763a93b75b1a6cb2b621",
+    "tests/test_summary.py": "e0004db0223685d8e475d3751caa565edf54d7fe4562459a2fae76da2e5a6b6d",
+    "tests/test_training.py": "1c288ba1c0ff94eeb32ee6478b1ab9c395fa0927ec2361043ef05048c2fed653",
+    "tests/test_untrained_control.py": "682323a958354a7b9069701eef8ab1dea88e5c0445a7b1618813994be1c6eb0f"
+  },
+  "dependency_lock_sha256": "9b3c6a215de5777b9077f50cc81a1d8b844a6f89f83b03aa147a2d174203e026",
+  "settings": "Only recurrent training GAE lambda changed",
+  "provenance_limit": "Evaluation summaries record checkpoint paths. Current hashes are archived; treatment evaluations did not independently log checkpoint hashes at collection time."
+}

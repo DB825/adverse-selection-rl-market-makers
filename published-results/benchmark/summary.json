@@ -1,0 +1,73 @@
+{
+  "cuda_available": false,
+  "torch_threads": 1,
+  "seed": 11,
+  "n_envs": 8,
+  "n_steps": 128,
+  "n_epochs": 10,
+  "benchmarks": [
+    {
+      "name": "stock64",
+      "path": "results/smoke/recurrent11",
+      "batch_size": 64,
+      "torch_mkldnn": true,
+      "fused_lstm_reset": false,
+      "actual_steps": 2048,
+      "elapsed_seconds": 21.40086010005325,
+      "steps_per_second": 95.69708836117779
+    },
+    {
+      "name": "no_mkldnn",
+      "path": "results/benchmark/no_mkldnn",
+      "batch_size": 64,
+      "torch_mkldnn": false,
+      "fused_lstm_reset": false,
+      "actual_steps": 2048,
+      "elapsed_seconds": 18.03244330000598,
+      "steps_per_second": 113.57307303993136
+    },
+    {
+      "name": "stock256",
+      "path": "results/benchmark/batch256",
+      "batch_size": 256,
+      "torch_mkldnn": true,
+      "fused_lstm_reset": false,
+      "actual_steps": 2048,
+      "elapsed_seconds": 7.4740909000393,
+      "steps_per_second": 274.0132582531517
+    },
+    {
+      "name": "stock512",
+      "path": "results/benchmark/batch512",
+      "batch_size": 512,
+      "torch_mkldnn": true,
+      "fused_lstm_reset": false,
+      "actual_steps": 2048,
+      "elapsed_seconds": 3.854359699995257,
+      "steps_per_second": 531.3463608501615
+    },
+    {
+      "name": "fused64",
+      "path": "results/benchmark/fused_batch64",
+      "batch_size": 64,
+      "torch_mkldnn": true,
+      "fused_lstm_reset": true,
+      "actual_steps": 2048,
+      "elapsed_seconds": 2.8365131000755355,
+      "steps_per_second": 722.0132351743633
+    },
+    {
+      "name": "fused256",
+      "path": "results/benchmark/fused_batch256",
+      "batch_size": 256,
+      "torch_mkldnn": true,
+      "fused_lstm_reset": true,
+      "actual_steps": 2048,
+      "elapsed_seconds": 1.220116600045003,
+      "steps_per_second": 1678.5281012687321
+    }
+  ],
+  "selected": "fused64",
+  "selection_basis": "CPU throughput preserving requested minibatch and optimizer schedule; no reward-based selection",
+  "checkpoint_max_parameter_abs_difference_stock64_vs_fused64": 5.960464477539063e-08
+}

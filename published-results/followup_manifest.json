@@ -1,0 +1,1226 @@
+{
+  "created_utc": "2026-09-27T16:33:18.240542+00:00",
+  "source_hashes": {
+    "src/__init__.py": "4057183ab54fa597f6ed42091f33def72f29a7b007420ca0f9b63eeaebb77692",
+    "src/accounting.py": "ea49b0a70533db4f93fb044aa30495a8da55bc5837e06c23db9c9f469266397a",
+    "src/artifacts.py": "791c2219feeba03180f70ad57afb756622aa6e320082d0f9ae95f7bd41de99ac",
+    "src/baselines.py": "fb8b401b77afc05787be2f7ee8597921befb90ce298ca1e3d7f063a2100363ac",
+    "src/bayes_filter.py": "ca8e8a647c699f05594f5cdd4447149938fd3b42a32cf2924d54354aead5c946",
+    "src/behavior.py": "3e63bd4de1ffbfb4ff945f56cc8c5fe83325de2cbbdb913b91e77b80199650e7",
+    "src/collect_activations.py": "6a5d1d10990a5200a26f8da5f836af92f9ee6aeeb42eb06c5e238e5b009ede69",
+    "src/customer_model.py": "8531fc4050b243d40d732bbac28d0d25be73f50ec5ad31bb4d9e4f80155c091b",
+    "src/environment.py": "5fa970e38d4e69a297a0c281bd39b1231cb247864b447d30456a8d042ae9169b",
+    "src/evaluate.py": "999a984814936654fb5cf43434a7c94572e951123bd1fb71682335f55f4b6d66",
+    "src/fast_recurrent.py": "a8013641a4d467c3292d897b0228fee40e5018b4a43a8dea03be9a8c1c3c7063",
+    "src/interventions.py": "8e77b4cd4548b8b032b5c0452d76c3fb287e60b0c8cb1fb6d4dc32f14ae0484e",
+    "src/probes.py": "13a439bf84a9a42f8ce79a07e022a3ab0196f7bd79ef00d722463d0e1edc3723",
+    "src/train.py": "e1c60ac45fc236131c3061b0b33e92c05934f92e62ef7c8fb5ae3fab54e6294a",
+    "src/untrained_control.py": "97d3976b1fa3dfad31c413fc0ac51b76ada56be6fcf9f2ff86e5aaf9587e7856",
+    "src/wrappers.py": "06f76e646e3d1cca7f5452065048577551c7288046a521c7c5539bb36a913c7a",
+    "configs/followup_budget.yaml": "38d82989578cbccda6e7830f11c0583d6229268be1e2d3ede91ae0dd6e0da867",
+    "configs/large.yaml": "b7ab1c169e3bccf8ca04b600ab63cc23c69c1a82c5ff3910dcb31cb2314dc170",
+    "configs/pilot.yaml": "429d48f495281b43839c690585b91e7eb6d4296cb7337f189a0de4862d383bb1",
+    "configs/smoke.yaml": "3c8f38173764d69e740e8c02498e46a170a2048579442c4620a6964130071208",
+    "scripts/analyze_shift.py": "d7483863c1b37235e4f91923f8d097ad397caaa3bb3c3a23124c76748af7752f",
+    "scripts/audit_followup.py": "c811d325352fd76897bd36b92037932228afedce72cb271da83dd987e37a3b7b",
+    "scripts/decision_relevance.py": "84b0a47216270516c760112ab933a4ea39cc50a48d493a4033582abfd6378d2f",
+    "scripts/make_followup_manifest.py": "0acc26735b7b4ea554b034479bf48255da8e6363c68634fcafa6f14e06ed97c9",
+    "scripts/make_manifest.py": "97e1553b6d5777276014e4edc4f00ed44dcd0f831af350d2cb4841390827f419",
+    "scripts/run_pilot.py": "6da7d9d6dd9ecf3527cfe0ce1d78a7d2f03b15365ecd00a05b2646013a6d2700",
+    "scripts/summarize_followup.py": "f583a255afd180732a73fcc6f411687720da0f3cf8b0f0025b76dfbd96ffc6cd",
+    "scripts/summarize_results.py": "cc7d4eb56470c7f1ce4477aefd31eface05f512e2bf8f8e94d6692340bed15c7",
+    "tests/test_analysis.py": "912ad745fed73231169d27c18dfff2afbdf1ae91602cd705ada965dd9424ab22",
+    "tests/test_bayes.py": "a463ded6fb7fb0226b628b6d86b54efc5cee149015a3e5ef558f3f5f068ee3d1",
+    "tests/test_behavior.py": "0f3bdfd6f856c3e0695cf26e7da40d07a903bc6246d2738a4c06a9722e23d4da",
+    "tests/test_decision_relevance.py": "20df0c2f7e95f1f6c62ada54c5dd60c6aa5b44dc213d7b543303431d31524dd0",
+    "tests/test_environment.py": "be000edbcac622c284ca0a089ed0189afa25d39db4408b1ca2c9161d61f705de",
+    "tests/test_followup_manifest.py": "c41018aa61cf8a04c1b31b02abf8d83bc7e06caeb9a5cde9c92ab5992559b3aa",
+    "tests/test_followup_summary.py": "6971cc9e51e020686d51531e3637bb37bc529874a6a5d56d0b25f39bdc9d6574",
+    "tests/test_summary.py": "e0004db0223685d8e475d3751caa565edf54d7fe4562459a2fae76da2e5a6b6d",
+    "tests/test_training.py": "1c288ba1c0ff94eeb32ee6478b1ab9c395fa0927ec2361043ef05048c2fed653",
+    "tests/test_untrained_control.py": "682323a958354a7b9069701eef8ab1dea88e5c0445a7b1618813994be1c6eb0f"
+  },
+  "dependency_lock_sha256": "9b3c6a215de5777b9077f50cc81a1d8b844a6f89f83b03aa147a2d174203e026",
+  "completed_runs": [
+    {
+      "policy": "recurrent",
+      "seed": 11,
+      "actual_steps": 300032,
+      "training_seconds": 425.651540699997,
+      "environment_seeds": [
+        110000,
+        110001,
+        110002,
+        110003,
+        110004,
+        110005,
+        110006,
+        110007
+      ],
+      "checkpoint": "results\\followup_budget\\recurrent\\seed_11\\model.zip",
+      "checkpoint_sha256": "0c53bf088e64085d84a56eaf649cf8325684c50e3694ba90bb515fcd98511517",
+      "metadata": "results\\followup_budget\\recurrent\\seed_11\\metadata.json",
+      "evaluation": "results\\followup_budget_evaluation\\recurrent\\seed_11\\summary.json",
+      "episodes": "results\\followup_budget_evaluation\\recurrent\\seed_11\\episodes.csv",
+      "episodes_sha256": "274b34ddf99a9c14f6ae6d6b159d3b377daf541d7ab32cce6312d4c6a62bdec6",
+      "artifact_sha256": {
+        "checkpoint": "0c53bf088e64085d84a56eaf649cf8325684c50e3694ba90bb515fcd98511517",
+        "metadata": "c2799620bab1235f4fa7f25bc94aeee5228a55399dd724569fe127c84566f875",
+        "config": "ae94387d38049aa8eaeafb97070cea21718c1e7fb9e6a25ec57b3f84a37cd4bb",
+        "evaluation": "e5b77289d06ce22880ba39296a05360408456367a662517836ebc5d78d48995e",
+        "episodes": "274b34ddf99a9c14f6ae6d6b159d3b377daf541d7ab32cce6312d4c6a62bdec6"
+      }
+    },
+    {
+      "policy": "recurrent",
+      "seed": 12,
+      "actual_steps": 300032,
+      "training_seconds": 433.4588781000348,
+      "environment_seeds": [
+        120000,
+        120001,
+        120002,
+        120003,
+        120004,
+        120005,
+        120006,
+        120007
+      ],
+      "checkpoint": "results\\followup_budget\\recurrent\\seed_12\\model.zip",
+      "checkpoint_sha256": "fe7b56fa94dfe2bf48245864713a0bc96fac8c93980b696d9cfc831172d22424",
+      "metadata": "results\\followup_budget\\recurrent\\seed_12\\metadata.json",
+      "evaluation": "results\\followup_budget_evaluation\\recurrent\\seed_12\\summary.json",
+      "episodes": "results\\followup_budget_evaluation\\recurrent\\seed_12\\episodes.csv",
+      "episodes_sha256": "3f4099597ef25ef4641d63eb78eda2fcd321808328657cc5def1ee608a9d4bdd",
+      "artifact_sha256": {
+        "checkpoint": "fe7b56fa94dfe2bf48245864713a0bc96fac8c93980b696d9cfc831172d22424",
+        "metadata": "57b0c2da6c8c1fe0497bddd9870599772b0befe01542b908cf111cc3e1d6021c",
+        "config": "ae94387d38049aa8eaeafb97070cea21718c1e7fb9e6a25ec57b3f84a37cd4bb",
+        "evaluation": "fe2646baea6304f09143c83424d7dfdf792b57e1f1018090d564038d9c4e4855",
+        "episodes": "3f4099597ef25ef4641d63eb78eda2fcd321808328657cc5def1ee608a9d4bdd"
+      }
+    },
+    {
+      "policy": "recurrent",
+      "seed": 13,
+      "actual_steps": 300032,
+      "training_seconds": 444.09059500007425,
+      "environment_seeds": [
+        130000,
+        130001,
+        130002,
+        130003,
+        130004,
+        130005,
+        130006,
+        130007
+      ],
+      "checkpoint": "results\\followup_budget\\recurrent\\seed_13\\model.zip",
+      "checkpoint_sha256": "e9d99ad0d2f2e2c2b4bb004f15c2724a5d7197fe8f01a0dc91b24239bb8b52a6",
+      "metadata": "results\\followup_budget\\recurrent\\seed_13\\metadata.json",
+      "evaluation": "results\\followup_budget_evaluation\\recurrent\\seed_13\\summary.json",
+      "episodes": "results\\followup_budget_evaluation\\recurrent\\seed_13\\episodes.csv",
+      "episodes_sha256": "75d5aaa52ffa22049ef65226ffe8b49fcdb236786f4b6036b090a7b6298e9fd7",
+      "artifact_sha256": {
+        "checkpoint": "e9d99ad0d2f2e2c2b4bb004f15c2724a5d7197fe8f01a0dc91b24239bb8b52a6",
+        "metadata": "5e6b30243272e918e0b46d2e71398d6aa63c20ec2cbea9c99bedd09d81037545",
+        "config": "ae94387d38049aa8eaeafb97070cea21718c1e7fb9e6a25ec57b3f84a37cd4bb",
+        "evaluation": "e5967557a4430d526d6ec45d585d9919580dc850524a1c36c6fd32d7f858ff76",
+        "episodes": "75d5aaa52ffa22049ef65226ffe8b49fcdb236786f4b6036b090a7b6298e9fd7"
+      }
+    },
+    {
+      "policy": "recurrent",
+      "seed": 14,
+      "actual_steps": 300032,
+      "training_seconds": 447.28916589997243,
+      "environment_seeds": [
+        140000,
+        140001,
+        140002,
+        140003,
+        140004,
+        140005,
+        140006,
+        140007
+      ],
+      "checkpoint": "results\\followup_budget\\recurrent\\seed_14\\model.zip",
+      "checkpoint_sha256": "b49d7e59ea8ac24031778f6239fc534b7ea31d3ec4c85e5e9113b04a2a414de7",
+      "metadata": "results\\followup_budget\\recurrent\\seed_14\\metadata.json",
+      "evaluation": "results\\followup_budget_evaluation\\recurrent\\seed_14\\summary.json",
+      "episodes": "results\\followup_budget_evaluation\\recurrent\\seed_14\\episodes.csv",
+      "episodes_sha256": "7bddc011171f765f0995f38524912e0e53b8728dd56633454a70aba962b38b0e",
+      "artifact_sha256": {
+        "checkpoint": "b49d7e59ea8ac24031778f6239fc534b7ea31d3ec4c85e5e9113b04a2a414de7",
+        "metadata": "a54be818fcca26011d02648a1e046c0808b6f1232189dbfbe8ca9763c8e2f018",
+        "config": "ae94387d38049aa8eaeafb97070cea21718c1e7fb9e6a25ec57b3f84a37cd4bb",
+        "evaluation": "3fb832b148f97739b1a8d614bf544538f4a96ff8c9b2ae9b8b1b24969728e371",
+        "episodes": "7bddc011171f765f0995f38524912e0e53b8728dd56633454a70aba962b38b0e"
+      }
+    },
+    {
+      "policy": "recurrent",
+      "seed": 15,
+      "actual_steps": 300032,
+      "training_seconds": 390.7072803999763,
+      "environment_seeds": [
+        150000,
+        150001,
+        150002,
+        150003,
+        150004,
+        150005,
+        150006,
+        150007
+      ],
+      "checkpoint": "results\\followup_budget\\recurrent\\seed_15\\model.zip",
+      "checkpoint_sha256": "edf1cef01015a38a8face784555436269aa46a8416d0fb88a42338d7439584fa",
+      "metadata": "results\\followup_budget\\recurrent\\seed_15\\metadata.json",
+      "evaluation": "results\\followup_budget_evaluation\\recurrent\\seed_15\\summary.json",
+      "episodes": "results\\followup_budget_evaluation\\recurrent\\seed_15\\episodes.csv",
+      "episodes_sha256": "4dfe98f1b1ed57cd7302a7b55213fa30ff7a21a5c6e20a081046c9cf4952fffd",
+      "artifact_sha256": {
+        "checkpoint": "edf1cef01015a38a8face784555436269aa46a8416d0fb88a42338d7439584fa",
+        "metadata": "9f0d916c62ecf387e9b330af71ed534fd21f28aec8a3ed2669e7557b905203ea",
+        "config": "ae94387d38049aa8eaeafb97070cea21718c1e7fb9e6a25ec57b3f84a37cd4bb",
+        "evaluation": "803c30ccebe87940ff583e7511426f047c1c782554769d8bb56e0d066b7bdf35",
+        "episodes": "4dfe98f1b1ed57cd7302a7b55213fa30ff7a21a5c6e20a081046c9cf4952fffd"
+      }
+    },
+    {
+      "policy": "feedforward",
+      "seed": 11,
+      "actual_steps": 300032,
+      "training_seconds": 196.5349671000149,
+      "environment_seeds": [
+        110000,
+        110001,
+        110002,
+        110003,
+        110004,
+        110005,
+        110006,
+        110007
+      ],
+      "checkpoint": "results\\followup_budget\\feedforward\\seed_11\\model.zip",
+      "checkpoint_sha256": "b7305c0963825befe0ff8aad2b0e683d270f94fa7fec8c5517824a8f3096a7c8",
+      "metadata": "results\\followup_budget\\feedforward\\seed_11\\metadata.json",
+      "evaluation": "results\\followup_budget_evaluation\\feedforward\\seed_11\\summary.json",
+      "episodes": "results\\followup_budget_evaluation\\feedforward\\seed_11\\episodes.csv",
+      "episodes_sha256": "2214f52539afcf66c09b7bfd87e905b493c619c3d9ef526a37e3449984f62781",
+      "artifact_sha256": {
+        "checkpoint": "b7305c0963825befe0ff8aad2b0e683d270f94fa7fec8c5517824a8f3096a7c8",
+        "metadata": "52376fc0e19017300f1e3fe14e92fdcfa3af54476ad7aade0cf025940363739b",
+        "config": "ae94387d38049aa8eaeafb97070cea21718c1e7fb9e6a25ec57b3f84a37cd4bb",
+        "evaluation": "b894d618bb95330d750d59fda6dcfc2662cb91d01b7847f3a27f0de033cb4c5e",
+        "episodes": "2214f52539afcf66c09b7bfd87e905b493c619c3d9ef526a37e3449984f62781"
+      }
+    },
+    {
+      "policy": "feedforward",
+      "seed": 12,
+      "actual_steps": 300032,
+      "training_seconds": 204.8514562000055,
+      "environment_seeds": [
+        120000,
+        120001,
+        120002,
+        120003,
+        120004,
+        120005,
+        120006,
+        120007
+      ],
+      "checkpoint": "results\\followup_budget\\feedforward\\seed_12\\model.zip",
+      "checkpoint_sha256": "45d430b57297d96f28cc905176d402c1f84b4b7056eef272f7b6917c4c4919a6",
+      "metadata": "results\\followup_budget\\feedforward\\seed_12\\metadata.json",
+      "evaluation": "results\\followup_budget_evaluation\\feedforward\\seed_12\\summary.json",
+      "episodes": "results\\followup_budget_evaluation\\feedforward\\seed_12\\episodes.csv",
+      "episodes_sha256": "60f108e6b928d6d5f3fe53f67335200e6eb3d67723452b4c73bfb55c13e5557f",
+      "artifact_sha256": {
+        "checkpoint": "45d430b57297d96f28cc905176d402c1f84b4b7056eef272f7b6917c4c4919a6",
+        "metadata": "8d52c1c17f6333c2b1b696acb8f56c44bb5a0229a028fde4119cefe8dc361482",
+        "config": "ae94387d38049aa8eaeafb97070cea21718c1e7fb9e6a25ec57b3f84a37cd4bb",
+        "evaluation": "38eff9de9cd7bf7e15e8807648726dc9aebbc5db00146afb3e7dee7a95786a71",
+        "episodes": "60f108e6b928d6d5f3fe53f67335200e6eb3d67723452b4c73bfb55c13e5557f"
+      }
+    },
+    {
+      "policy": "feedforward",
+      "seed": 13,
+      "actual_steps": 300032,
+      "training_seconds": 205.28431890008505,
+      "environment_seeds": [
+        130000,
+        130001,
+        130002,
+        130003,
+        130004,
+        130005,
+        130006,
+        130007
+      ],
+      "checkpoint": "results\\followup_budget\\feedforward\\seed_13\\model.zip",
+      "checkpoint_sha256": "1ef73277e1f1b7df05cec67117fb102b7af8a76243f91c016dd43bffad637aa6",
+      "metadata": "results\\followup_budget\\feedforward\\seed_13\\metadata.json",
+      "evaluation": "results\\followup_budget_evaluation\\feedforward\\seed_13\\summary.json",
+      "episodes": "results\\followup_budget_evaluation\\feedforward\\seed_13\\episodes.csv",
+      "episodes_sha256": "aee70e7ca3b825ed7ffe0b41a58c8aba9e0a8dda9ba13f594260c57960a0fa3e",
+      "artifact_sha256": {
+        "checkpoint": "1ef73277e1f1b7df05cec67117fb102b7af8a76243f91c016dd43bffad637aa6",
+        "metadata": "69aae7d571d88c904b472c4365317fba834e4f34fc31b1c4798f8173ed1190af",
+        "config": "ae94387d38049aa8eaeafb97070cea21718c1e7fb9e6a25ec57b3f84a37cd4bb",
+        "evaluation": "7278dd491fb2952e11ba5a87e65e08e5ba6bdec7d96b3738cdcfffcfd8ab3ac0",
+        "episodes": "aee70e7ca3b825ed7ffe0b41a58c8aba9e0a8dda9ba13f594260c57960a0fa3e"
+      }
+    },
+    {
+      "policy": "feedforward",
+      "seed": 14,
+      "actual_steps": 300032,
+      "training_seconds": 243.95588229992427,
+      "environment_seeds": [
+        140000,
+        140001,
+        140002,
+        140003,
+        140004,
+        140005,
+        140006,
+        140007
+      ],
+      "checkpoint": "results\\followup_budget\\feedforward\\seed_14\\model.zip",
+      "checkpoint_sha256": "d29a91beee42fdecadafa4279ecd7a5be4246190d6e74a45c1927730cf0f1076",
+      "metadata": "results\\followup_budget\\feedforward\\seed_14\\metadata.json",
+      "evaluation": "results\\followup_budget_evaluation\\feedforward\\seed_14\\summary.json",
+      "episodes": "results\\followup_budget_evaluation\\feedforward\\seed_14\\episodes.csv",
+      "episodes_sha256": "414be3f9c9c47d96cbe7a9b786cc38e09c49499d07f42871b63eccb46892e5d8",
+      "artifact_sha256": {
+        "checkpoint": "d29a91beee42fdecadafa4279ecd7a5be4246190d6e74a45c1927730cf0f1076",
+        "metadata": "6dbf89c59b845896fee35e1b40c2828bd9afb21564df3147a9db0bbb43c5fc2a",
+        "config": "ae94387d38049aa8eaeafb97070cea21718c1e7fb9e6a25ec57b3f84a37cd4bb",
+        "evaluation": "55f6d99c99d3f5b797e7217229e7dc1d1b082c0ee341bc8048c4fd5be6cb43cb",
+        "episodes": "414be3f9c9c47d96cbe7a9b786cc38e09c49499d07f42871b63eccb46892e5d8"
+      }
+    },
+    {
+      "policy": "feedforward",
+      "seed": 15,
+      "actual_steps": 300032,
+      "training_seconds": 185.09779599995818,
+      "environment_seeds": [
+        150000,
+        150001,
+        150002,
+        150003,
+        150004,
+        150005,
+        150006,
+        150007
+      ],
+      "checkpoint": "results\\followup_budget\\feedforward\\seed_15\\model.zip",
+      "checkpoint_sha256": "5d4c0da591e32e3ffbc917d4e84914b1449a85e61781a1ebc89a088982a8a117",
+      "metadata": "results\\followup_budget\\feedforward\\seed_15\\metadata.json",
+      "evaluation": "results\\followup_budget_evaluation\\feedforward\\seed_15\\summary.json",
+      "episodes": "results\\followup_budget_evaluation\\feedforward\\seed_15\\episodes.csv",
+      "episodes_sha256": "f27fd787dadd4f65f2019dcf9f87457d3e83953c63a8eb4882b840b05f6e28cf",
+      "artifact_sha256": {
+        "checkpoint": "5d4c0da591e32e3ffbc917d4e84914b1449a85e61781a1ebc89a088982a8a117",
+        "metadata": "0d327ecdcd56a0d21324957728ed451a8665c43c78473fcb6be5c63fae962d70",
+        "config": "ae94387d38049aa8eaeafb97070cea21718c1e7fb9e6a25ec57b3f84a37cd4bb",
+        "evaluation": "b1ae78142f0cae0b9a73f1565de38cf22df8ba6a59acf35570655ccce749687d",
+        "episodes": "f27fd787dadd4f65f2019dcf9f87457d3e83953c63a8eb4882b840b05f6e28cf"
+      }
+    },
+    {
+      "policy": "history",
+      "seed": 11,
+      "actual_steps": 300032,
+      "training_seconds": 201.68144309998024,
+      "environment_seeds": [
+        110000,
+        110001,
+        110002,
+        110003,
+        110004,
+        110005,
+        110006,
+        110007
+      ],
+      "checkpoint": "results\\followup_budget\\history\\seed_11\\model.zip",
+      "checkpoint_sha256": "82eaca174a6c69fb35c8f929e68b871ddb866751ea3fb9696cfb068d82d1fca1",
+      "metadata": "results\\followup_budget\\history\\seed_11\\metadata.json",
+      "evaluation": "results\\followup_budget_evaluation\\history\\seed_11\\summary.json",
+      "episodes": "results\\followup_budget_evaluation\\history\\seed_11\\episodes.csv",
+      "episodes_sha256": "1c099937a121b79b2ed4d905f3e952af1856797aa8dd971895d8af35efbf3e4d",
+      "artifact_sha256": {
+        "checkpoint": "82eaca174a6c69fb35c8f929e68b871ddb866751ea3fb9696cfb068d82d1fca1",
+        "metadata": "ba7b8a71e9a569d45dfb30f9936dfdecb88881710117c65efb3a1e94a8454da6",
+        "config": "ae94387d38049aa8eaeafb97070cea21718c1e7fb9e6a25ec57b3f84a37cd4bb",
+        "evaluation": "b4f0b48d6359db13bf8d4b90fafbc2956fc65d35e4f9662071ffcd544c1fd41e",
+        "episodes": "1c099937a121b79b2ed4d905f3e952af1856797aa8dd971895d8af35efbf3e4d"
+      }
+    },
+    {
+      "policy": "history",
+      "seed": 12,
+      "actual_steps": 300032,
+      "training_seconds": 208.62920520000625,
+      "environment_seeds": [
+        120000,
+        120001,
+        120002,
+        120003,
+        120004,
+        120005,
+        120006,
+        120007
+      ],
+      "checkpoint": "results\\followup_budget\\history\\seed_12\\model.zip",
+      "checkpoint_sha256": "37dca5c4c28feca1f25bb58d13e11f12f86d288ec5102769006579cdacf12237",
+      "metadata": "results\\followup_budget\\history\\seed_12\\metadata.json",
+      "evaluation": "results\\followup_budget_evaluation\\history\\seed_12\\summary.json",
+      "episodes": "results\\followup_budget_evaluation\\history\\seed_12\\episodes.csv",
+      "episodes_sha256": "cdbce97da39b5e1adfd59284538fba0b54b6ef5411d62e60c582fdf5c45b8bf3",
+      "artifact_sha256": {
+        "checkpoint": "37dca5c4c28feca1f25bb58d13e11f12f86d288ec5102769006579cdacf12237",
+        "metadata": "623835d5e3febce549b3c014bebb87c19e4348a8681f0759075249e309a2a99d",
+        "config": "ae94387d38049aa8eaeafb97070cea21718c1e7fb9e6a25ec57b3f84a37cd4bb",
+        "evaluation": "b40ee6a4c3e3a84477d1672f0ddcd66f918d7674d7179aacdafadfcc0f74ebbf",
+        "episodes": "cdbce97da39b5e1adfd59284538fba0b54b6ef5411d62e60c582fdf5c45b8bf3"
+      }
+    },
+    {
+      "policy": "history",
+      "seed": 13,
+      "actual_steps": 300032,
+      "training_seconds": 227.42557199997827,
+      "environment_seeds": [
+        130000,
+        130001,
+        130002,
+        130003,
+        130004,
+        130005,
+        130006,
+        130007
+      ],
+      "checkpoint": "results\\followup_budget\\history\\seed_13\\model.zip",
+      "checkpoint_sha256": "55595b3b22daba529b554d5938a207df399b82d78a43253d9fc7044e55a54b20",
+      "metadata": "results\\followup_budget\\history\\seed_13\\metadata.json",
+      "evaluation": "results\\followup_budget_evaluation\\history\\seed_13\\summary.json",
+      "episodes": "results\\followup_budget_evaluation\\history\\seed_13\\episodes.csv",
+      "episodes_sha256": "6f60b026523e563995d81a934380b5d97fbc850d3a84ff09414c942e960f26da",
+      "artifact_sha256": {
+        "checkpoint": "55595b3b22daba529b554d5938a207df399b82d78a43253d9fc7044e55a54b20",
+        "metadata": "c087654814bba1ec0042df5c719bd79b066c27634f595402126d8d5ff0ca7d92",
+        "config": "ae94387d38049aa8eaeafb97070cea21718c1e7fb9e6a25ec57b3f84a37cd4bb",
+        "evaluation": "98cfc6d73cce49a91ed4bd79ffe4a8eb6a26a6c5a8f3de0ffef32f31d7bdf465",
+        "episodes": "6f60b026523e563995d81a934380b5d97fbc850d3a84ff09414c942e960f26da"
+      }
+    },
+    {
+      "policy": "history",
+      "seed": 14,
+      "actual_steps": 300032,
+      "training_seconds": 252.20705570001155,
+      "environment_seeds": [
+        140000,
+        140001,
+        140002,
+        140003,
+        140004,
+        140005,
+        140006,
+        140007
+      ],
+      "checkpoint": "results\\followup_budget\\history\\seed_14\\model.zip",
+      "checkpoint_sha256": "3c93c653bd090469755d19d048215dab5cb46ee470b199c211b945b62af09dd8",
+      "metadata": "results\\followup_budget\\history\\seed_14\\metadata.json",
+      "evaluation": "results\\followup_budget_evaluation\\history\\seed_14\\summary.json",
+      "episodes": "results\\followup_budget_evaluation\\history\\seed_14\\episodes.csv",
+      "episodes_sha256": "b020bd7a52b2eaa0f0990f68c6b7c9bd8b05f5defaa1a99d0f8b3e9c7f4507fa",
+      "artifact_sha256": {
+        "checkpoint": "3c93c653bd090469755d19d048215dab5cb46ee470b199c211b945b62af09dd8",
+        "metadata": "1e5982acb46813e8e1da40f0809bb38d4f730652bf10879ab6cd3c2c39c1acb2",
+        "config": "ae94387d38049aa8eaeafb97070cea21718c1e7fb9e6a25ec57b3f84a37cd4bb",
+        "evaluation": "225bd24d10421b08ef63b8974f2404315e752ca57945d932ba65d765e0ba8f67",
+        "episodes": "b020bd7a52b2eaa0f0990f68c6b7c9bd8b05f5defaa1a99d0f8b3e9c7f4507fa"
+      }
+    },
+    {
+      "policy": "history",
+      "seed": 15,
+      "actual_steps": 300032,
+      "training_seconds": 193.101991500007,
+      "environment_seeds": [
+        150000,
+        150001,
+        150002,
+        150003,
+        150004,
+        150005,
+        150006,
+        150007
+      ],
+      "checkpoint": "results\\followup_budget\\history\\seed_15\\model.zip",
+      "checkpoint_sha256": "f10682afd03718c8d554cd1237f6b3c43b39393d1df32db9b62b4fe029ee3b94",
+      "metadata": "results\\followup_budget\\history\\seed_15\\metadata.json",
+      "evaluation": "results\\followup_budget_evaluation\\history\\seed_15\\summary.json",
+      "episodes": "results\\followup_budget_evaluation\\history\\seed_15\\episodes.csv",
+      "episodes_sha256": "c04b6890fcb6c82dc0eadab33d8de02865f9f7f853b82bb3baa78af4c4025d04",
+      "artifact_sha256": {
+        "checkpoint": "f10682afd03718c8d554cd1237f6b3c43b39393d1df32db9b62b4fe029ee3b94",
+        "metadata": "da1ea6d7646376eac736682128295b9910d066d1ca2349ca90cba8b412de9203",
+        "config": "ae94387d38049aa8eaeafb97070cea21718c1e7fb9e6a25ec57b3f84a37cd4bb",
+        "evaluation": "f9482fd0bcf8f4d5f28daea35bf2565c34a8f7819a061695477a2d39ad3e64f0",
+        "episodes": "c04b6890fcb6c82dc0eadab33d8de02865f9f7f853b82bb3baa78af4c4025d04"
+      }
+    },
+    {
+      "policy": "belief",
+      "seed": 11,
+      "actual_steps": 300032,
+      "training_seconds": 230.18640929996036,
+      "environment_seeds": [
+        110000,
+        110001,
+        110002,
+        110003,
+        110004,
+        110005,
+        110006,
+        110007
+      ],
+      "checkpoint": "results\\followup_budget\\belief\\seed_11\\model.zip",
+      "checkpoint_sha256": "24c26e331337d4b741ff048a03521c57f806f2b7d36ba2f9a0c9cad584d6d35d",
+      "metadata": "results\\followup_budget\\belief\\seed_11\\metadata.json",
+      "evaluation": "results\\followup_budget_evaluation\\belief\\seed_11\\summary.json",
+      "episodes": "results\\followup_budget_evaluation\\belief\\seed_11\\episodes.csv",
+      "episodes_sha256": "5a8dc273ac45ca19cea71c8774da09ef83ea899b8dd780115eb40ffcd6d3cd20",
+      "artifact_sha256": {
+        "checkpoint": "24c26e331337d4b741ff048a03521c57f806f2b7d36ba2f9a0c9cad584d6d35d",
+        "metadata": "238fbcbfa5984d407315e565f43193e52a7501214dc204fa781fb23c0a0d8336",
+        "config": "ae94387d38049aa8eaeafb97070cea21718c1e7fb9e6a25ec57b3f84a37cd4bb",
+        "evaluation": "93875115f8a5a725e5fa11b0f66f556d8d7697c68db973986c05e0d7f287ccb5",
+        "episodes": "5a8dc273ac45ca19cea71c8774da09ef83ea899b8dd780115eb40ffcd6d3cd20"
+      }
+    },
+    {
+      "policy": "belief",
+      "seed": 12,
+      "actual_steps": 300032,
+      "training_seconds": 219.570976399933,
+      "environment_seeds": [
+        120000,
+        120001,
+        120002,
+        120003,
+        120004,
+        120005,
+        120006,
+        120007
+      ],
+      "checkpoint": "results\\followup_budget\\belief\\seed_12\\model.zip",
+      "checkpoint_sha256": "6720dcbe865aabf729250d5f215bc1ed7561014bb2346015e887209226d6573c",
+      "metadata": "results\\followup_budget\\belief\\seed_12\\metadata.json",
+      "evaluation": "results\\followup_budget_evaluation\\belief\\seed_12\\summary.json",
+      "episodes": "results\\followup_budget_evaluation\\belief\\seed_12\\episodes.csv",
+      "episodes_sha256": "5f98e2dfc989882f06d36e5e3b74eaef0ae272cf38a41e8c8ea6e632772a9503",
+      "artifact_sha256": {
+        "checkpoint": "6720dcbe865aabf729250d5f215bc1ed7561014bb2346015e887209226d6573c",
+        "metadata": "0352eed78daa0d6f4de5f021491dca6960153ee9d7ec25162d0f9cc0a4c2c9ce",
+        "config": "ae94387d38049aa8eaeafb97070cea21718c1e7fb9e6a25ec57b3f84a37cd4bb",
+        "evaluation": "6d7a7727c40e3f996ceffb377b93c6e9977b029c6c9566f3d1b5bcbfe090e099",
+        "episodes": "5f98e2dfc989882f06d36e5e3b74eaef0ae272cf38a41e8c8ea6e632772a9503"
+      }
+    },
+    {
+      "policy": "belief",
+      "seed": 13,
+      "actual_steps": 300032,
+      "training_seconds": 235.92610540008172,
+      "environment_seeds": [
+        130000,
+        130001,
+        130002,
+        130003,
+        130004,
+        130005,
+        130006,
+        130007
+      ],
+      "checkpoint": "results\\followup_budget\\belief\\seed_13\\model.zip",
+      "checkpoint_sha256": "05a567a95544da53220de6c36a728b770c411e406d5d6db710b58e4df33c61b5",
+      "metadata": "results\\followup_budget\\belief\\seed_13\\metadata.json",
+      "evaluation": "results\\followup_budget_evaluation\\belief\\seed_13\\summary.json",
+      "episodes": "results\\followup_budget_evaluation\\belief\\seed_13\\episodes.csv",
+      "episodes_sha256": "b163357bbf9efb01c45542ed21b261e513dac89015041f86554e0272625d4cad",
+      "artifact_sha256": {
+        "checkpoint": "05a567a95544da53220de6c36a728b770c411e406d5d6db710b58e4df33c61b5",
+        "metadata": "e46d86d5a0b65b5c611e0a5921d7f1097c9bdfff4efccc8ab8a21faa232c78e0",
+        "config": "ae94387d38049aa8eaeafb97070cea21718c1e7fb9e6a25ec57b3f84a37cd4bb",
+        "evaluation": "c3a45a8352dc3e5d7f883c07e8c87373e2aecad8734ab94e0170a8171c17e610",
+        "episodes": "b163357bbf9efb01c45542ed21b261e513dac89015041f86554e0272625d4cad"
+      }
+    },
+    {
+      "policy": "belief",
+      "seed": 14,
+      "actual_steps": 300032,
+      "training_seconds": 206.07200970000122,
+      "environment_seeds": [
+        140000,
+        140001,
+        140002,
+        140003,
+        140004,
+        140005,
+        140006,
+        140007
+      ],
+      "checkpoint": "results\\followup_budget\\belief\\seed_14\\model.zip",
+      "checkpoint_sha256": "c452c5b48e277af76e911e596f353b6f373a029347d04f679e1c35fc49b6c4b2",
+      "metadata": "results\\followup_budget\\belief\\seed_14\\metadata.json",
+      "evaluation": "results\\followup_budget_evaluation\\belief\\seed_14\\summary.json",
+      "episodes": "results\\followup_budget_evaluation\\belief\\seed_14\\episodes.csv",
+      "episodes_sha256": "12e645601bf3c454f6f8b120498ef19f4885c7ca6b35dccad918cbd9bb8656c2",
+      "artifact_sha256": {
+        "checkpoint": "c452c5b48e277af76e911e596f353b6f373a029347d04f679e1c35fc49b6c4b2",
+        "metadata": "5b5a30bae2a6c206cca7a1ff7a88714f18e7551d8fa446f87b2f66392338f444",
+        "config": "ae94387d38049aa8eaeafb97070cea21718c1e7fb9e6a25ec57b3f84a37cd4bb",
+        "evaluation": "079ccaf1f1fd312bfbd4e3e13ff805240a981c05a19e55d54f242853b9aefd93",
+        "episodes": "12e645601bf3c454f6f8b120498ef19f4885c7ca6b35dccad918cbd9bb8656c2"
+      }
+    },
+    {
+      "policy": "belief",
+      "seed": 15,
+      "actual_steps": 300032,
+      "training_seconds": 190.64396969997324,
+      "environment_seeds": [
+        150000,
+        150001,
+        150002,
+        150003,
+        150004,
+        150005,
+        150006,
+        150007
+      ],
+      "checkpoint": "results\\followup_budget\\belief\\seed_15\\model.zip",
+      "checkpoint_sha256": "39006b38742182582700129d6c59357371594114f27459c13c3c60aa66c0d820",
+      "metadata": "results\\followup_budget\\belief\\seed_15\\metadata.json",
+      "evaluation": "results\\followup_budget_evaluation\\belief\\seed_15\\summary.json",
+      "episodes": "results\\followup_budget_evaluation\\belief\\seed_15\\episodes.csv",
+      "episodes_sha256": "a382a4de5bc863e0965848b9353045a9193a10cdebd761a56843861e3809074a",
+      "artifact_sha256": {
+        "checkpoint": "39006b38742182582700129d6c59357371594114f27459c13c3c60aa66c0d820",
+        "metadata": "5137e459b1b3bfe342bff6b7f598934d0c1ec2cd69767fb073f9075378adde83",
+        "config": "ae94387d38049aa8eaeafb97070cea21718c1e7fb9e6a25ec57b3f84a37cd4bb",
+        "evaluation": "4817e5164f375dcf5d80ca0fe40b634b32a0fa26ff3508a84790b2a7f65b57cb",
+        "episodes": "a382a4de5bc863e0965848b9353045a9193a10cdebd761a56843861e3809074a"
+      }
+    }
+  ],
+  "same_cohort_short_budget_runs": [
+    {
+      "policy": "recurrent",
+      "seed": 11,
+      "actual_steps": 100352,
+      "training_seconds": 126.30350619996898,
+      "environment_seeds": [
+        110000,
+        110001,
+        110002,
+        110003,
+        110004,
+        110005,
+        110006,
+        110007
+      ],
+      "checkpoint": "results\\pilot\\recurrent\\seed_11\\model.zip",
+      "checkpoint_sha256": "7ae2ebd41be03dd8421438eede91b8260883015bd71e8bd01543f0d50690ae32",
+      "metadata": "results\\pilot\\recurrent\\seed_11\\metadata.json",
+      "evaluation": "results\\pilot_on_followup_evaluation\\recurrent\\seed_11\\summary.json",
+      "episodes": "results\\pilot_on_followup_evaluation\\recurrent\\seed_11\\episodes.csv",
+      "episodes_sha256": "4c1a88258ddccdf6646a4661c10c254f0ed5884753f71a4286f27d9aa05d595f",
+      "artifact_sha256": {
+        "checkpoint": "7ae2ebd41be03dd8421438eede91b8260883015bd71e8bd01543f0d50690ae32",
+        "metadata": "4988313a043ee077bc44cb291c40e20c2a9041cf6fdc68497c6174a96c28fd83",
+        "config": "e1d7e66cfe3593f5c7b20c141a1b7a001677b363172c60f7d155bfe499141726",
+        "evaluation": "2aaf0dab1d18a6e2b2793bd35dfcd374fa09d36870586449c36c25ed51c219c5",
+        "episodes": "4c1a88258ddccdf6646a4661c10c254f0ed5884753f71a4286f27d9aa05d595f"
+      }
+    },
+    {
+      "policy": "recurrent",
+      "seed": 12,
+      "actual_steps": 100352,
+      "training_seconds": 129.2331704000244,
+      "environment_seeds": [
+        120000,
+        120001,
+        120002,
+        120003,
+        120004,
+        120005,
+        120006,
+        120007
+      ],
+      "checkpoint": "results\\pilot\\recurrent\\seed_12\\model.zip",
+      "checkpoint_sha256": "2d018f5672b03065fd08119d86128b793412ad0a0bae1fd691334a0d2423f7f2",
+      "metadata": "results\\pilot\\recurrent\\seed_12\\metadata.json",
+      "evaluation": "results\\pilot_on_followup_evaluation\\recurrent\\seed_12\\summary.json",
+      "episodes": "results\\pilot_on_followup_evaluation\\recurrent\\seed_12\\episodes.csv",
+      "episodes_sha256": "dfd651c0226c3d742b9725ad458f229cce5f75512de5d0febc8fb1d219ff6eaa",
+      "artifact_sha256": {
+        "checkpoint": "2d018f5672b03065fd08119d86128b793412ad0a0bae1fd691334a0d2423f7f2",
+        "metadata": "3d963edf3ef3ddec2147e5ce34540e9c001d00642d93eb23219cb38a65285074",
+        "config": "e1d7e66cfe3593f5c7b20c141a1b7a001677b363172c60f7d155bfe499141726",
+        "evaluation": "9057a15228a04eecc621c1f43861dba0424e4b920f444b30fb5bebd46cc2dda3",
+        "episodes": "dfd651c0226c3d742b9725ad458f229cce5f75512de5d0febc8fb1d219ff6eaa"
+      }
+    },
+    {
+      "policy": "recurrent",
+      "seed": 13,
+      "actual_steps": 100352,
+      "training_seconds": 125.41053550003562,
+      "environment_seeds": [
+        130000,
+        130001,
+        130002,
+        130003,
+        130004,
+        130005,
+        130006,
+        130007
+      ],
+      "checkpoint": "results\\pilot\\recurrent\\seed_13\\model.zip",
+      "checkpoint_sha256": "fd91cc9efb2576a8ee129f4ababcf65e2ec6823f58d9f9286fc6cbeaf4d3089a",
+      "metadata": "results\\pilot\\recurrent\\seed_13\\metadata.json",
+      "evaluation": "results\\pilot_on_followup_evaluation\\recurrent\\seed_13\\summary.json",
+      "episodes": "results\\pilot_on_followup_evaluation\\recurrent\\seed_13\\episodes.csv",
+      "episodes_sha256": "dc96a7033a0e9e42747301de6b75fe5237034d7e19750bc46572c0dbbd7eb14b",
+      "artifact_sha256": {
+        "checkpoint": "fd91cc9efb2576a8ee129f4ababcf65e2ec6823f58d9f9286fc6cbeaf4d3089a",
+        "metadata": "216ba373e53d237c8835761f29f49214ace8903b8c8c1a1b0308cf89c6cc87f5",
+        "config": "e1d7e66cfe3593f5c7b20c141a1b7a001677b363172c60f7d155bfe499141726",
+        "evaluation": "73913cda3754ff373919d3fb6fe136e76faac1f0b08c21d426ef45c0c5510428",
+        "episodes": "dc96a7033a0e9e42747301de6b75fe5237034d7e19750bc46572c0dbbd7eb14b"
+      }
+    },
+    {
+      "policy": "recurrent",
+      "seed": 14,
+      "actual_steps": 100352,
+      "training_seconds": 125.34848769998644,
+      "environment_seeds": [
+        140000,
+        140001,
+        140002,
+        140003,
+        140004,
+        140005,
+        140006,
+        140007
+      ],
+      "checkpoint": "results\\pilot\\recurrent\\seed_14\\model.zip",
+      "checkpoint_sha256": "7d43815a736f7a0ce8cf8f8ba43538cca6eb87a9ebf38ce3d1204c526dd2a6e9",
+      "metadata": "results\\pilot\\recurrent\\seed_14\\metadata.json",
+      "evaluation": "results\\pilot_on_followup_evaluation\\recurrent\\seed_14\\summary.json",
+      "episodes": "results\\pilot_on_followup_evaluation\\recurrent\\seed_14\\episodes.csv",
+      "episodes_sha256": "ac9b3ebfd7ecc8ba918aa70bd00429f25b2c0dc689018b8fb4adefc96f8ca721",
+      "artifact_sha256": {
+        "checkpoint": "7d43815a736f7a0ce8cf8f8ba43538cca6eb87a9ebf38ce3d1204c526dd2a6e9",
+        "metadata": "1d265cebecdf7c0f47363adbff28166879f4cc71f73dd064e5f1b4ba83183fa8",
+        "config": "e1d7e66cfe3593f5c7b20c141a1b7a001677b363172c60f7d155bfe499141726",
+        "evaluation": "871f6298d3a734e1803dfb1d9d8370d51eb63393e90ac66d0dd41a94bc560a56",
+        "episodes": "ac9b3ebfd7ecc8ba918aa70bd00429f25b2c0dc689018b8fb4adefc96f8ca721"
+      }
+    },
+    {
+      "policy": "recurrent",
+      "seed": 15,
+      "actual_steps": 100352,
+      "training_seconds": 127.92204229999334,
+      "environment_seeds": [
+        150000,
+        150001,
+        150002,
+        150003,
+        150004,
+        150005,
+        150006,
+        150007
+      ],
+      "checkpoint": "results\\pilot\\recurrent\\seed_15\\model.zip",
+      "checkpoint_sha256": "3ca4f0116766be44392042b502950ca84c5a3b88497bc05ab4e81875d65217e2",
+      "metadata": "results\\pilot\\recurrent\\seed_15\\metadata.json",
+      "evaluation": "results\\pilot_on_followup_evaluation\\recurrent\\seed_15\\summary.json",
+      "episodes": "results\\pilot_on_followup_evaluation\\recurrent\\seed_15\\episodes.csv",
+      "episodes_sha256": "f410dde3829c773df96503b0ab142d177951fff1025727b93cb07a6d1529e3c5",
+      "artifact_sha256": {
+        "checkpoint": "3ca4f0116766be44392042b502950ca84c5a3b88497bc05ab4e81875d65217e2",
+        "metadata": "dfabe53d77563c28ffc4e71560c641dc52e2c2fc03464bdc65927b3e9077f729",
+        "config": "e1d7e66cfe3593f5c7b20c141a1b7a001677b363172c60f7d155bfe499141726",
+        "evaluation": "9a4375a5218a5020a2c2a3d946386e3ea3ddf80f3177ffbeceeb8bb723cdbc2a",
+        "episodes": "f410dde3829c773df96503b0ab142d177951fff1025727b93cb07a6d1529e3c5"
+      }
+    },
+    {
+      "policy": "feedforward",
+      "seed": 11,
+      "actual_steps": 100352,
+      "training_seconds": 59.5597266999539,
+      "environment_seeds": [
+        110000,
+        110001,
+        110002,
+        110003,
+        110004,
+        110005,
+        110006,
+        110007
+      ],
+      "checkpoint": "results\\pilot\\feedforward\\seed_11\\model.zip",
+      "checkpoint_sha256": "5996d652d9d8420f07168b8231a820b5fa77b936afbed6d50a1c212abdc6f466",
+      "metadata": "results\\pilot\\feedforward\\seed_11\\metadata.json",
+      "evaluation": "results\\pilot_on_followup_evaluation\\feedforward\\seed_11\\summary.json",
+      "episodes": "results\\pilot_on_followup_evaluation\\feedforward\\seed_11\\episodes.csv",
+      "episodes_sha256": "cb407a4b2927ab92fe25e51e9d9d38010be140943b0e9ed0edd00ca085ea7bd2",
+      "artifact_sha256": {
+        "checkpoint": "5996d652d9d8420f07168b8231a820b5fa77b936afbed6d50a1c212abdc6f466",
+        "metadata": "41e38a81b55cf872fa32b1e0af2d1a69a93cf453d9c05c1a38bfac650da5a554",
+        "config": "e1d7e66cfe3593f5c7b20c141a1b7a001677b363172c60f7d155bfe499141726",
+        "evaluation": "d46cc2c17c726d21d3d128d74333c36860faf9c55eb2c4ad31e752c666f2389a",
+        "episodes": "cb407a4b2927ab92fe25e51e9d9d38010be140943b0e9ed0edd00ca085ea7bd2"
+      }
+    },
+    {
+      "policy": "feedforward",
+      "seed": 12,
+      "actual_steps": 100352,
+      "training_seconds": 59.18602739996277,
+      "environment_seeds": [
+        120000,
+        120001,
+        120002,
+        120003,
+        120004,
+        120005,
+        120006,
+        120007
+      ],
+      "checkpoint": "results\\pilot\\feedforward\\seed_12\\model.zip",
+      "checkpoint_sha256": "d23752031e3526cb9918c6d47522eff444feea1586f97b9204b7c2f9bab14a5c",
+      "metadata": "results\\pilot\\feedforward\\seed_12\\metadata.json",
+      "evaluation": "results\\pilot_on_followup_evaluation\\feedforward\\seed_12\\summary.json",
+      "episodes": "results\\pilot_on_followup_evaluation\\feedforward\\seed_12\\episodes.csv",
+      "episodes_sha256": "d407b8e5d40141246c48de3b623f3b96336e01212a44af6f4e0ca54927a25774",
+      "artifact_sha256": {
+        "checkpoint": "d23752031e3526cb9918c6d47522eff444feea1586f97b9204b7c2f9bab14a5c",
+        "metadata": "4763f511c44a1265e5ee44a15f52c38b4b1c31ebf69583e4d5783fc24eb0d369",
+        "config": "e1d7e66cfe3593f5c7b20c141a1b7a001677b363172c60f7d155bfe499141726",
+        "evaluation": "b54ba3e26eb5da3f249d322c79f12f9bb3858ee787493990dea73b4d305fe741",
+        "episodes": "d407b8e5d40141246c48de3b623f3b96336e01212a44af6f4e0ca54927a25774"
+      }
+    },
+    {
+      "policy": "feedforward",
+      "seed": 13,
+      "actual_steps": 100352,
+      "training_seconds": 61.29177039989736,
+      "environment_seeds": [
+        130000,
+        130001,
+        130002,
+        130003,
+        130004,
+        130005,
+        130006,
+        130007
+      ],
+      "checkpoint": "results\\pilot\\feedforward\\seed_13\\model.zip",
+      "checkpoint_sha256": "ebfcceb9d6305fc9e111e340796def6d08a4e7cec7a1882e13809bb135ec1cac",
+      "metadata": "results\\pilot\\feedforward\\seed_13\\metadata.json",
+      "evaluation": "results\\pilot_on_followup_evaluation\\feedforward\\seed_13\\summary.json",
+      "episodes": "results\\pilot_on_followup_evaluation\\feedforward\\seed_13\\episodes.csv",
+      "episodes_sha256": "d936f3466f954343a089f66c9b520727ead8f856c681a3148be35a3bd76ec393",
+      "artifact_sha256": {
+        "checkpoint": "ebfcceb9d6305fc9e111e340796def6d08a4e7cec7a1882e13809bb135ec1cac",
+        "metadata": "e7cd59fb6df15917be64577fefbe5e4fbbbcc3b01059c1cac4a22bbb22cd2585",
+        "config": "e1d7e66cfe3593f5c7b20c141a1b7a001677b363172c60f7d155bfe499141726",
+        "evaluation": "d06e3892aed64fd579b32e153982a3d1fc936f26458470e59e144c46c1832ae8",
+        "episodes": "d936f3466f954343a089f66c9b520727ead8f856c681a3148be35a3bd76ec393"
+      }
+    },
+    {
+      "policy": "feedforward",
+      "seed": 14,
+      "actual_steps": 100352,
+      "training_seconds": 60.109715900034644,
+      "environment_seeds": [
+        140000,
+        140001,
+        140002,
+        140003,
+        140004,
+        140005,
+        140006,
+        140007
+      ],
+      "checkpoint": "results\\pilot\\feedforward\\seed_14\\model.zip",
+      "checkpoint_sha256": "14e1ce4031bf12569f3f06fd8d210b1e2d56e36205b8bb8cf6275dd4c1356dc9",
+      "metadata": "results\\pilot\\feedforward\\seed_14\\metadata.json",
+      "evaluation": "results\\pilot_on_followup_evaluation\\feedforward\\seed_14\\summary.json",
+      "episodes": "results\\pilot_on_followup_evaluation\\feedforward\\seed_14\\episodes.csv",
+      "episodes_sha256": "42178b494a753f26b33f686e430ea3ce1150f3515b773e64e470096de89eb74b",
+      "artifact_sha256": {
+        "checkpoint": "14e1ce4031bf12569f3f06fd8d210b1e2d56e36205b8bb8cf6275dd4c1356dc9",
+        "metadata": "c27f4f4c587cdde80b4df9c48a38d18cfa152ee64ad373986f565e3d7738526e",
+        "config": "e1d7e66cfe3593f5c7b20c141a1b7a001677b363172c60f7d155bfe499141726",
+        "evaluation": "772f5b4c2a40c54208cd94e12c18f79d021a17bdbaa94d6d0bd04ff4f1ecb707",
+        "episodes": "42178b494a753f26b33f686e430ea3ce1150f3515b773e64e470096de89eb74b"
+      }
+    },
+    {
+      "policy": "feedforward",
+      "seed": 15,
+      "actual_steps": 100352,
+      "training_seconds": 61.23506209999323,
+      "environment_seeds": [
+        150000,
+        150001,
+        150002,
+        150003,
+        150004,
+        150005,
+        150006,
+        150007
+      ],
+      "checkpoint": "results\\pilot\\feedforward\\seed_15\\model.zip",
+      "checkpoint_sha256": "49b9b093c5ae22cb90ae473d48a91765c3ae898e56d85bc0bd40f069856e4c7c",
+      "metadata": "results\\pilot\\feedforward\\seed_15\\metadata.json",
+      "evaluation": "results\\pilot_on_followup_evaluation\\feedforward\\seed_15\\summary.json",
+      "episodes": "results\\pilot_on_followup_evaluation\\feedforward\\seed_15\\episodes.csv",
+      "episodes_sha256": "1a6b4ed67ffd7b614dd890429a64da175089e465b3a34614c5c91e292eea9757",
+      "artifact_sha256": {
+        "checkpoint": "49b9b093c5ae22cb90ae473d48a91765c3ae898e56d85bc0bd40f069856e4c7c",
+        "metadata": "212d60a338d091e6a8c27dadd32c4ea42d5a0e7b91bc905d9a631a3c7dc443b6",
+        "config": "e1d7e66cfe3593f5c7b20c141a1b7a001677b363172c60f7d155bfe499141726",
+        "evaluation": "d2a145911dc7aa48e5aa9e1b3d8fa811bea897b9a6e9e5fdcd99b3251e394cb5",
+        "episodes": "1a6b4ed67ffd7b614dd890429a64da175089e465b3a34614c5c91e292eea9757"
+      }
+    },
+    {
+      "policy": "history",
+      "seed": 11,
+      "actual_steps": 100352,
+      "training_seconds": 62.102479699999094,
+      "environment_seeds": [
+        110000,
+        110001,
+        110002,
+        110003,
+        110004,
+        110005,
+        110006,
+        110007
+      ],
+      "checkpoint": "results\\pilot\\history\\seed_11\\model.zip",
+      "checkpoint_sha256": "6275a82d252be7fab9e0a98d6f9d2844f6ab38cf3f3390e8f4ed3cf9120a14d1",
+      "metadata": "results\\pilot\\history\\seed_11\\metadata.json",
+      "evaluation": "results\\pilot_on_followup_evaluation\\history\\seed_11\\summary.json",
+      "episodes": "results\\pilot_on_followup_evaluation\\history\\seed_11\\episodes.csv",
+      "episodes_sha256": "0db894464b476db89e99b70665601dab71a3362b9982d65a13887a8998be5b77",
+      "artifact_sha256": {
+        "checkpoint": "6275a82d252be7fab9e0a98d6f9d2844f6ab38cf3f3390e8f4ed3cf9120a14d1",
+        "metadata": "9f8bda2638e76e4c470afb1ee76189f7925013b472ac9f1f6c30f2ee0302c303",
+        "config": "e1d7e66cfe3593f5c7b20c141a1b7a001677b363172c60f7d155bfe499141726",
+        "evaluation": "744190712506cbe94fa58336bb9d609477a980ee14fd4740510d34c897f65154",
+        "episodes": "0db894464b476db89e99b70665601dab71a3362b9982d65a13887a8998be5b77"
+      }
+    },
+    {
+      "policy": "history",
+      "seed": 12,
+      "actual_steps": 100352,
+      "training_seconds": 61.97894000005908,
+      "environment_seeds": [
+        120000,
+        120001,
+        120002,
+        120003,
+        120004,
+        120005,
+        120006,
+        120007
+      ],
+      "checkpoint": "results\\pilot\\history\\seed_12\\model.zip",
+      "checkpoint_sha256": "fc5d59f448f6090ca4dbd8f55dd0dd2259eec4e1b2a92eb1bc52f7825262f55b",
+      "metadata": "results\\pilot\\history\\seed_12\\metadata.json",
+      "evaluation": "results\\pilot_on_followup_evaluation\\history\\seed_12\\summary.json",
+      "episodes": "results\\pilot_on_followup_evaluation\\history\\seed_12\\episodes.csv",
+      "episodes_sha256": "0a647066d2f8fd2f43ba85d7bd1a7e53c7e69e16b2b2992ff4787cea66de1f5a",
+      "artifact_sha256": {
+        "checkpoint": "fc5d59f448f6090ca4dbd8f55dd0dd2259eec4e1b2a92eb1bc52f7825262f55b",
+        "metadata": "e1f47c06f3d9c2cf770bb73ac60160fea66df21a6d7072c1af112f4e86785b63",
+        "config": "e1d7e66cfe3593f5c7b20c141a1b7a001677b363172c60f7d155bfe499141726",
+        "evaluation": "5e4b55859cac78fb21208b29249eb922a681e07eae20db5e35c9f5f65aa236b9",
+        "episodes": "0a647066d2f8fd2f43ba85d7bd1a7e53c7e69e16b2b2992ff4787cea66de1f5a"
+      }
+    },
+    {
+      "policy": "history",
+      "seed": 13,
+      "actual_steps": 100352,
+      "training_seconds": 61.55884149996564,
+      "environment_seeds": [
+        130000,
+        130001,
+        130002,
+        130003,
+        130004,
+        130005,
+        130006,
+        130007
+      ],
+      "checkpoint": "results\\pilot\\history\\seed_13\\model.zip",
+      "checkpoint_sha256": "ef3404759cc3a5829542210f48f0179f5d5e00861a7c5aa3750f92ff4a885f84",
+      "metadata": "results\\pilot\\history\\seed_13\\metadata.json",
+      "evaluation": "results\\pilot_on_followup_evaluation\\history\\seed_13\\summary.json",
+      "episodes": "results\\pilot_on_followup_evaluation\\history\\seed_13\\episodes.csv",
+      "episodes_sha256": "e2d9b8187ad9e71f23b9a2f3119cbe544690c63473ab3f568127c5891736a991",
+      "artifact_sha256": {
+        "checkpoint": "ef3404759cc3a5829542210f48f0179f5d5e00861a7c5aa3750f92ff4a885f84",
+        "metadata": "7d117f787b4d5b84184f88a6471643e1f66e6a55b34853be6a9a58599d252db2",
+        "config": "e1d7e66cfe3593f5c7b20c141a1b7a001677b363172c60f7d155bfe499141726",
+        "evaluation": "afe289eddea52bb9ca850bf2f381e5008c1dc7c3adb2db297be12d811e9726bc",
+        "episodes": "e2d9b8187ad9e71f23b9a2f3119cbe544690c63473ab3f568127c5891736a991"
+      }
+    },
+    {
+      "policy": "history",
+      "seed": 14,
+      "actual_steps": 100352,
+      "training_seconds": 61.17709589994047,
+      "environment_seeds": [
+        140000,
+        140001,
+        140002,
+        140003,
+        140004,
+        140005,
+        140006,
+        140007
+      ],
+      "checkpoint": "results\\pilot\\history\\seed_14\\model.zip",
+      "checkpoint_sha256": "f544a136980e27a4812d4d139a42ecb892b75ba72421cf4713ca2e90f239dbcd",
+      "metadata": "results\\pilot\\history\\seed_14\\metadata.json",
+      "evaluation": "results\\pilot_on_followup_evaluation\\history\\seed_14\\summary.json",
+      "episodes": "results\\pilot_on_followup_evaluation\\history\\seed_14\\episodes.csv",
+      "episodes_sha256": "24c7ec36bd4d0920f4349f56fbda2af4ce2647258c50b56dda4e1cb1e0b0ea04",
+      "artifact_sha256": {
+        "checkpoint": "f544a136980e27a4812d4d139a42ecb892b75ba72421cf4713ca2e90f239dbcd",
+        "metadata": "0886acf4298fba0f31fe9e26efc516eb094f2233000b81786ccd7f2391dc6e25",
+        "config": "e1d7e66cfe3593f5c7b20c141a1b7a001677b363172c60f7d155bfe499141726",
+        "evaluation": "294b0208755f722a5d2116a3c5a01a6ff3ec2c64defb6a3061580b11395ded33",
+        "episodes": "24c7ec36bd4d0920f4349f56fbda2af4ce2647258c50b56dda4e1cb1e0b0ea04"
+      }
+    },
+    {
+      "policy": "history",
+      "seed": 15,
+      "actual_steps": 100352,
+      "training_seconds": 62.333620900055394,
+      "environment_seeds": [
+        150000,
+        150001,
+        150002,
+        150003,
+        150004,
+        150005,
+        150006,
+        150007
+      ],
+      "checkpoint": "results\\pilot\\history\\seed_15\\model.zip",
+      "checkpoint_sha256": "3b565c4e65599d171dd9912c4f44e0845cbc583741eafb173962b14ed749554f",
+      "metadata": "results\\pilot\\history\\seed_15\\metadata.json",
+      "evaluation": "results\\pilot_on_followup_evaluation\\history\\seed_15\\summary.json",
+      "episodes": "results\\pilot_on_followup_evaluation\\history\\seed_15\\episodes.csv",
+      "episodes_sha256": "feb54890bf44913df7bfc820fe7c1fb3a6b07c2e9d3586e2ccc19ba05b3282f7",
+      "artifact_sha256": {
+        "checkpoint": "3b565c4e65599d171dd9912c4f44e0845cbc583741eafb173962b14ed749554f",
+        "metadata": "4d680740a603f2323ee87799179054997eb6c082de084c17fb4cac841f0abcf3",
+        "config": "e1d7e66cfe3593f5c7b20c141a1b7a001677b363172c60f7d155bfe499141726",
+        "evaluation": "c6578480bd912a3f9e3a94ba73c21787ba88e26b99e140431b85129253bf97e5",
+        "episodes": "feb54890bf44913df7bfc820fe7c1fb3a6b07c2e9d3586e2ccc19ba05b3282f7"
+      }
+    },
+    {
+      "policy": "belief",
+      "seed": 11,
+      "actual_steps": 100352,
+      "training_seconds": 65.30416299996432,
+      "environment_seeds": [
+        110000,
+        110001,
+        110002,
+        110003,
+        110004,
+        110005,
+        110006,
+        110007
+      ],
+      "checkpoint": "results\\pilot\\belief\\seed_11\\model.zip",
+      "checkpoint_sha256": "8741a1699f62b7d346a2c80c192f8c38044de0358fe37042021ccb216e9ab34d",
+      "metadata": "results\\pilot\\belief\\seed_11\\metadata.json",
+      "evaluation": "results\\pilot_on_followup_evaluation\\belief\\seed_11\\summary.json",
+      "episodes": "results\\pilot_on_followup_evaluation\\belief\\seed_11\\episodes.csv",
+      "episodes_sha256": "2119f552a7db73439a73bced6f8138529521c194be39f0da8807d767d1a5061b",
+      "artifact_sha256": {
+        "checkpoint": "8741a1699f62b7d346a2c80c192f8c38044de0358fe37042021ccb216e9ab34d",
+        "metadata": "f7a36c764969b43a9852485fd3d0d1c075d76761ff7ffee83de866cc9d9e12e4",
+        "config": "e1d7e66cfe3593f5c7b20c141a1b7a001677b363172c60f7d155bfe499141726",
+        "evaluation": "4d6d89166f1228c47864299850b05cee69cc1b15f818ee4b8808d433f70f96e5",
+        "episodes": "2119f552a7db73439a73bced6f8138529521c194be39f0da8807d767d1a5061b"
+      }
+    },
+    {
+      "policy": "belief",
+      "seed": 12,
+      "actual_steps": 100352,
+      "training_seconds": 64.71188070008066,
+      "environment_seeds": [
+        120000,
+        120001,
+        120002,
+        120003,
+        120004,
+        120005,
+        120006,
+        120007
+      ],
+      "checkpoint": "results\\pilot\\belief\\seed_12\\model.zip",
+      "checkpoint_sha256": "cae5c07a6772ca9906ea6ef9f96e022f653b1be8d0080b7479d5a0257a5f5547",
+      "metadata": "results\\pilot\\belief\\seed_12\\metadata.json",
+      "evaluation": "results\\pilot_on_followup_evaluation\\belief\\seed_12\\summary.json",
+      "episodes": "results\\pilot_on_followup_evaluation\\belief\\seed_12\\episodes.csv",
+      "episodes_sha256": "5eeee4fd5bc2b3ee7880b4ebbb8de6c597cc30a81b362c33241a0b752de55a79",
+      "artifact_sha256": {
+        "checkpoint": "cae5c07a6772ca9906ea6ef9f96e022f653b1be8d0080b7479d5a0257a5f5547",
+        "metadata": "1e87223f0a3918dbc3cd8b103c04692efe87125de848b592955369afbb1521b5",
+        "config": "e1d7e66cfe3593f5c7b20c141a1b7a001677b363172c60f7d155bfe499141726",
+        "evaluation": "e744a679fd94ef6c74fd5ded342641120ceedc8eb39c36c2b109439d5324ec66",
+        "episodes": "5eeee4fd5bc2b3ee7880b4ebbb8de6c597cc30a81b362c33241a0b752de55a79"
+      }
+    },
+    {
+      "policy": "belief",
+      "seed": 13,
+      "actual_steps": 100352,
+      "training_seconds": 64.3120149000315,
+      "environment_seeds": [
+        130000,
+        130001,
+        130002,
+        130003,
+        130004,
+        130005,
+        130006,
+        130007
+      ],
+      "checkpoint": "results\\pilot\\belief\\seed_13\\model.zip",
+      "checkpoint_sha256": "e1ee7c2826c5c42cc4d40d903a8a36b67fc34b01d07368a0346e1fb597181915",
+      "metadata": "results\\pilot\\belief\\seed_13\\metadata.json",
+      "evaluation": "results\\pilot_on_followup_evaluation\\belief\\seed_13\\summary.json",
+      "episodes": "results\\pilot_on_followup_evaluation\\belief\\seed_13\\episodes.csv",
+      "episodes_sha256": "28d3025643d7307c5344e0c16fa2f17b32d8e23f6e926e514185b27626653aa7",
+      "artifact_sha256": {
+        "checkpoint": "e1ee7c2826c5c42cc4d40d903a8a36b67fc34b01d07368a0346e1fb597181915",
+        "metadata": "140af26fc487f40aa4e9ceeb69ba52dee0899acb35f709d573f2d6d1030e4449",
+        "config": "e1d7e66cfe3593f5c7b20c141a1b7a001677b363172c60f7d155bfe499141726",
+        "evaluation": "b5ee29e1b570e3d21f4f7db052c5713196d29805c814987f803998e4a580ee3a",
+        "episodes": "28d3025643d7307c5344e0c16fa2f17b32d8e23f6e926e514185b27626653aa7"
+      }
+    },
+    {
+      "policy": "belief",
+      "seed": 14,
+      "actual_steps": 100352,
+      "training_seconds": 65.2810592999449,
+      "environment_seeds": [
+        140000,
+        140001,
+        140002,
+        140003,
+        140004,
+        140005,
+        140006,
+        140007
+      ],
+      "checkpoint": "results\\pilot\\belief\\seed_14\\model.zip",
+      "checkpoint_sha256": "9b0ab30a4b4659f40012ca845faf5a96b6ccda5024e02c7cec91a353b6013ac8",
+      "metadata": "results\\pilot\\belief\\seed_14\\metadata.json",
+      "evaluation": "results\\pilot_on_followup_evaluation\\belief\\seed_14\\summary.json",
+      "episodes": "results\\pilot_on_followup_evaluation\\belief\\seed_14\\episodes.csv",
+      "episodes_sha256": "d0711875fdf5e99e2775d665f52bdf59e2925a5b5c636fcadaf160d7fc40b558",
+      "artifact_sha256": {
+        "checkpoint": "9b0ab30a4b4659f40012ca845faf5a96b6ccda5024e02c7cec91a353b6013ac8",
+        "metadata": "db3afd939385d9c7e18e4fcdf358fabaf9150ba263ac03a47d3c3973c2983289",
+        "config": "e1d7e66cfe3593f5c7b20c141a1b7a001677b363172c60f7d155bfe499141726",
+        "evaluation": "054267bad5b53abb8c69155a0ba2ebbe4630bf20c24f8cce65447368eeb625e7",
+        "episodes": "d0711875fdf5e99e2775d665f52bdf59e2925a5b5c636fcadaf160d7fc40b558"
+      }
+    },
+    {
+      "policy": "belief",
+      "seed": 15,
+      "actual_steps": 100352,
+      "training_seconds": 66.5422050000634,
+      "environment_seeds": [
+        150000,
+        150001,
+        150002,
+        150003,
+        150004,
+        150005,
+        150006,
+        150007
+      ],
+      "checkpoint": "results\\pilot\\belief\\seed_15\\model.zip",
+      "checkpoint_sha256": "958b18a26799d9acde158944842c9a2df5c5f2df665a2a00469920769f28a726",
+      "metadata": "results\\pilot\\belief\\seed_15\\metadata.json",
+      "evaluation": "results\\pilot_on_followup_evaluation\\belief\\seed_15\\summary.json",
+      "episodes": "results\\pilot_on_followup_evaluation\\belief\\seed_15\\episodes.csv",
+      "episodes_sha256": "fc0358a15eb14ee621d9fc7a873a13bc6331995e70125b7a69e98306093d13b1",
+      "artifact_sha256": {
+        "checkpoint": "958b18a26799d9acde158944842c9a2df5c5f2df665a2a00469920769f28a726",
+        "metadata": "71f2840ac01ae62be3d8e96702f3a492ab71f21b998d24c451ba202e68ea28e0",
+        "config": "e1d7e66cfe3593f5c7b20c141a1b7a001677b363172c60f7d155bfe499141726",
+        "evaluation": "ff0df2085cbe41e0dbb27fd3dd6b5a2dd8e702fb242c63fd2eaac42fb87ef7b4",
+        "episodes": "fc0358a15eb14ee621d9fc7a873a13bc6331995e70125b7a69e98306093d13b1"
+      }
+    }
+  ],
+  "completed_followup_transitions": 6000640,
+  "transitions_beyond_repeated_initial_prefix": 3993600,
+  "summed_training_process_seconds": 5342.3666185999755,
+  "evidence_hashes": {
+    "results\\followup_summary.json": "61e7f53298ccef783c9f8c20d1ef26834b30a44193a62a33c6e142435b82d355",
+    "results\\followup_audit.json": "266f1216be8689c9fabd1c19d192db1f40b63555173296fa89a5497ccf329690",
+    "results\\followup_tests.xml": "55e373dcf8119569ceff056ce09d89ef0f0c0cd16af21da90c15895577230451"
+  },
+  "junit": {
+    "test_cases": 111,
+    "passed": 111,
+    "skipped": 0,
+    "failures": 0,
+    "errors": 0,
+    "sha256": "55e373dcf8119569ceff056ce09d89ef0f0c0cd16af21da90c15895577230451"
+  },
+  "interpretation": "All final checkpoints at a predeclared 300032-step budget; same training seeds/prefix as initial pilot. Both budgets evaluated on the same fresh 2048 episodes starting at 5m. No independent replication or convergence claim.",
+  "provenance_limit": "Paths, current checkpoint hashes and paired audit hashes are verified. Evaluation files did not record checkpoint content hashes when generated; the manifest cannot independently prove a same-path checkpoint was never replaced before the final audit."
+}

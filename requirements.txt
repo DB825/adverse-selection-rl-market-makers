@@ -1,0 +1,12 @@
+numpy==2.2.6
+gymnasium==1.2.0
+torch==2.8.0
+stable-baselines3==2.7.0
+sb3-contrib==2.7.0
+scikit-learn==1.7.2
+matplotlib==3.10.6
+tensorboard==2.20.0
+pytest==8.4.2
+PyYAML==6.0.2
+pandas==2.3.2
+

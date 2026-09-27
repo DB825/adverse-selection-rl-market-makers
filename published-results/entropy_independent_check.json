@@ -1,0 +1,10 @@
+{
+  "source": "Raw episode CSV subtraction; no summary helper used",
+  "paired_effect": 0.7151206710815412,
+  "seed_t95_ci": [
+    -0.6383481347005711,
+    2.0685894768636537
+  ],
+  "episode_se": 0.040298775180056604,
+  "matches_archived_summary": true
+}

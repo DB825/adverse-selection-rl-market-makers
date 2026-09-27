@@ -1,0 +1,11 @@
+{
+  "command": "python -m pytest -q --disable-warnings",
+  "observed_result": "82 passed, 14 warnings in 9.49s",
+  "passed": 82,
+  "failed": 0,
+  "warnings": 14,
+  "warning_category": "upstream Matplotlib/Pyparsing deprecation warnings",
+  "dependency_check_command": "python -m pip check",
+  "dependency_check_result": "No broken requirements found.",
+  "provenance": "Recorded from completed tool output; tests include simulator, inference, training, evaluation, controls and statistical aggregation."
+}

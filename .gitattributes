@@ -1,0 +1,3 @@
+# Experiment manifests hash exact file bytes. Preserve recorded line endings
+# instead of changing source, JSON or CSV checksums during clone/checkout.
+* -text

@@ -1,0 +1,336 @@
+{
+  "completed_treatment_runs": 5,
+  "control_policy_runs": 20,
+  "audits": [
+    {
+      "seed": 11,
+      "serialized_control_treatment": [
+        {
+          "gae_lambda": 0.95,
+          "gamma": 1.0,
+          "entropy_coefficient": 0.0,
+          "steps": 300032
+        },
+        {
+          "gae_lambda": 0.95,
+          "gamma": 1.0,
+          "entropy_coefficient": 0.01,
+          "steps": 300032
+        }
+      ],
+      "training_seconds": 424.51144979998935,
+      "log_diagnostics": {
+        "undefined_explained_variance_rows": 0,
+        "other_nonfinite_logged_values": 0,
+        "interpretation": "NaN explained variance is allowed only in this diagnostic column. SB3 defines it for zero target variance; historical target variances were not archived, so counts alone do not reconstruct every cause."
+      },
+      "serialized_parameters_all_finite": true,
+      "first_preupdate_rollout_economics_identical": true,
+      "first_rollout_metrics": {
+        "economics/objective_mean": -3.5440683593750006,
+        "economics/profit_mean": -3.4406250000000007,
+        "economics/inventory_penalty_total_mean": 0.103443359375
+      }
+    },
+    {
+      "seed": 12,
+      "serialized_control_treatment": [
+        {
+          "gae_lambda": 0.95,
+          "gamma": 1.0,
+          "entropy_coefficient": 0.0,
+          "steps": 300032
+        },
+        {
+          "gae_lambda": 0.95,
+          "gamma": 1.0,
+          "entropy_coefficient": 0.01,
+          "steps": 300032
+        }
+      ],
+      "training_seconds": 423.05370679998305,
+      "log_diagnostics": {
+        "undefined_explained_variance_rows": 0,
+        "other_nonfinite_logged_values": 0,
+        "interpretation": "NaN explained variance is allowed only in this diagnostic column. SB3 defines it for zero target variance; historical target variances were not archived, so counts alone do not reconstruct every cause."
+      },
+      "serialized_parameters_all_finite": true,
+      "first_preupdate_rollout_economics_identical": true,
+      "first_rollout_metrics": {
+        "economics/objective_mean": -3.2676035156250007,
+        "economics/profit_mean": -3.1625000000000005,
+        "economics/inventory_penalty_total_mean": 0.105103515625
+      }
+    },
+    {
+      "seed": 13,
+      "serialized_control_treatment": [
+        {
+          "gae_lambda": 0.95,
+          "gamma": 1.0,
+          "entropy_coefficient": 0.0,
+          "steps": 300032
+        },
+        {
+          "gae_lambda": 0.95,
+          "gamma": 1.0,
+          "entropy_coefficient": 0.01,
+          "steps": 300032
+        }
+      ],
+      "training_seconds": 423.9723770999117,
+      "log_diagnostics": {
+        "undefined_explained_variance_rows": 0,
+        "other_nonfinite_logged_values": 0,
+        "interpretation": "NaN explained variance is allowed only in this diagnostic column. SB3 defines it for zero target variance; historical target variances were not archived, so counts alone do not reconstruct every cause."
+      },
+      "serialized_parameters_all_finite": true,
+      "first_preupdate_rollout_economics_identical": true,
+      "first_rollout_metrics": {
+        "economics/objective_mean": 0.7222314453124995,
+        "economics/profit_mean": 0.7656249999999994,
+        "economics/inventory_penalty_total_mean": 0.0433935546875
+      }
+    },
+    {
+      "seed": 14,
+      "serialized_control_treatment": [
+        {
+          "gae_lambda": 0.95,
+          "gamma": 1.0,
+          "entropy_coefficient": 0.0,
+          "steps": 300032
+        },
+        {
+          "gae_lambda": 0.95,
+          "gamma": 1.0,
+          "entropy_coefficient": 0.01,
+          "steps": 300032
+        }
+      ],
+      "training_seconds": 430.46393059997354,
+      "log_diagnostics": {
+        "undefined_explained_variance_rows": 0,
+        "other_nonfinite_logged_values": 0,
+        "interpretation": "NaN explained variance is allowed only in this diagnostic column. SB3 defines it for zero target variance; historical target variances were not archived, so counts alone do not reconstruct every cause."
+      },
+      "serialized_parameters_all_finite": true,
+      "first_preupdate_rollout_economics_identical": true,
+      "first_rollout_metrics": {
+        "economics/objective_mean": -0.1654130859375008,
+        "economics/profit_mean": -0.1093750000000008,
+        "economics/inventory_penalty_total_mean": 0.0560380859375
+      }
+    },
+    {
+      "seed": 15,
+      "serialized_control_treatment": [
+        {
+          "gae_lambda": 0.95,
+          "gamma": 1.0,
+          "entropy_coefficient": 0.0,
+          "steps": 300032
+        },
+        {
+          "gae_lambda": 0.95,
+          "gamma": 1.0,
+          "entropy_coefficient": 0.01,
+          "steps": 300032
+        }
+      ],
+      "training_seconds": 431.4575052000582,
+      "log_diagnostics": {
+        "undefined_explained_variance_rows": 0,
+        "other_nonfinite_logged_values": 0,
+        "interpretation": "NaN explained variance is allowed only in this diagnostic column. SB3 defines it for zero target variance; historical target variances were not archived, so counts alone do not reconstruct every cause."
+      },
+      "serialized_parameters_all_finite": true,
+      "first_preupdate_rollout_economics_identical": true,
+      "first_rollout_metrics": {
+        "economics/objective_mean": -0.779822265625,
+        "economics/profit_mean": -0.7187500000000001,
+        "economics/inventory_penalty_total_mean": 0.061072265625
+      }
+    }
+  ],
+  "total_new_training_transitions": 1500160,
+  "tests": {
+    "test_cases": 138,
+    "passed": 138,
+    "skipped": 0,
+    "failures": 0,
+    "errors": 0,
+    "sha256": "0cfd11e9d471278cd080c0891c73122f3562dececc7a6ba7badc5d4f768b7c47"
+  },
+  "artifacts_sha256": {
+    "results\\followup_budget\\recurrent\\seed_11\\model.zip": "0c53bf088e64085d84a56eaf649cf8325684c50e3694ba90bb515fcd98511517",
+    "results\\followup_budget\\recurrent\\seed_11\\metadata.json": "c2799620bab1235f4fa7f25bc94aeee5228a55399dd724569fe127c84566f875",
+    "results\\entropy_control_evaluation\\recurrent\\seed_11\\episodes.csv": "d8c4b8e44ae01e40316e0243192de7d0039e86ed7774419f69cf16ff898fb40b",
+    "results\\entropy_control_evaluation\\recurrent\\seed_11\\summary.json": "2c495852040f8ba9238656fc95f9fb511199b916ea92b45755e2faa0a5de7f68",
+    "results\\followup_budget\\recurrent\\seed_12\\model.zip": "fe7b56fa94dfe2bf48245864713a0bc96fac8c93980b696d9cfc831172d22424",
+    "results\\followup_budget\\recurrent\\seed_12\\metadata.json": "57b0c2da6c8c1fe0497bddd9870599772b0befe01542b908cf111cc3e1d6021c",
+    "results\\entropy_control_evaluation\\recurrent\\seed_12\\episodes.csv": "bbd3df5ed2bdcd5124cdbafca7a46b437eaecc640155ef48ed5f2ec5e773bbd4",
+    "results\\entropy_control_evaluation\\recurrent\\seed_12\\summary.json": "e9b79b138ada09ad2efc3d93619f3d2d22e873d7449710ee3240e5813053f8c5",
+    "results\\followup_budget\\recurrent\\seed_13\\model.zip": "e9d99ad0d2f2e2c2b4bb004f15c2724a5d7197fe8f01a0dc91b24239bb8b52a6",
+    "results\\followup_budget\\recurrent\\seed_13\\metadata.json": "5e6b30243272e918e0b46d2e71398d6aa63c20ec2cbea9c99bedd09d81037545",
+    "results\\entropy_control_evaluation\\recurrent\\seed_13\\episodes.csv": "f8606d5c011cb4de5107fa2e7271ee84f57a3e3808928cae867b1e7ab77d9748",
+    "results\\entropy_control_evaluation\\recurrent\\seed_13\\summary.json": "e57d85ea4d97677a046b4cfe57be684c70ca2e2f05e0a1ebb9f5f36d876f8c29",
+    "results\\followup_budget\\recurrent\\seed_14\\model.zip": "b49d7e59ea8ac24031778f6239fc534b7ea31d3ec4c85e5e9113b04a2a414de7",
+    "results\\followup_budget\\recurrent\\seed_14\\metadata.json": "a54be818fcca26011d02648a1e046c0808b6f1232189dbfbe8ca9763c8e2f018",
+    "results\\entropy_control_evaluation\\recurrent\\seed_14\\episodes.csv": "06844cb5a3b5dfbea32e80442673dcd25be450255e8104020bde2770abf2d12a",
+    "results\\entropy_control_evaluation\\recurrent\\seed_14\\summary.json": "488e9e8db1f8a469eea49857493608d5d0a8cb50541072d833277e55f035df87",
+    "results\\followup_budget\\recurrent\\seed_15\\model.zip": "edf1cef01015a38a8face784555436269aa46a8416d0fb88a42338d7439584fa",
+    "results\\followup_budget\\recurrent\\seed_15\\metadata.json": "9f0d916c62ecf387e9b330af71ed534fd21f28aec8a3ed2669e7557b905203ea",
+    "results\\entropy_control_evaluation\\recurrent\\seed_15\\episodes.csv": "ad14c429214cdc6a40de79149c53d803851160c8682abc87e9960946504f2542",
+    "results\\entropy_control_evaluation\\recurrent\\seed_15\\summary.json": "8a4a4bc62aeb3f95e5974c0e1cc889e7adfb79d7ab874ef7a83e6894b9945e4f",
+    "results\\followup_budget\\feedforward\\seed_11\\model.zip": "b7305c0963825befe0ff8aad2b0e683d270f94fa7fec8c5517824a8f3096a7c8",
+    "results\\followup_budget\\feedforward\\seed_11\\metadata.json": "52376fc0e19017300f1e3fe14e92fdcfa3af54476ad7aade0cf025940363739b",
+    "results\\entropy_control_evaluation\\feedforward\\seed_11\\episodes.csv": "89b5fe0beaf70cd830dce00baab0aa9526938deebf13a9c654eb4b0ef05d6ea4",
+    "results\\entropy_control_evaluation\\feedforward\\seed_11\\summary.json": "a2cab2f65b07c56ae1f1e024ad06d52b9df724105cc66e98d64c786d27c31d1c",
+    "results\\followup_budget\\feedforward\\seed_12\\model.zip": "45d430b57297d96f28cc905176d402c1f84b4b7056eef272f7b6917c4c4919a6",
+    "results\\followup_budget\\feedforward\\seed_12\\metadata.json": "8d52c1c17f6333c2b1b696acb8f56c44bb5a0229a028fde4119cefe8dc361482",
+    "results\\entropy_control_evaluation\\feedforward\\seed_12\\episodes.csv": "1f80f39222e20665e9da4a3a4a46d3252efa99b8f84d3505ef4ddc3cd00f0a80",
+    "results\\entropy_control_evaluation\\feedforward\\seed_12\\summary.json": "22afd3073e4da7fef0babe6dfee9dc40d7b3aeae6ed51ec8d8a6d69eeb150a2d",
+    "results\\followup_budget\\feedforward\\seed_13\\model.zip": "1ef73277e1f1b7df05cec67117fb102b7af8a76243f91c016dd43bffad637aa6",
+    "results\\followup_budget\\feedforward\\seed_13\\metadata.json": "69aae7d571d88c904b472c4365317fba834e4f34fc31b1c4798f8173ed1190af",
+    "results\\entropy_control_evaluation\\feedforward\\seed_13\\episodes.csv": "e0344a60f84a488ea4d3267c172a4a849c217df08cb812d9ce3ea9898d87c04b",
+    "results\\entropy_control_evaluation\\feedforward\\seed_13\\summary.json": "2af53147971fc03d29d4eeaf01c0ab34f33236812ec2621ee115feb618156658",
+    "results\\followup_budget\\feedforward\\seed_14\\model.zip": "d29a91beee42fdecadafa4279ecd7a5be4246190d6e74a45c1927730cf0f1076",
+    "results\\followup_budget\\feedforward\\seed_14\\metadata.json": "6dbf89c59b845896fee35e1b40c2828bd9afb21564df3147a9db0bbb43c5fc2a",
+    "results\\entropy_control_evaluation\\feedforward\\seed_14\\episodes.csv": "c3510286b58cd7ba7a46859e294feed6d56aaa40134f232cc24474967789a6ee",
+    "results\\entropy_control_evaluation\\feedforward\\seed_14\\summary.json": "6ac8cb58dcb5276ec0b9e1390c4d4e4e3df689530deb85000076b9d0f28d326e",
+    "results\\followup_budget\\feedforward\\seed_15\\model.zip": "5d4c0da591e32e3ffbc917d4e84914b1449a85e61781a1ebc89a088982a8a117",
+    "results\\followup_budget\\feedforward\\seed_15\\metadata.json": "0d327ecdcd56a0d21324957728ed451a8665c43c78473fcb6be5c63fae962d70",
+    "results\\entropy_control_evaluation\\feedforward\\seed_15\\episodes.csv": "3c537dd70a2589178c9d68a0d68e78bdc4a4d3efee29d2474915ff8f3e09ee70",
+    "results\\entropy_control_evaluation\\feedforward\\seed_15\\summary.json": "9511a605c60bc4d310eaf8fec6827f37ae2868f51c8f24a77056a4ec08093195",
+    "results\\followup_budget\\history\\seed_11\\model.zip": "82eaca174a6c69fb35c8f929e68b871ddb866751ea3fb9696cfb068d82d1fca1",
+    "results\\followup_budget\\history\\seed_11\\metadata.json": "ba7b8a71e9a569d45dfb30f9936dfdecb88881710117c65efb3a1e94a8454da6",
+    "results\\entropy_control_evaluation\\history\\seed_11\\episodes.csv": "8b3588e3f8a481ac5d74d551a6730a968a646021c38f18c45af5d1aa533e5bf8",
+    "results\\entropy_control_evaluation\\history\\seed_11\\summary.json": "abb6c81d01e5924df4ded45227483c7db4e9be463d561b6f71e592311ec07f6e",
+    "results\\followup_budget\\history\\seed_12\\model.zip": "37dca5c4c28feca1f25bb58d13e11f12f86d288ec5102769006579cdacf12237",
+    "results\\followup_budget\\history\\seed_12\\metadata.json": "623835d5e3febce549b3c014bebb87c19e4348a8681f0759075249e309a2a99d",
+    "results\\entropy_control_evaluation\\history\\seed_12\\episodes.csv": "9f8ef82264e9228463f75adb5b74e2c703896c14b8e1ebb6112b054ab57360b7",
+    "results\\entropy_control_evaluation\\history\\seed_12\\summary.json": "30737c1cadcf4166174894bb8923dbc01b714bb128f6b710c83036bba57f1834",
+    "results\\followup_budget\\history\\seed_13\\model.zip": "55595b3b22daba529b554d5938a207df399b82d78a43253d9fc7044e55a54b20",
+    "results\\followup_budget\\history\\seed_13\\metadata.json": "c087654814bba1ec0042df5c719bd79b066c27634f595402126d8d5ff0ca7d92",
+    "results\\entropy_control_evaluation\\history\\seed_13\\episodes.csv": "1f5439c3141247a9908e1af43a595cc3afcba71075032722378b1bfab8f8f0ae",
+    "results\\entropy_control_evaluation\\history\\seed_13\\summary.json": "e786dc291460527123f11889f5cf3ac8db9b3ed96b5540d302177ecfb10f4eb8",
+    "results\\followup_budget\\history\\seed_14\\model.zip": "3c93c653bd090469755d19d048215dab5cb46ee470b199c211b945b62af09dd8",
+    "results\\followup_budget\\history\\seed_14\\metadata.json": "1e5982acb46813e8e1da40f0809bb38d4f730652bf10879ab6cd3c2c39c1acb2",
+    "results\\entropy_control_evaluation\\history\\seed_14\\episodes.csv": "1171e5c4db8de754f00456050aed149b068445ec64931db639038c162a49de8f",
+    "results\\entropy_control_evaluation\\history\\seed_14\\summary.json": "3952b39cfc029550aa3dd9e2e3cf5cb10943471dbe6cba8aaf26e6ac36d37a06",
+    "results\\followup_budget\\history\\seed_15\\model.zip": "f10682afd03718c8d554cd1237f6b3c43b39393d1df32db9b62b4fe029ee3b94",
+    "results\\followup_budget\\history\\seed_15\\metadata.json": "da1ea6d7646376eac736682128295b9910d066d1ca2349ca90cba8b412de9203",
+    "results\\entropy_control_evaluation\\history\\seed_15\\episodes.csv": "296c32a04463800e49c04b4fb97e4da0e7084128c14a6908c9050124143aac30",
+    "results\\entropy_control_evaluation\\history\\seed_15\\summary.json": "e557b5ab4ff2cc22251b3beb16c928df39d27e305fb201caba683660d95ad651",
+    "results\\followup_budget\\belief\\seed_11\\model.zip": "24c26e331337d4b741ff048a03521c57f806f2b7d36ba2f9a0c9cad584d6d35d",
+    "results\\followup_budget\\belief\\seed_11\\metadata.json": "238fbcbfa5984d407315e565f43193e52a7501214dc204fa781fb23c0a0d8336",
+    "results\\entropy_control_evaluation\\belief\\seed_11\\episodes.csv": "b28e7d30c81cdf4cfe13a109e2dc6a493ed5d3fbced6f57afd00474a5c109e9e",
+    "results\\entropy_control_evaluation\\belief\\seed_11\\summary.json": "ac8625d633570ef58ec16e85940eb87d5c8f7a27263cf1cdddba22d1ec378c3c",
+    "results\\followup_budget\\belief\\seed_12\\model.zip": "6720dcbe865aabf729250d5f215bc1ed7561014bb2346015e887209226d6573c",
+    "results\\followup_budget\\belief\\seed_12\\metadata.json": "0352eed78daa0d6f4de5f021491dca6960153ee9d7ec25162d0f9cc0a4c2c9ce",
+    "results\\entropy_control_evaluation\\belief\\seed_12\\episodes.csv": "76bd5da810f7f0b99f930f80ff278ff52a9de33b24d4f4a4edb340b5914cbb75",
+    "results\\entropy_control_evaluation\\belief\\seed_12\\summary.json": "20c964484718153d590d4704344a4f8dd1681dea0623652812b6520a354d4bac",
+    "results\\followup_budget\\belief\\seed_13\\model.zip": "05a567a95544da53220de6c36a728b770c411e406d5d6db710b58e4df33c61b5",
+    "results\\followup_budget\\belief\\seed_13\\metadata.json": "e46d86d5a0b65b5c611e0a5921d7f1097c9bdfff4efccc8ab8a21faa232c78e0",
+    "results\\entropy_control_evaluation\\belief\\seed_13\\episodes.csv": "abfeb1cb31d508d606f5ea305586c5b081b7cc76464120b8d3c899fe7510393b",
+    "results\\entropy_control_evaluation\\belief\\seed_13\\summary.json": "4d26ea39fba748e06f8e6fbe5f7269ed7d08f628f31cd53f2ec008015015068d",
+    "results\\followup_budget\\belief\\seed_14\\model.zip": "c452c5b48e277af76e911e596f353b6f373a029347d04f679e1c35fc49b6c4b2",
+    "results\\followup_budget\\belief\\seed_14\\metadata.json": "5b5a30bae2a6c206cca7a1ff7a88714f18e7551d8fa446f87b2f66392338f444",
+    "results\\entropy_control_evaluation\\belief\\seed_14\\episodes.csv": "3a972f1b124f19bceeb08dd94bd8d8c116c2a19e7fbe9ff924c77e7a6f4445ec",
+    "results\\entropy_control_evaluation\\belief\\seed_14\\summary.json": "74792d09629f5465dfa1628fa0cac0bf88f5dc25f5b1e17baeaf04b47cd9fcfd",
+    "results\\followup_budget\\belief\\seed_15\\model.zip": "39006b38742182582700129d6c59357371594114f27459c13c3c60aa66c0d820",
+    "results\\followup_budget\\belief\\seed_15\\metadata.json": "5137e459b1b3bfe342bff6b7f598934d0c1ec2cd69767fb073f9075378adde83",
+    "results\\entropy_control_evaluation\\belief\\seed_15\\episodes.csv": "72f1cb3035dd732a6fe57fdf80398cf64b3096f926b5357366d4ea8b0345380a",
+    "results\\entropy_control_evaluation\\belief\\seed_15\\summary.json": "9f9297a2c8bbbafaf1d39a8696de7a3015c21e63eb716443de7348e450ebc4e8",
+    "results\\entropy_001\\recurrent\\seed_11\\model.zip": "2e7b8b16bc0c5a9cb3046b79d43d855e8ded4c3dd10b74a0f1c40cff82edb760",
+    "results\\entropy_001\\recurrent\\seed_11\\metadata.json": "f52930d117ad829ce39dbb3c6c2dc03bb85f7e82f4e6270058dbb37251d2d1cd",
+    "results\\entropy_001\\recurrent\\seed_11\\config.json": "f21ff4fbf3c4c51111dcd6078036aef02ad12348b874ce732d380bf567d6ec1c",
+    "results\\entropy_treatment_evaluation\\recurrent\\seed_11\\episodes.csv": "47fdba207b4802b8162fa00dbd5976c8bb3e8b6aa1ba2d28ff7715f13da5cff1",
+    "results\\entropy_treatment_evaluation\\recurrent\\seed_11\\summary.json": "ce0201ca355114002777bf54dff360b96273748c356d42273cf12d52bc8fee39",
+    "results\\entropy_001\\recurrent\\seed_12\\model.zip": "b4197fce1528c041c5185fb23c3e67a264c194c5d1ee86d4f04dc01be934275b",
+    "results\\entropy_001\\recurrent\\seed_12\\metadata.json": "c1956939424f0222b542ebe2397b677096366d42a10914efec8515ef859378df",
+    "results\\entropy_001\\recurrent\\seed_12\\config.json": "f21ff4fbf3c4c51111dcd6078036aef02ad12348b874ce732d380bf567d6ec1c",
+    "results\\entropy_treatment_evaluation\\recurrent\\seed_12\\episodes.csv": "a8f01804e8c3162f3711c67ab9c12917082900463779453acd930c8141319d0f",
+    "results\\entropy_treatment_evaluation\\recurrent\\seed_12\\summary.json": "3da5bfa0e8d409a014afa0038f89c190b33f1e8b73d30d671eea931b3e0c83a8",
+    "results\\entropy_001\\recurrent\\seed_13\\model.zip": "7d4cf3c8fd8faff3716cb9d4906785802856ba76a08985ca975ab41db044af36",
+    "results\\entropy_001\\recurrent\\seed_13\\metadata.json": "30af7846083a6729e427435489defd7ed59d62f1287dca5133b70bb32877687f",
+    "results\\entropy_001\\recurrent\\seed_13\\config.json": "f21ff4fbf3c4c51111dcd6078036aef02ad12348b874ce732d380bf567d6ec1c",
+    "results\\entropy_treatment_evaluation\\recurrent\\seed_13\\episodes.csv": "50f6b296465a16b5c6eae2817a23280e2a221edaaf403057f9c863d040b269b5",
+    "results\\entropy_treatment_evaluation\\recurrent\\seed_13\\summary.json": "600cdd91f421af34b386cbe89e60e43f295e7aae2ae94687690d632136b20eb8",
+    "results\\entropy_001\\recurrent\\seed_14\\model.zip": "1e6ef3d7d87918b2bf3fcf5d05eb15d368a63e9f9484ab6818b04ff11de9d494",
+    "results\\entropy_001\\recurrent\\seed_14\\metadata.json": "0263cee6cd170d9b3531e5d6e2c4364e8ef63ae1b4a62ba689fbec9ebe365577",
+    "results\\entropy_001\\recurrent\\seed_14\\config.json": "f21ff4fbf3c4c51111dcd6078036aef02ad12348b874ce732d380bf567d6ec1c",
+    "results\\entropy_treatment_evaluation\\recurrent\\seed_14\\episodes.csv": "3ff7e23fd64a2c0325d3db05d60aab844fc4e2f4027bfcd82bc9a164a1493d54",
+    "results\\entropy_treatment_evaluation\\recurrent\\seed_14\\summary.json": "64197625f4b4eb599528e6481a145e3c5639523f94c042e2a50efdc5ae022445",
+    "results\\entropy_001\\recurrent\\seed_15\\model.zip": "5b2e3823e71c9fdafaf260ddeb6547c7aab3b63107ea7392f208219ecae9797e",
+    "results\\entropy_001\\recurrent\\seed_15\\metadata.json": "dbbd5cf2e1fb37cc55d4cf80265458f15a2d2068a928e7244df56f3af7e646f1",
+    "results\\entropy_001\\recurrent\\seed_15\\config.json": "f21ff4fbf3c4c51111dcd6078036aef02ad12348b874ce732d380bf567d6ec1c",
+    "results\\entropy_treatment_evaluation\\recurrent\\seed_15\\episodes.csv": "7c58a9b4650c29c1004a7d6dc8ff006403501da379a9dc1187143b02f35fb5e7",
+    "results\\entropy_treatment_evaluation\\recurrent\\seed_15\\summary.json": "4721336497f71f83ffad26d4aa76e8db01ea77f8b9e92962b56dccc558544cba",
+    "results\\entropy_control_evaluation\\fixed_2\\episodes.csv": "4b3b20f09d90435821638634d0089dd35d5325b10356016af4021fe0b0581f25",
+    "results\\entropy_control_evaluation\\fixed_4\\episodes.csv": "7132540e3e844d5a8507a1fa04150f0553ed83fc8993ea438fb3185ab50c8115",
+    "results\\entropy_control_evaluation\\fixed_5\\episodes.csv": "a979a25b0bdeb87a84f7939b9b674f4b00b9925b1be42cfc0646861492efa5c6",
+    "results\\entropy_control_evaluation\\fixed_8\\episodes.csv": "23acdaed157863bf9026627b88c788699954b6cce0f80b739a0622f89b520953",
+    "results\\entropy_control_evaluation\\fixed_9\\episodes.csv": "adf58ba88673b8237bc6e41e5490fe424589625ff1ee7afef100b4c106e98021",
+    "results\\entropy_control_evaluation\\myopic\\episodes.csv": "08d5d15571a1df8ca9df076d20c9a0455c78ab98c97aaa54f2eefc4e6152579d",
+    "results\\entropy_preflight.json": "be972c26b866fa052f0fafcdaedc79eb5be952d181e18d829bb6ed7e12cddfcd",
+    "results\\entropy_tests.xml": "0cfd11e9d471278cd080c0891c73122f3562dececc7a6ba7badc5d4f768b7c47",
+    "results\\entropy_summary.json": "2d0816e9d696a14307afc4ddf6ba512c9e18c96f513c332b67fa50fd937b35bb",
+    "reports\\entropy_protocol.md": "f4d3edcfba0fb84a2feb61b20eb3d459c693c1144774ce76d8f7fa8efab5b549",
+    "configs\\entropy_001.yaml": "abeff9d0a25314e5fc11f67a35e50114dc6534daf0906bbbeadc5654576c4fb2"
+  },
+  "source_hashes": {
+    "src/__init__.py": "4057183ab54fa597f6ed42091f33def72f29a7b007420ca0f9b63eeaebb77692",
+    "src/accounting.py": "ea49b0a70533db4f93fb044aa30495a8da55bc5837e06c23db9c9f469266397a",
+    "src/artifacts.py": "791c2219feeba03180f70ad57afb756622aa6e320082d0f9ae95f7bd41de99ac",
+    "src/baselines.py": "fb8b401b77afc05787be2f7ee8597921befb90ce298ca1e3d7f063a2100363ac",
+    "src/bayes_filter.py": "ca8e8a647c699f05594f5cdd4447149938fd3b42a32cf2924d54354aead5c946",
+    "src/behavior.py": "3e63bd4de1ffbfb4ff945f56cc8c5fe83325de2cbbdb913b91e77b80199650e7",
+    "src/collect_activations.py": "6a5d1d10990a5200a26f8da5f836af92f9ee6aeeb42eb06c5e238e5b009ede69",
+    "src/customer_model.py": "8531fc4050b243d40d732bbac28d0d25be73f50ec5ad31bb4d9e4f80155c091b",
+    "src/environment.py": "5fa970e38d4e69a297a0c281bd39b1231cb247864b447d30456a8d042ae9169b",
+    "src/evaluate.py": "999a984814936654fb5cf43434a7c94572e951123bd1fb71682335f55f4b6d66",
+    "src/fast_recurrent.py": "a8013641a4d467c3292d897b0228fee40e5018b4a43a8dea03be9a8c1c3c7063",
+    "src/interventions.py": "8e77b4cd4548b8b032b5c0452d76c3fb287e60b0c8cb1fb6d4dc32f14ae0484e",
+    "src/probes.py": "13a439bf84a9a42f8ce79a07e022a3ab0196f7bd79ef00d722463d0e1edc3723",
+    "src/train.py": "e1c60ac45fc236131c3061b0b33e92c05934f92e62ef7c8fb5ae3fab54e6294a",
+    "src/untrained_control.py": "97d3976b1fa3dfad31c413fc0ac51b76ada56be6fcf9f2ff86e5aaf9587e7856",
+    "src/wrappers.py": "06f76e646e3d1cca7f5452065048577551c7288046a521c7c5539bb36a913c7a",
+    "configs/entropy_001.yaml": "abeff9d0a25314e5fc11f67a35e50114dc6534daf0906bbbeadc5654576c4fb2",
+    "configs/followup_budget.yaml": "38d82989578cbccda6e7830f11c0583d6229268be1e2d3ede91ae0dd6e0da867",
+    "configs/gae_lambda_one.yaml": "473b17e9488133266b9b11dfbe154490b2448bf3967028c99f84d14c2646d08e",
+    "configs/large.yaml": "b7ab1c169e3bccf8ca04b600ab63cc23c69c1a82c5ff3910dcb31cb2314dc170",
+    "configs/pilot.yaml": "429d48f495281b43839c690585b91e7eb6d4296cb7337f189a0de4862d383bb1",
+    "configs/smoke.yaml": "3c8f38173764d69e740e8c02498e46a170a2048579442c4620a6964130071208",
+    "scripts/analyze_entropy.py": "88c35e0d8f3d33fd36e682a827a90074af3efc0fc78206b51304e33aa842822a",
+    "scripts/analyze_entropy_probes.py": "b4e129051b5ee8a8cd6be02b9dd92ca5f44f4c51e7ac215f75f98e152bd19826",
+    "scripts/analyze_gae.py": "b136e86e93b3c20b20d843f1dd0e6324008e3345e9a1db4894b2088fdd5d59e5",
+    "scripts/analyze_shift.py": "d7483863c1b37235e4f91923f8d097ad397caaa3bb3c3a23124c76748af7752f",
+    "scripts/audit_followup.py": "c811d325352fd76897bd36b92037932228afedce72cb271da83dd987e37a3b7b",
+    "scripts/decision_relevance.py": "84b0a47216270516c760112ab933a4ea39cc50a48d493a4033582abfd6378d2f",
+    "scripts/entropy_preflight.py": "7e7ec4344f2e6fb13dec8641a0c08aaeec2ae4278cac4e126a3a56558c18f22e",
+    "scripts/gae_preflight.py": "c7bd5ae1b8fa84d883baeeb42c04c55ff6f0ddbbf78d8895262acc28f4b4ccdf",
+    "scripts/make_followup_manifest.py": "0acc26735b7b4ea554b034479bf48255da8e6363c68634fcafa6f14e06ed97c9",
+    "scripts/make_manifest.py": "97e1553b6d5777276014e4edc4f00ed44dcd0f831af350d2cb4841390827f419",
+    "scripts/run_pilot.py": "6da7d9d6dd9ecf3527cfe0ce1d78a7d2f03b15365ecd00a05b2646013a6d2700",
+    "scripts/summarize_followup.py": "f583a255afd180732a73fcc6f411687720da0f3cf8b0f0025b76dfbd96ffc6cd",
+    "scripts/summarize_results.py": "cc7d4eb56470c7f1ce4477aefd31eface05f512e2bf8f8e94d6692340bed15c7",
+    "tests/test_analysis.py": "912ad745fed73231169d27c18dfff2afbdf1ae91602cd705ada965dd9424ab22",
+    "tests/test_bayes.py": "a463ded6fb7fb0226b628b6d86b54efc5cee149015a3e5ef558f3f5f068ee3d1",
+    "tests/test_behavior.py": "0f3bdfd6f856c3e0695cf26e7da40d07a903bc6246d2738a4c06a9722e23d4da",
+    "tests/test_decision_relevance.py": "20df0c2f7e95f1f6c62ada54c5dd60c6aa5b44dc213d7b543303431d31524dd0",
+    "tests/test_entropy_experiment.py": "c69d49e5f94b1c4ab515d66c0318976bcea06728763779f73dcae5fb31a7c2bb",
+    "tests/test_entropy_probe_audit.py": "0f0b49d5daf599d6fd7cddb179299c6288551ed77a4abfd6b60fc8739c09335a",
+    "tests/test_environment.py": "be000edbcac622c284ca0a089ed0189afa25d39db4408b1ca2c9161d61f705de",
+    "tests/test_followup_manifest.py": "c41018aa61cf8a04c1b31b02abf8d83bc7e06caeb9a5cde9c92ab5992559b3aa",
+    "tests/test_followup_summary.py": "6971cc9e51e020686d51531e3637bb37bc529874a6a5d56d0b25f39bdc9d6574",
+    "tests/test_gae_experiment.py": "d0792c3d4403833f0b7eed0aa0173e840d0f8fcb116e763a93b75b1a6cb2b621",
+    "tests/test_summary.py": "e0004db0223685d8e475d3751caa565edf54d7fe4562459a2fae76da2e5a6b6d",
+    "tests/test_training.py": "1c288ba1c0ff94eeb32ee6478b1ab9c395fa0927ec2361043ef05048c2fed653",
+    "tests/test_untrained_control.py": "682323a958354a7b9069701eef8ab1dea88e5c0445a7b1618813994be1c6eb0f"
+  },
+  "dependency_lock_sha256": "9b3c6a215de5777b9077f50cc81a1d8b844a6f89f83b03aa147a2d174203e026",
+  "settings": "Only recurrent entropy coefficient changed; GAE .95 retained",
+  "provenance_limit": "Evaluation summaries record checkpoint paths. Current hashes are archived; treatment evaluations did not independently log checkpoint hashes at collection time."
+}

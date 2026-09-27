@@ -1,0 +1,165 @@
+{
+  "experiment": "Entropy coefficient 0 versus .01; GAE .95; 300032 steps; five paired seeds",
+  "cohort": {
+    "episodes": 2048,
+    "seed_start": 11000000
+  },
+  "primary_contrast": {
+    "mean": 0.7151206710815413,
+    "episode_only_se": 0.040298775180056604,
+    "episode_bootstrap_95_ci": [
+      0.6377835656738265,
+      0.7937521360778793
+    ],
+    "training_seed": {
+      "n": 5,
+      "mean": 0.7151206710815412,
+      "sample_sd": 1.090044333845621,
+      "mean_t95_ci": [
+        -0.6383481347005711,
+        2.0685894768636537
+      ],
+      "degrees_of_freedom": 4
+    },
+    "per_seed_difference_means": {
+      "11": 0.7259763259887666,
+      "12": 1.8511303405761699,
+      "13": 1.7267077026367175,
+      "14": -0.597968902587892,
+      "15": -0.13024211120605503
+    },
+    "paired_training_seeds": [
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "episodes_per_seed": 2048,
+    "fixed_reference_reused_across_seeds": false
+  },
+  "per_seed_minus_fixed_wide": {
+    "11": {
+      "mean": 0.7257192993164032,
+      "episode_only_se": 0.055887003244852865,
+      "episode_bootstrap_95_ci": [
+        0.6193941949844333,
+        0.8352418666839566
+      ],
+      "per_seed_means": null,
+      "training_seed": null
+    },
+    "12": {
+      "mean": 1.5168971405029272,
+      "episode_only_se": 0.055809618654240445,
+      "episode_bootstrap_95_ci": [
+        1.4116299240112278,
+        1.6234059276580781
+      ],
+      "per_seed_means": null,
+      "training_seed": null
+    },
+    "13": {
+      "mean": 0.540144462585447,
+      "episode_only_se": 0.03855742898161448,
+      "episode_bootstrap_95_ci": [
+        0.46445731239318644,
+        0.6164940717697119
+      ],
+      "per_seed_means": null,
+      "training_seed": null
+    },
+    "14": {
+      "mean": -0.6295486755371109,
+      "episode_only_se": 0.040377726478415366,
+      "episode_bootstrap_95_ci": [
+        -0.7099440755844131,
+        -0.5506828935623185
+      ],
+      "per_seed_means": null,
+      "training_seed": null
+    },
+    "15": {
+      "mean": -0.13031535339355504,
+      "episode_only_se": 0.01410772254801383,
+      "episode_bootstrap_95_ci": [
+        -0.15806966381073034,
+        -0.10326943378448514
+      ],
+      "per_seed_means": null,
+      "training_seed": null
+    }
+  },
+  "gate_1": {
+    "decision": "continue",
+    "reason": "Constructive supported-history evidence remains; trajectory prevalence unmeasured."
+  },
+  "gate_2": {
+    "decision": "continue to exploratory decoding",
+    "reason": "Seeds 11, 12 and 13 exceed fixed-wide objective with positive conditional episode intervals and input-dependent action probabilities. Seeds 14 and 15 fail. Retain all five in exploratory probes; the family training-seed intervals still include zero, so reliable learning is not established.",
+    "qualifying_seeds": [
+      11,
+      12,
+      13
+    ],
+    "failed_seeds": [
+      14,
+      15
+    ]
+  },
+  "gate_3": {
+    "decision": "no recurrence benefit demonstrated",
+    "comparison": {
+      "mean": -1.3778950195312492,
+      "episode_only_se": 0.03314248920238363,
+      "episode_bootstrap_95_ci": [
+        -1.4422319445419305,
+        -1.3151872700881952
+      ],
+      "training_seed": {
+        "n": 5,
+        "mean": -1.3778950195312492,
+        "sample_sd": 0.8317508383502303,
+        "mean_t95_ci": [
+          -2.410650090986529,
+          -0.34513994807596937
+        ],
+        "degrees_of_freedom": 4
+      },
+      "per_seed_difference_means": {
+        "11": -0.9612952880859381,
+        "12": -0.3357978057861324,
+        "13": -1.166172546386718,
+        "14": -2.3971413650512687,
+        "15": -2.029068092346189
+      },
+      "paired_training_seeds": [
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "episodes_per_seed": 2048,
+      "fixed_reference_reused_across_seeds": false
+    },
+    "limitation": "Contextual architecture comparison; only recurrent entropy changed."
+  },
+  "gate_4": {
+    "decision": "linear accessibility observed; stronger memory and causal-use claims deferred",
+    "substantive_probes_run": true,
+    "causal_interventions_run": false,
+    "analysis_cohort_start": 12000000,
+    "all_training_seeds_included": [
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "all_planned_probe_runs_completed": 5,
+    "nonlinear_recent_history_control_run": false,
+    "probe_summary": "results/entropy_probe_summary.json",
+    "reason": "State improves on linear history features, but random recurrent controls decode much of the targets and seed uncertainty includes zero for trained-over-untrained adverse-selection gains. Poor economic policies can decode well."
+  }
+}

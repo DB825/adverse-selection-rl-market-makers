@@ -1,0 +1,151 @@
+{
+  "policy": "belief",
+  "checkpoint": "results\\pilot\\belief\\seed_14\\model.zip",
+  "episodes": 1024,
+  "seed_start": 1000000,
+  "seed_stop_exclusive": 1001024,
+  "deterministic": false,
+  "shift": false,
+  "correct_filter": false,
+  "horizon": 64,
+  "inventory_penalty": 0.001,
+  "fee": 0.0,
+  "objective_mean": 2.6406214141845696,
+  "objective_episode_se": 0.08537248045462328,
+  "objective_p05": -1.4432000000000003,
+  "objective_lower5_mean": -2.1474525240384645,
+  "profit_mean": 2.683740234374999,
+  "inventory_penalty_mean": 0.04311882019042969,
+  "action_fractions": [
+    0.0071868896484375,
+    0.0402374267578125,
+    0.4330291748046875,
+    0.0082550048828125,
+    0.05877685546875,
+    0.002655029296875,
+    0.0275115966796875,
+    0.289154052734375,
+    0.1281585693359375,
+    0.005035400390625
+  ],
+  "elapsed_seconds": 2.6877521999413148,
+  "mean_abs_inventory": 4.5663909912109375,
+  "mean_q2": 43.11882019042969,
+  "buy_rate": 0.1883544921875,
+  "sell_rate": 0.1790008544921875,
+  "abstain_rate": 0.005035400390625,
+  "mean_spread": 0.5048311839968856,
+  "mean_center": 0.49416977970023074,
+  "informed_profit_per_execution": -0.13035446609646414,
+  "uninformed_profit_per_execution": 0.3319067064551594,
+  "regimes": [
+    {
+      "value": 0.0,
+      "alpha": 0.05,
+      "p": 0.25,
+      "objective": 1.217512132352941,
+      "profit": 1.2264705882352938,
+      "abstain_rate": 0.036948529411764706,
+      "mean_abs_inventory": 2.248529411764706
+    },
+    {
+      "value": 0.0,
+      "alpha": 0.05,
+      "p": 0.5,
+      "objective": 2.9831958841463413,
+      "profit": 2.989024390243902,
+      "abstain_rate": 0.004954268292682927,
+      "mean_abs_inventory": 1.7145579268292683
+    },
+    {
+      "value": 0.0,
+      "alpha": 0.05,
+      "p": 0.75,
+      "objective": 5.731228645833333,
+      "profit": 5.743333333333333,
+      "abstain_rate": 0.001736111111111111,
+      "mean_abs_inventory": 2.587673611111111
+    },
+    {
+      "value": 0.0,
+      "alpha": 0.3,
+      "p": 0.25,
+      "objective": 0.40548632812499963,
+      "profit": 0.5320312499999996,
+      "abstain_rate": 0.001708984375,
+      "mean_abs_inventory": 9.3515625
+    },
+    {
+      "value": 0.0,
+      "alpha": 0.3,
+      "p": 0.5,
+      "objective": 3.0958250343406597,
+      "profit": 3.163736263736264,
+      "abstain_rate": 0.0010302197802197802,
+      "mean_abs_inventory": 6.640281593406593
+    },
+    {
+      "value": 0.0,
+      "alpha": 0.3,
+      "p": 0.75,
+      "objective": 5.776079915364583,
+      "profit": 5.811979166666667,
+      "abstain_rate": 0.0006510416666666666,
+      "mean_abs_inventory": 4.593587239583333
+    },
+    {
+      "value": 1.0,
+      "alpha": 0.05,
+      "p": 0.25,
+      "objective": 4.214928333333333,
+      "profit": 4.219999999999999,
+      "abstain_rate": 0.01125,
+      "mean_abs_inventory": 1.5395833333333333
+    },
+    {
+      "value": 1.0,
+      "alpha": 0.05,
+      "p": 0.5,
+      "objective": 2.619560427295918,
+      "profit": 2.626020408163265,
+      "abstain_rate": 0.0030293367346938774,
+      "mean_abs_inventory": 1.8515625
+    },
+    {
+      "value": 1.0,
+      "alpha": 0.05,
+      "p": 0.75,
+      "objective": 0.45088849431818173,
+      "profit": 0.4727272727272726,
+      "abstain_rate": 0.0005326704545454545,
+      "mean_abs_inventory": 3.8299005681818183
+    },
+    {
+      "value": 1.0,
+      "alpha": 0.3,
+      "p": 0.25,
+      "objective": 4.040171874999999,
+      "profit": 4.07469135802469,
+      "abstain_rate": 0.0,
+      "mean_abs_inventory": 4.335841049382716
+    },
+    {
+      "value": 1.0,
+      "alpha": 0.3,
+      "p": 0.5,
+      "objective": 1.249365911989794,
+      "profit": 1.328061224489794,
+      "abstain_rate": 0.0,
+      "mean_abs_inventory": 7.300860969387755
+    },
+    {
+      "value": 1.0,
+      "alpha": 0.3,
+      "p": 0.75,
+      "objective": -1.1092925575657928,
+      "profit": -0.9690789473684245,
+      "abstain_rate": 0.0,
+      "mean_abs_inventory": 10.091899671052632
+    }
+  ]
+}

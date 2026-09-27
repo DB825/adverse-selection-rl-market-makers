@@ -1,0 +1,151 @@
+{
+  "policy": "myopic",
+  "checkpoint": null,
+  "episodes": 1024,
+  "seed_start": 1000000,
+  "seed_stop_exclusive": 1001024,
+  "deterministic": false,
+  "shift": false,
+  "correct_filter": false,
+  "horizon": 64,
+  "inventory_penalty": 0.001,
+  "fee": 0.0,
+  "objective_mean": 3.459558074951171,
+  "objective_episode_se": 0.07628379655118159,
+  "objective_p05": 0.03637031249999989,
+  "objective_lower5_mean": -0.6020219350961561,
+  "profit_mean": 3.499267578124999,
+  "inventory_penalty_mean": 0.03970950317382813,
+  "action_fractions": [
+    0.0,
+    0.019989013671875,
+    0.313507080078125,
+    0.0,
+    0.114959716796875,
+    0.2068634033203125,
+    0.0,
+    0.0244140625,
+    0.3202667236328125,
+    0.0
+  ],
+  "elapsed_seconds": 7.688415499986149,
+  "mean_abs_inventory": 4.38079833984375,
+  "mean_q2": 39.709503173828125,
+  "buy_rate": 0.173126220703125,
+  "sell_rate": 0.1708984375,
+  "abstain_rate": 0.0,
+  "mean_spread": 0.5681274414062503,
+  "mean_center": 0.5016777038574217,
+  "informed_profit_per_execution": -0.08682078379568474,
+  "uninformed_profit_per_execution": 0.4082834420516487,
+  "regimes": [
+    {
+      "value": 0.0,
+      "alpha": 0.05,
+      "p": 0.25,
+      "objective": 1.638889338235294,
+      "profit": 1.65,
+      "abstain_rate": 0.0,
+      "mean_abs_inventory": 2.6496323529411763
+    },
+    {
+      "value": 0.0,
+      "alpha": 0.05,
+      "p": 0.5,
+      "objective": 3.383220655487805,
+      "profit": 3.389024390243903,
+      "abstain_rate": 0.0,
+      "mean_abs_inventory": 1.727515243902439
+    },
+    {
+      "value": 0.0,
+      "alpha": 0.05,
+      "p": 0.75,
+      "objective": 5.578490277777778,
+      "profit": 5.585,
+      "abstain_rate": 0.0,
+      "mean_abs_inventory": 1.8388888888888888
+    },
+    {
+      "value": 0.0,
+      "alpha": 0.3,
+      "p": 0.25,
+      "objective": 0.8312722167968747,
+      "profit": 0.9554687499999996,
+      "abstain_rate": 0.0,
+      "mean_abs_inventory": 9.295654296875
+    },
+    {
+      "value": 0.0,
+      "alpha": 0.3,
+      "p": 0.5,
+      "objective": 3.351754292582418,
+      "profit": 3.42032967032967,
+      "abstain_rate": 0.0,
+      "mean_abs_inventory": 6.722355769230769
+    },
+    {
+      "value": 0.0,
+      "alpha": 0.3,
+      "p": 0.75,
+      "objective": 5.705262532552084,
+      "profit": 5.744270833333334,
+      "abstain_rate": 0.0,
+      "mean_abs_inventory": 4.839029947916667
+    },
+    {
+      "value": 1.0,
+      "alpha": 0.05,
+      "p": 0.25,
+      "objective": 5.191619583333334,
+      "profit": 5.198,
+      "abstain_rate": 0.0,
+      "mean_abs_inventory": 1.8008333333333333
+    },
+    {
+      "value": 1.0,
+      "alpha": 0.05,
+      "p": 0.5,
+      "objective": 3.143723852040817,
+      "profit": 3.1494897959183676,
+      "abstain_rate": 0.0,
+      "mean_abs_inventory": 1.7997448979591837
+    },
+    {
+      "value": 1.0,
+      "alpha": 0.05,
+      "p": 0.75,
+      "objective": 1.662369850852273,
+      "profit": 1.6721590909090913,
+      "abstain_rate": 0.0,
+      "mean_abs_inventory": 2.524325284090909
+    },
+    {
+      "value": 1.0,
+      "alpha": 0.3,
+      "p": 0.25,
+      "objective": 5.6786292438271575,
+      "profit": 5.719135802469133,
+      "abstain_rate": 0.0,
+      "mean_abs_inventory": 4.850694444444445
+    },
+    {
+      "value": 1.0,
+      "alpha": 0.3,
+      "p": 0.5,
+      "objective": 3.4238617665816267,
+      "profit": 3.497448979591831,
+      "abstain_rate": 0.0,
+      "mean_abs_inventory": 6.972735969387755
+    },
+    {
+      "value": 1.0,
+      "alpha": 0.3,
+      "p": 0.75,
+      "objective": 1.0345396792763095,
+      "profit": 1.1440789473684148,
+      "abstain_rate": 0.0,
+      "mean_abs_inventory": 8.849300986842104
+    }
+  ]
+}

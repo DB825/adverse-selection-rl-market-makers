@@ -1,0 +1,4 @@
+rollout/ep_len_mean,economics/episodes,time/iterations,economics/profit_mean,time/fps,rollout/ep_rew_mean,time/time_elapsed,economics/objective_mean,economics/inventory_penalty_total_mean,time/total_timesteps,train/value_loss,train/entropy_loss,train/policy_gradient_loss,train/loss,train/learning_rate,train/n_updates,train/clip_fraction,train/post_clip_gradient_norm,train/clip_range,train/approx_kl,train/explained_variance
+64.0,16,1,-1.1406250000000004,4248,-1.2193077499999998,0,-1.2193076171875008,0.0786826171875,1024,,,,,,,,,,,
+64.0,16,2,-0.9062500000000002,2479,-1.10488384375,0,-0.9904599609375,0.08420996093750002,2048,6.9634099245071415,-2.3024623572826384,-0.0007955208187922835,1.9801710844039917,0.0003,10,0.0,0.47950573936104784,0.2,0.00033961557,0.00245589017868042
+,,,,,,,,,,6.7415076196193695,-2.301544839143753,-0.0006470377556979656,4.230899333953857,0.0003,20,0.0,0.49889055863022796,0.2,0.00061835063,0.03419852256774902

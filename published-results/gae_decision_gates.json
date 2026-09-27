@@ -1,0 +1,107 @@
+{
+  "experiment": "GAE lambda .95 versus 1.0; 300032 steps; five paired seeds",
+  "cohort": {
+    "episodes": 2048,
+    "seed_start": 8000000
+  },
+  "primary_contrast": {
+    "mean": 0.01812668457031224,
+    "episode_only_se": 0.025788614198849088,
+    "episode_bootstrap_95_ci": [
+      -0.031849427375793715,
+      0.06751141838073704
+    ],
+    "training_seed": {
+      "n": 5,
+      "mean": 0.018126684570312235,
+      "sample_sd": 0.36424309410421585,
+      "mean_t95_ci": [
+        -0.43414085197323826,
+        0.47039422111386275
+      ],
+      "degrees_of_freedom": 4
+    },
+    "per_seed_difference_means": {
+      "11": -0.03378458404541033,
+      "12": 0.2866819686889654,
+      "13": 0.3957822723388663,
+      "14": -0.017627197265624915,
+      "15": -0.5404190368652353
+    },
+    "paired_training_seeds": [
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "episodes_per_seed": 2048,
+    "fixed_reference_reused_across_seeds": false
+  },
+  "gate_1": {
+    "decision": "continue",
+    "reason": "Existing supported-history construction establishes earlier quote evidence can matter; prevalence remains unmeasured."
+  },
+  "gate_2": {
+    "decision": "revise",
+    "reason": "No lambda-one recurrent point estimate beats fixed-wide. Near-fixed quoting, abstention and unprofitable conditional variation do not establish useful adaptive inference."
+  },
+  "gate_3": {
+    "decision": "no recurrence benefit demonstrated",
+    "comparison": {
+      "mean": -2.1199134460449196,
+      "episode_only_se": 0.04348509038118979,
+      "episode_bootstrap_95_ci": [
+        -2.209041325149534,
+        -2.034280740509031
+      ],
+      "training_seed": {
+        "n": 5,
+        "mean": -2.1199134460449196,
+        "sample_sd": 0.37459683057876264,
+        "mean_t95_ci": [
+          -2.585036844415804,
+          -1.6547900476740351
+        ],
+        "degrees_of_freedom": 4
+      },
+      "per_seed_difference_means": {
+        "11": -1.770561958312986,
+        "12": -1.9763559417724579,
+        "13": -2.5560513229370105,
+        "14": -1.811543754577634,
+        "15": -2.48505425262451
+      },
+      "paired_training_seeds": [
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "episodes_per_seed": 2048,
+      "fixed_reference_reused_across_seeds": false
+    },
+    "limitation": "Contextual architecture comparison; only recurrent GAE changed."
+  },
+  "gate_4": {
+    "decision": "defer",
+    "substantive_probes_run": false,
+    "causal_interventions_run": false,
+    "analysis_cohort_unused": 9000000
+  },
+  "next_experiment": {
+    "status": "recommended, not run",
+    "factor": "Entropy coefficient 0 versus .01",
+    "gae_lambda": 0.95,
+    "budget_per_seed": 300032,
+    "seeds": [
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "rationale": "Test sensitivity to an exploration-promoting regularizer while retaining the original GAE setting. Low entropy is not a diagnosed cause; require economic adaptation rather than stochastic action diversity."
+  }
+}

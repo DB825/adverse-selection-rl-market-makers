@@ -1,0 +1,3563 @@
+{
+  "audited_utc": "2026-09-27T16:32:29.540274+00:00",
+  "completed_runs": 20,
+  "expected_runs": 20,
+  "config_differences": {
+    "analysis.seed": {
+      "initial": 3000000,
+      "followup": 6000000
+    },
+    "evaluation.episodes": {
+      "initial": 1024,
+      "followup": 2048
+    },
+    "evaluation.seed": {
+      "initial": 1000000,
+      "followup": 5000000
+    },
+    "training.total_timesteps": {
+      "initial": 100352,
+      "followup": 300032
+    }
+  },
+  "unexpected_config_difference_keys": [],
+  "training_streams": {
+    "11": [
+      110000,
+      110001,
+      110002,
+      110003,
+      110004,
+      110005,
+      110006,
+      110007
+    ],
+    "12": [
+      120000,
+      120001,
+      120002,
+      120003,
+      120004,
+      120005,
+      120006,
+      120007
+    ],
+    "13": [
+      130000,
+      130001,
+      130002,
+      130003,
+      130004,
+      130005,
+      130006,
+      130007
+    ],
+    "14": [
+      140000,
+      140001,
+      140002,
+      140003,
+      140004,
+      140005,
+      140006,
+      140007
+    ],
+    "15": [
+      150000,
+      150001,
+      150002,
+      150003,
+      150004,
+      150005,
+      150006,
+      150007
+    ]
+  },
+  "training_seeds_disjoint_across_seed_replicates": true,
+  "training_streams_do_not_overlap_evaluation_or_analysis": true,
+  "reserved_seed_domains_start_inclusive_stop_exclusive": {
+    "initial_evaluation": [
+      1000000,
+      1001024
+    ],
+    "initial_analysis": [
+      3000000,
+      3001024
+    ],
+    "followup_evaluation": [
+      5000000,
+      5002048
+    ],
+    "followup_analysis": [
+      6000000,
+      6001024
+    ]
+  },
+  "reserved_seed_domain_overlaps": [],
+  "runs": [
+    {
+      "policy": "recurrent",
+      "seed": 11,
+      "followup_started": true,
+      "followup_completed": true,
+      "initial_checkpoint_sha256": "7ae2ebd41be03dd8421438eede91b8260883015bd71e8bd01543f0d50690ae32",
+      "initial_recorded_environment_seeds": [
+        110000,
+        110001,
+        110002,
+        110003,
+        110004,
+        110005,
+        110006,
+        110007
+      ],
+      "initial_actual_steps": 100352,
+      "followup_checkpoint_sha256": "0c53bf088e64085d84a56eaf649cf8325684c50e3694ba90bb515fcd98511517",
+      "followup_recorded_environment_seeds": [
+        110000,
+        110001,
+        110002,
+        110003,
+        110004,
+        110005,
+        110006,
+        110007
+      ],
+      "followup_actual_steps": 300032,
+      "core_source_hash_matches": {
+        "src/train.py": true,
+        "src/environment.py": true,
+        "src/customer_model.py": true,
+        "src/accounting.py": true,
+        "src/bayes_filter.py": true,
+        "src/wrappers.py": true,
+        "src/fast_recurrent.py": true
+      },
+      "effective_followup_config_matches_requested": true,
+      "initial_nonfinite_logged_values": {},
+      "followup_nonfinite_logged_values": {},
+      "followup_logged_steps": 300032,
+      "rollout_prefix": {
+        "matched_rows": 98,
+        "largest_matched_index": 100352,
+        "columns": {
+          "rollout/ep_rew_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "economics/episodes": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "economics/profit_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "economics/objective_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "economics/inventory_penalty_total_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "rollout/ep_len_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          }
+        },
+        "all_compared_values_exactly_equal": true
+      },
+      "optimizer_prefix": {
+        "matched_rows": 98,
+        "largest_matched_index": 980,
+        "columns": {
+          "train/learning_rate": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/entropy_loss": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/policy_gradient_loss": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/approx_kl": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/clip_range": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/clip_fraction": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/value_loss": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/post_clip_gradient_norm": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/explained_variance": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/loss": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          }
+        },
+        "all_compared_values_exactly_equal": true
+      },
+      "latest_training_metrics": {
+        "train/learning_rate": 0.0003,
+        "train/entropy_loss": -0.004830526895239,
+        "train/policy_gradient_loss": -2.8731301426887517e-08,
+        "train/approx_kl": 0.0,
+        "train/clip_range": 0.2,
+        "train/clip_fraction": 0.0,
+        "train/value_loss": 0.9876641198061408,
+        "train/post_clip_gradient_norm": 0.5000000363215802,
+        "train/explained_variance": 0.9247292280197144,
+        "train/loss": 1.1018768548965454
+      }
+    },
+    {
+      "policy": "feedforward",
+      "seed": 11,
+      "followup_started": true,
+      "followup_completed": true,
+      "initial_checkpoint_sha256": "5996d652d9d8420f07168b8231a820b5fa77b936afbed6d50a1c212abdc6f466",
+      "initial_recorded_environment_seeds": [
+        110000,
+        110001,
+        110002,
+        110003,
+        110004,
+        110005,
+        110006,
+        110007
+      ],
+      "initial_actual_steps": 100352,
+      "followup_checkpoint_sha256": "b7305c0963825befe0ff8aad2b0e683d270f94fa7fec8c5517824a8f3096a7c8",
+      "followup_recorded_environment_seeds": [
+        110000,
+        110001,
+        110002,
+        110003,
+        110004,
+        110005,
+        110006,
+        110007
+      ],
+      "followup_actual_steps": 300032,
+      "core_source_hash_matches": {
+        "src/train.py": true,
+        "src/environment.py": true,
+        "src/customer_model.py": true,
+        "src/accounting.py": true,
+        "src/bayes_filter.py": true,
+        "src/wrappers.py": true,
+        "src/fast_recurrent.py": true
+      },
+      "effective_followup_config_matches_requested": true,
+      "initial_nonfinite_logged_values": {},
+      "followup_nonfinite_logged_values": {},
+      "followup_logged_steps": 300032,
+      "rollout_prefix": {
+        "matched_rows": 98,
+        "largest_matched_index": 100352,
+        "columns": {
+          "economics/inventory_penalty_total_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "rollout/ep_len_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "economics/objective_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "economics/episodes": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "economics/profit_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "rollout/ep_rew_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          }
+        },
+        "all_compared_values_exactly_equal": true
+      },
+      "optimizer_prefix": {
+        "matched_rows": 98,
+        "largest_matched_index": 980,
+        "columns": {
+          "train/post_clip_gradient_norm": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/loss": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/clip_range": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/approx_kl": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/explained_variance": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/clip_fraction": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/entropy_loss": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/policy_gradient_loss": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/value_loss": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/learning_rate": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          }
+        },
+        "all_compared_values_exactly_equal": true
+      },
+      "latest_training_metrics": {
+        "train/post_clip_gradient_norm": 0.4985328804701567,
+        "train/loss": 0.1297900527715683,
+        "train/clip_range": 0.2,
+        "train/approx_kl": 0.007574826,
+        "train/explained_variance": 0.965633511543274,
+        "train/clip_fraction": 0.06630859375,
+        "train/entropy_loss": -0.2666035264730453,
+        "train/policy_gradient_loss": -0.0039972991537069,
+        "train/value_loss": 0.2872653886675834,
+        "train/learning_rate": 0.0003
+      }
+    },
+    {
+      "policy": "history",
+      "seed": 11,
+      "followup_started": true,
+      "followup_completed": true,
+      "initial_checkpoint_sha256": "6275a82d252be7fab9e0a98d6f9d2844f6ab38cf3f3390e8f4ed3cf9120a14d1",
+      "initial_recorded_environment_seeds": [
+        110000,
+        110001,
+        110002,
+        110003,
+        110004,
+        110005,
+        110006,
+        110007
+      ],
+      "initial_actual_steps": 100352,
+      "followup_checkpoint_sha256": "82eaca174a6c69fb35c8f929e68b871ddb866751ea3fb9696cfb068d82d1fca1",
+      "followup_recorded_environment_seeds": [
+        110000,
+        110001,
+        110002,
+        110003,
+        110004,
+        110005,
+        110006,
+        110007
+      ],
+      "followup_actual_steps": 300032,
+      "core_source_hash_matches": {
+        "src/train.py": true,
+        "src/environment.py": true,
+        "src/customer_model.py": true,
+        "src/accounting.py": true,
+        "src/bayes_filter.py": true,
+        "src/wrappers.py": true,
+        "src/fast_recurrent.py": true
+      },
+      "effective_followup_config_matches_requested": true,
+      "initial_nonfinite_logged_values": {},
+      "followup_nonfinite_logged_values": {},
+      "followup_logged_steps": 300032,
+      "rollout_prefix": {
+        "matched_rows": 98,
+        "largest_matched_index": 100352,
+        "columns": {
+          "economics/episodes": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "economics/objective_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "rollout/ep_rew_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "economics/profit_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "economics/inventory_penalty_total_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "rollout/ep_len_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          }
+        },
+        "all_compared_values_exactly_equal": true
+      },
+      "optimizer_prefix": {
+        "matched_rows": 98,
+        "largest_matched_index": 980,
+        "columns": {
+          "train/explained_variance": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/entropy_loss": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/clip_range": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/policy_gradient_loss": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/approx_kl": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/learning_rate": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/clip_fraction": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/post_clip_gradient_norm": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/value_loss": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/loss": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          }
+        },
+        "all_compared_values_exactly_equal": true
+      },
+      "latest_training_metrics": {
+        "train/explained_variance": 0.9564852714538574,
+        "train/entropy_loss": -0.3319019356742501,
+        "train/clip_range": 0.2,
+        "train/policy_gradient_loss": -0.0173832631568075,
+        "train/approx_kl": 0.011133233,
+        "train/learning_rate": 0.0003,
+        "train/clip_fraction": 0.08916015625,
+        "train/post_clip_gradient_norm": 0.499999569170177,
+        "train/value_loss": 0.3527398770675063,
+        "train/loss": 0.1460367441177368
+      }
+    },
+    {
+      "policy": "belief",
+      "seed": 11,
+      "followup_started": true,
+      "followup_completed": true,
+      "initial_checkpoint_sha256": "8741a1699f62b7d346a2c80c192f8c38044de0358fe37042021ccb216e9ab34d",
+      "initial_recorded_environment_seeds": [
+        110000,
+        110001,
+        110002,
+        110003,
+        110004,
+        110005,
+        110006,
+        110007
+      ],
+      "initial_actual_steps": 100352,
+      "followup_checkpoint_sha256": "24c26e331337d4b741ff048a03521c57f806f2b7d36ba2f9a0c9cad584d6d35d",
+      "followup_recorded_environment_seeds": [
+        110000,
+        110001,
+        110002,
+        110003,
+        110004,
+        110005,
+        110006,
+        110007
+      ],
+      "followup_actual_steps": 300032,
+      "core_source_hash_matches": {
+        "src/train.py": true,
+        "src/environment.py": true,
+        "src/customer_model.py": true,
+        "src/accounting.py": true,
+        "src/bayes_filter.py": true,
+        "src/wrappers.py": true,
+        "src/fast_recurrent.py": true
+      },
+      "effective_followup_config_matches_requested": true,
+      "initial_nonfinite_logged_values": {},
+      "followup_nonfinite_logged_values": {},
+      "followup_logged_steps": 300032,
+      "rollout_prefix": {
+        "matched_rows": 98,
+        "largest_matched_index": 100352,
+        "columns": {
+          "economics/inventory_penalty_total_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "rollout/ep_len_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "economics/objective_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "economics/episodes": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "economics/profit_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "rollout/ep_rew_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          }
+        },
+        "all_compared_values_exactly_equal": true
+      },
+      "optimizer_prefix": {
+        "matched_rows": 98,
+        "largest_matched_index": 980,
+        "columns": {
+          "train/post_clip_gradient_norm": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/loss": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/clip_range": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/approx_kl": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/explained_variance": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/clip_fraction": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/entropy_loss": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/policy_gradient_loss": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/value_loss": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/learning_rate": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          }
+        },
+        "all_compared_values_exactly_equal": true
+      },
+      "latest_training_metrics": {
+        "train/post_clip_gradient_norm": 0.4992053115740419,
+        "train/loss": 0.3457647860050201,
+        "train/clip_range": 0.2,
+        "train/approx_kl": 0.0039605633,
+        "train/explained_variance": 0.933868944644928,
+        "train/clip_fraction": 0.02861328125,
+        "train/entropy_loss": -0.1717912612017244,
+        "train/policy_gradient_loss": -0.003938542061951,
+        "train/value_loss": 0.6124477550387383,
+        "train/learning_rate": 0.0003
+      }
+    },
+    {
+      "policy": "recurrent",
+      "seed": 12,
+      "followup_started": true,
+      "followup_completed": true,
+      "initial_checkpoint_sha256": "2d018f5672b03065fd08119d86128b793412ad0a0bae1fd691334a0d2423f7f2",
+      "initial_recorded_environment_seeds": [
+        120000,
+        120001,
+        120002,
+        120003,
+        120004,
+        120005,
+        120006,
+        120007
+      ],
+      "initial_actual_steps": 100352,
+      "followup_checkpoint_sha256": "fe7b56fa94dfe2bf48245864713a0bc96fac8c93980b696d9cfc831172d22424",
+      "followup_recorded_environment_seeds": [
+        120000,
+        120001,
+        120002,
+        120003,
+        120004,
+        120005,
+        120006,
+        120007
+      ],
+      "followup_actual_steps": 300032,
+      "core_source_hash_matches": {
+        "src/train.py": true,
+        "src/environment.py": true,
+        "src/customer_model.py": true,
+        "src/accounting.py": true,
+        "src/bayes_filter.py": true,
+        "src/wrappers.py": true,
+        "src/fast_recurrent.py": true
+      },
+      "effective_followup_config_matches_requested": true,
+      "initial_nonfinite_logged_values": {},
+      "followup_nonfinite_logged_values": {},
+      "followup_logged_steps": 300032,
+      "rollout_prefix": {
+        "matched_rows": 98,
+        "largest_matched_index": 100352,
+        "columns": {
+          "economics/episodes": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "economics/objective_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "rollout/ep_rew_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "economics/profit_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "economics/inventory_penalty_total_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "rollout/ep_len_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          }
+        },
+        "all_compared_values_exactly_equal": true
+      },
+      "optimizer_prefix": {
+        "matched_rows": 98,
+        "largest_matched_index": 980,
+        "columns": {
+          "train/explained_variance": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/entropy_loss": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/clip_range": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/policy_gradient_loss": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/approx_kl": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/learning_rate": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/clip_fraction": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/post_clip_gradient_norm": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/value_loss": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/loss": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          }
+        },
+        "all_compared_values_exactly_equal": true
+      },
+      "latest_training_metrics": {
+        "train/explained_variance": 0.8581907153129578,
+        "train/entropy_loss": -0.6038677895441651,
+        "train/clip_range": 0.2,
+        "train/policy_gradient_loss": -0.0026127312186872,
+        "train/approx_kl": 0.007433092,
+        "train/learning_rate": 0.0003,
+        "train/clip_fraction": 0.0806640625,
+        "train/post_clip_gradient_norm": 0.5000000519677992,
+        "train/value_loss": 2.057714905496687,
+        "train/loss": 1.0262055397033691
+      }
+    },
+    {
+      "policy": "feedforward",
+      "seed": 12,
+      "followup_started": true,
+      "followup_completed": true,
+      "initial_checkpoint_sha256": "d23752031e3526cb9918c6d47522eff444feea1586f97b9204b7c2f9bab14a5c",
+      "initial_recorded_environment_seeds": [
+        120000,
+        120001,
+        120002,
+        120003,
+        120004,
+        120005,
+        120006,
+        120007
+      ],
+      "initial_actual_steps": 100352,
+      "followup_checkpoint_sha256": "45d430b57297d96f28cc905176d402c1f84b4b7056eef272f7b6917c4c4919a6",
+      "followup_recorded_environment_seeds": [
+        120000,
+        120001,
+        120002,
+        120003,
+        120004,
+        120005,
+        120006,
+        120007
+      ],
+      "followup_actual_steps": 300032,
+      "core_source_hash_matches": {
+        "src/train.py": true,
+        "src/environment.py": true,
+        "src/customer_model.py": true,
+        "src/accounting.py": true,
+        "src/bayes_filter.py": true,
+        "src/wrappers.py": true,
+        "src/fast_recurrent.py": true
+      },
+      "effective_followup_config_matches_requested": true,
+      "initial_nonfinite_logged_values": {},
+      "followup_nonfinite_logged_values": {},
+      "followup_logged_steps": 300032,
+      "rollout_prefix": {
+        "matched_rows": 98,
+        "largest_matched_index": 100352,
+        "columns": {
+          "economics/inventory_penalty_total_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "rollout/ep_len_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "economics/objective_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "economics/episodes": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "economics/profit_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "rollout/ep_rew_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          }
+        },
+        "all_compared_values_exactly_equal": true
+      },
+      "optimizer_prefix": {
+        "matched_rows": 98,
+        "largest_matched_index": 980,
+        "columns": {
+          "train/post_clip_gradient_norm": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/loss": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/clip_range": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/approx_kl": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/explained_variance": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/clip_fraction": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/entropy_loss": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/policy_gradient_loss": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/value_loss": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/learning_rate": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          }
+        },
+        "all_compared_values_exactly_equal": true
+      },
+      "latest_training_metrics": {
+        "train/post_clip_gradient_norm": 0.4999996483325958,
+        "train/loss": 0.199355274438858,
+        "train/clip_range": 0.2,
+        "train/approx_kl": 0.0030202372,
+        "train/explained_variance": 0.9579960703849792,
+        "train/clip_fraction": 0.0421875,
+        "train/entropy_loss": -0.2956333912909031,
+        "train/policy_gradient_loss": -0.0045332124631386,
+        "train/value_loss": 0.5211615186184645,
+        "train/learning_rate": 0.0003
+      }
+    },
+    {
+      "policy": "history",
+      "seed": 12,
+      "followup_started": true,
+      "followup_completed": true,
+      "initial_checkpoint_sha256": "fc5d59f448f6090ca4dbd8f55dd0dd2259eec4e1b2a92eb1bc52f7825262f55b",
+      "initial_recorded_environment_seeds": [
+        120000,
+        120001,
+        120002,
+        120003,
+        120004,
+        120005,
+        120006,
+        120007
+      ],
+      "initial_actual_steps": 100352,
+      "followup_checkpoint_sha256": "37dca5c4c28feca1f25bb58d13e11f12f86d288ec5102769006579cdacf12237",
+      "followup_recorded_environment_seeds": [
+        120000,
+        120001,
+        120002,
+        120003,
+        120004,
+        120005,
+        120006,
+        120007
+      ],
+      "followup_actual_steps": 300032,
+      "core_source_hash_matches": {
+        "src/train.py": true,
+        "src/environment.py": true,
+        "src/customer_model.py": true,
+        "src/accounting.py": true,
+        "src/bayes_filter.py": true,
+        "src/wrappers.py": true,
+        "src/fast_recurrent.py": true
+      },
+      "effective_followup_config_matches_requested": true,
+      "initial_nonfinite_logged_values": {},
+      "followup_nonfinite_logged_values": {},
+      "followup_logged_steps": 300032,
+      "rollout_prefix": {
+        "matched_rows": 98,
+        "largest_matched_index": 100352,
+        "columns": {
+          "rollout/ep_rew_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "economics/episodes": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "economics/profit_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "economics/objective_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "economics/inventory_penalty_total_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "rollout/ep_len_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          }
+        },
+        "all_compared_values_exactly_equal": true
+      },
+      "optimizer_prefix": {
+        "matched_rows": 98,
+        "largest_matched_index": 980,
+        "columns": {
+          "train/learning_rate": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/entropy_loss": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/policy_gradient_loss": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/approx_kl": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/clip_range": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/clip_fraction": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/value_loss": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/post_clip_gradient_norm": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/explained_variance": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/loss": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          }
+        },
+        "all_compared_values_exactly_equal": true
+      },
+      "latest_training_metrics": {
+        "train/learning_rate": 0.0003,
+        "train/entropy_loss": -0.2303829551674425,
+        "train/policy_gradient_loss": -0.0115833496995037,
+        "train/approx_kl": 0.008798071,
+        "train/clip_range": 0.2,
+        "train/clip_fraction": 0.06484375,
+        "train/value_loss": 0.3341992615722119,
+        "train/post_clip_gradient_norm": 0.4999995594844223,
+        "train/explained_variance": 0.9560953974723816,
+        "train/loss": 0.0929014384746551
+      }
+    },
+    {
+      "policy": "belief",
+      "seed": 12,
+      "followup_started": true,
+      "followup_completed": true,
+      "initial_checkpoint_sha256": "cae5c07a6772ca9906ea6ef9f96e022f653b1be8d0080b7479d5a0257a5f5547",
+      "initial_recorded_environment_seeds": [
+        120000,
+        120001,
+        120002,
+        120003,
+        120004,
+        120005,
+        120006,
+        120007
+      ],
+      "initial_actual_steps": 100352,
+      "followup_checkpoint_sha256": "6720dcbe865aabf729250d5f215bc1ed7561014bb2346015e887209226d6573c",
+      "followup_recorded_environment_seeds": [
+        120000,
+        120001,
+        120002,
+        120003,
+        120004,
+        120005,
+        120006,
+        120007
+      ],
+      "followup_actual_steps": 300032,
+      "core_source_hash_matches": {
+        "src/train.py": true,
+        "src/environment.py": true,
+        "src/customer_model.py": true,
+        "src/accounting.py": true,
+        "src/bayes_filter.py": true,
+        "src/wrappers.py": true,
+        "src/fast_recurrent.py": true
+      },
+      "effective_followup_config_matches_requested": true,
+      "initial_nonfinite_logged_values": {},
+      "followup_nonfinite_logged_values": {},
+      "followup_logged_steps": 300032,
+      "rollout_prefix": {
+        "matched_rows": 98,
+        "largest_matched_index": 100352,
+        "columns": {
+          "economics/inventory_penalty_total_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "rollout/ep_len_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "economics/objective_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "economics/episodes": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "economics/profit_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "rollout/ep_rew_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          }
+        },
+        "all_compared_values_exactly_equal": true
+      },
+      "optimizer_prefix": {
+        "matched_rows": 98,
+        "largest_matched_index": 980,
+        "columns": {
+          "train/post_clip_gradient_norm": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/loss": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/clip_range": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/approx_kl": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/explained_variance": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/clip_fraction": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/entropy_loss": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/policy_gradient_loss": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/value_loss": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/learning_rate": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          }
+        },
+        "all_compared_values_exactly_equal": true
+      },
+      "latest_training_metrics": {
+        "train/post_clip_gradient_norm": 0.4999995348975062,
+        "train/loss": 0.2590885162353515,
+        "train/clip_range": 0.2,
+        "train/approx_kl": 0.0047267866,
+        "train/explained_variance": 0.93051415681839,
+        "train/clip_fraction": 0.06767578125,
+        "train/entropy_loss": -0.5548624791204929,
+        "train/policy_gradient_loss": -0.0057549774413928,
+        "train/value_loss": 0.6987326821312309,
+        "train/learning_rate": 0.0003
+      }
+    },
+    {
+      "policy": "recurrent",
+      "seed": 13,
+      "followup_started": true,
+      "followup_completed": true,
+      "initial_checkpoint_sha256": "fd91cc9efb2576a8ee129f4ababcf65e2ec6823f58d9f9286fc6cbeaf4d3089a",
+      "initial_recorded_environment_seeds": [
+        130000,
+        130001,
+        130002,
+        130003,
+        130004,
+        130005,
+        130006,
+        130007
+      ],
+      "initial_actual_steps": 100352,
+      "followup_checkpoint_sha256": "e9d99ad0d2f2e2c2b4bb004f15c2724a5d7197fe8f01a0dc91b24239bb8b52a6",
+      "followup_recorded_environment_seeds": [
+        130000,
+        130001,
+        130002,
+        130003,
+        130004,
+        130005,
+        130006,
+        130007
+      ],
+      "followup_actual_steps": 300032,
+      "core_source_hash_matches": {
+        "src/train.py": true,
+        "src/environment.py": true,
+        "src/customer_model.py": true,
+        "src/accounting.py": true,
+        "src/bayes_filter.py": true,
+        "src/wrappers.py": true,
+        "src/fast_recurrent.py": true
+      },
+      "effective_followup_config_matches_requested": true,
+      "initial_nonfinite_logged_values": {},
+      "followup_nonfinite_logged_values": {},
+      "followup_logged_steps": 300032,
+      "rollout_prefix": {
+        "matched_rows": 98,
+        "largest_matched_index": 100352,
+        "columns": {
+          "rollout/ep_rew_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "economics/episodes": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "economics/profit_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "economics/objective_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "economics/inventory_penalty_total_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "rollout/ep_len_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          }
+        },
+        "all_compared_values_exactly_equal": true
+      },
+      "optimizer_prefix": {
+        "matched_rows": 98,
+        "largest_matched_index": 980,
+        "columns": {
+          "train/learning_rate": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/entropy_loss": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/policy_gradient_loss": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/approx_kl": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/clip_range": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/clip_fraction": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/value_loss": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/post_clip_gradient_norm": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/explained_variance": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/loss": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          }
+        },
+        "all_compared_values_exactly_equal": true
+      },
+      "latest_training_metrics": {
+        "train/learning_rate": 0.0003,
+        "train/entropy_loss": -0.0482718505430966,
+        "train/policy_gradient_loss": 0.0070024608663516,
+        "train/approx_kl": 0.07239391,
+        "train/clip_range": 0.2,
+        "train/clip_fraction": 0.008984375,
+        "train/value_loss": 8.057840440236031,
+        "train/post_clip_gradient_norm": 0.5000000491738321,
+        "train/explained_variance": 0.616958737373352,
+        "train/loss": 3.1886255741119385
+      }
+    },
+    {
+      "policy": "feedforward",
+      "seed": 13,
+      "followup_started": true,
+      "followup_completed": true,
+      "initial_checkpoint_sha256": "ebfcceb9d6305fc9e111e340796def6d08a4e7cec7a1882e13809bb135ec1cac",
+      "initial_recorded_environment_seeds": [
+        130000,
+        130001,
+        130002,
+        130003,
+        130004,
+        130005,
+        130006,
+        130007
+      ],
+      "initial_actual_steps": 100352,
+      "followup_checkpoint_sha256": "1ef73277e1f1b7df05cec67117fb102b7af8a76243f91c016dd43bffad637aa6",
+      "followup_recorded_environment_seeds": [
+        130000,
+        130001,
+        130002,
+        130003,
+        130004,
+        130005,
+        130006,
+        130007
+      ],
+      "followup_actual_steps": 300032,
+      "core_source_hash_matches": {
+        "src/train.py": true,
+        "src/environment.py": true,
+        "src/customer_model.py": true,
+        "src/accounting.py": true,
+        "src/bayes_filter.py": true,
+        "src/wrappers.py": true,
+        "src/fast_recurrent.py": true
+      },
+      "effective_followup_config_matches_requested": true,
+      "initial_nonfinite_logged_values": {},
+      "followup_nonfinite_logged_values": {},
+      "followup_logged_steps": 300032,
+      "rollout_prefix": {
+        "matched_rows": 98,
+        "largest_matched_index": 100352,
+        "columns": {
+          "economics/episodes": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "economics/objective_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "rollout/ep_rew_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "economics/profit_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "economics/inventory_penalty_total_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "rollout/ep_len_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          }
+        },
+        "all_compared_values_exactly_equal": true
+      },
+      "optimizer_prefix": {
+        "matched_rows": 98,
+        "largest_matched_index": 980,
+        "columns": {
+          "train/explained_variance": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/entropy_loss": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/clip_range": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/policy_gradient_loss": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/approx_kl": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/learning_rate": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/clip_fraction": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/post_clip_gradient_norm": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/value_loss": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/loss": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          }
+        },
+        "all_compared_values_exactly_equal": true
+      },
+      "latest_training_metrics": {
+        "train/explained_variance": 0.829727292060852,
+        "train/entropy_loss": -0.3428408408537507,
+        "train/clip_range": 0.2,
+        "train/policy_gradient_loss": -0.00243864566728,
+        "train/approx_kl": 0.0025930272,
+        "train/learning_rate": 0.0003,
+        "train/clip_fraction": 0.03193359375,
+        "train/post_clip_gradient_norm": 0.4999997675418854,
+        "train/value_loss": 1.3647415071725846,
+        "train/loss": 0.4655732810497284
+      }
+    },
+    {
+      "policy": "history",
+      "seed": 13,
+      "followup_started": true,
+      "followup_completed": true,
+      "initial_checkpoint_sha256": "ef3404759cc3a5829542210f48f0179f5d5e00861a7c5aa3750f92ff4a885f84",
+      "initial_recorded_environment_seeds": [
+        130000,
+        130001,
+        130002,
+        130003,
+        130004,
+        130005,
+        130006,
+        130007
+      ],
+      "initial_actual_steps": 100352,
+      "followup_checkpoint_sha256": "55595b3b22daba529b554d5938a207df399b82d78a43253d9fc7044e55a54b20",
+      "followup_recorded_environment_seeds": [
+        130000,
+        130001,
+        130002,
+        130003,
+        130004,
+        130005,
+        130006,
+        130007
+      ],
+      "followup_actual_steps": 300032,
+      "core_source_hash_matches": {
+        "src/train.py": true,
+        "src/environment.py": true,
+        "src/customer_model.py": true,
+        "src/accounting.py": true,
+        "src/bayes_filter.py": true,
+        "src/wrappers.py": true,
+        "src/fast_recurrent.py": true
+      },
+      "effective_followup_config_matches_requested": true,
+      "initial_nonfinite_logged_values": {},
+      "followup_nonfinite_logged_values": {},
+      "followup_logged_steps": 300032,
+      "rollout_prefix": {
+        "matched_rows": 98,
+        "largest_matched_index": 100352,
+        "columns": {
+          "economics/inventory_penalty_total_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "rollout/ep_len_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "economics/objective_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "economics/episodes": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "economics/profit_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "rollout/ep_rew_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          }
+        },
+        "all_compared_values_exactly_equal": true
+      },
+      "optimizer_prefix": {
+        "matched_rows": 98,
+        "largest_matched_index": 980,
+        "columns": {
+          "train/post_clip_gradient_norm": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/loss": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/clip_range": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/approx_kl": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/explained_variance": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/clip_fraction": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/entropy_loss": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/policy_gradient_loss": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/value_loss": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/learning_rate": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          }
+        },
+        "all_compared_values_exactly_equal": true
+      },
+      "latest_training_metrics": {
+        "train/post_clip_gradient_norm": 0.4999325904995201,
+        "train/loss": 0.1107147708535194,
+        "train/clip_range": 0.2,
+        "train/approx_kl": 0.0129382685,
+        "train/explained_variance": 0.926802098751068,
+        "train/clip_fraction": 0.09345703125,
+        "train/entropy_loss": -0.3238844214938581,
+        "train/policy_gradient_loss": -0.0163425176870077,
+        "train/value_loss": 0.3084543799981475,
+        "train/learning_rate": 0.0003
+      }
+    },
+    {
+      "policy": "belief",
+      "seed": 13,
+      "followup_started": true,
+      "followup_completed": true,
+      "initial_checkpoint_sha256": "e1ee7c2826c5c42cc4d40d903a8a36b67fc34b01d07368a0346e1fb597181915",
+      "initial_recorded_environment_seeds": [
+        130000,
+        130001,
+        130002,
+        130003,
+        130004,
+        130005,
+        130006,
+        130007
+      ],
+      "initial_actual_steps": 100352,
+      "followup_checkpoint_sha256": "05a567a95544da53220de6c36a728b770c411e406d5d6db710b58e4df33c61b5",
+      "followup_recorded_environment_seeds": [
+        130000,
+        130001,
+        130002,
+        130003,
+        130004,
+        130005,
+        130006,
+        130007
+      ],
+      "followup_actual_steps": 300032,
+      "core_source_hash_matches": {
+        "src/train.py": true,
+        "src/environment.py": true,
+        "src/customer_model.py": true,
+        "src/accounting.py": true,
+        "src/bayes_filter.py": true,
+        "src/wrappers.py": true,
+        "src/fast_recurrent.py": true
+      },
+      "effective_followup_config_matches_requested": true,
+      "initial_nonfinite_logged_values": {},
+      "followup_nonfinite_logged_values": {},
+      "followup_logged_steps": 300032,
+      "rollout_prefix": {
+        "matched_rows": 98,
+        "largest_matched_index": 100352,
+        "columns": {
+          "economics/episodes": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "economics/objective_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "rollout/ep_rew_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "economics/profit_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "economics/inventory_penalty_total_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "rollout/ep_len_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          }
+        },
+        "all_compared_values_exactly_equal": true
+      },
+      "optimizer_prefix": {
+        "matched_rows": 98,
+        "largest_matched_index": 980,
+        "columns": {
+          "train/explained_variance": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/entropy_loss": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/clip_range": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/policy_gradient_loss": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/approx_kl": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/learning_rate": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/clip_fraction": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/post_clip_gradient_norm": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/value_loss": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/loss": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          }
+        },
+        "all_compared_values_exactly_equal": true
+      },
+      "latest_training_metrics": {
+        "train/explained_variance": 0.8642047047615051,
+        "train/entropy_loss": -0.3515435140579939,
+        "train/clip_range": 0.2,
+        "train/policy_gradient_loss": -0.0059949643502477,
+        "train/approx_kl": 0.003930851,
+        "train/learning_rate": 0.0003,
+        "train/clip_fraction": 0.0373046875,
+        "train/post_clip_gradient_norm": 0.499954729899764,
+        "train/value_loss": 1.1801224678754807,
+        "train/loss": 0.5005348920822144
+      }
+    },
+    {
+      "policy": "recurrent",
+      "seed": 14,
+      "followup_started": true,
+      "followup_completed": true,
+      "initial_checkpoint_sha256": "7d43815a736f7a0ce8cf8f8ba43538cca6eb87a9ebf38ce3d1204c526dd2a6e9",
+      "initial_recorded_environment_seeds": [
+        140000,
+        140001,
+        140002,
+        140003,
+        140004,
+        140005,
+        140006,
+        140007
+      ],
+      "initial_actual_steps": 100352,
+      "followup_checkpoint_sha256": "b49d7e59ea8ac24031778f6239fc534b7ea31d3ec4c85e5e9113b04a2a414de7",
+      "followup_recorded_environment_seeds": [
+        140000,
+        140001,
+        140002,
+        140003,
+        140004,
+        140005,
+        140006,
+        140007
+      ],
+      "followup_actual_steps": 300032,
+      "core_source_hash_matches": {
+        "src/train.py": true,
+        "src/environment.py": true,
+        "src/customer_model.py": true,
+        "src/accounting.py": true,
+        "src/bayes_filter.py": true,
+        "src/wrappers.py": true,
+        "src/fast_recurrent.py": true
+      },
+      "effective_followup_config_matches_requested": true,
+      "initial_nonfinite_logged_values": {},
+      "followup_nonfinite_logged_values": {},
+      "followup_logged_steps": 300032,
+      "rollout_prefix": {
+        "matched_rows": 98,
+        "largest_matched_index": 100352,
+        "columns": {
+          "economics/inventory_penalty_total_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "rollout/ep_len_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "economics/objective_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "economics/episodes": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "economics/profit_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "rollout/ep_rew_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          }
+        },
+        "all_compared_values_exactly_equal": true
+      },
+      "optimizer_prefix": {
+        "matched_rows": 98,
+        "largest_matched_index": 980,
+        "columns": {
+          "train/post_clip_gradient_norm": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/loss": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/clip_range": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/approx_kl": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/explained_variance": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/clip_fraction": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/entropy_loss": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/policy_gradient_loss": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/value_loss": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/learning_rate": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          }
+        },
+        "all_compared_values_exactly_equal": true
+      },
+      "latest_training_metrics": {
+        "train/post_clip_gradient_norm": 0.5000000221654771,
+        "train/loss": 0.2355105727910995,
+        "train/clip_range": 0.2,
+        "train/approx_kl": 0.000299701,
+        "train/explained_variance": 0.8985893130302429,
+        "train/clip_fraction": 0.0046875,
+        "train/entropy_loss": -0.1275056095328182,
+        "train/policy_gradient_loss": -0.0002701231132959,
+        "train/value_loss": 1.2146141700446609,
+        "train/learning_rate": 0.0003
+      }
+    },
+    {
+      "policy": "feedforward",
+      "seed": 14,
+      "followup_started": true,
+      "followup_completed": true,
+      "initial_checkpoint_sha256": "14e1ce4031bf12569f3f06fd8d210b1e2d56e36205b8bb8cf6275dd4c1356dc9",
+      "initial_recorded_environment_seeds": [
+        140000,
+        140001,
+        140002,
+        140003,
+        140004,
+        140005,
+        140006,
+        140007
+      ],
+      "initial_actual_steps": 100352,
+      "followup_checkpoint_sha256": "d29a91beee42fdecadafa4279ecd7a5be4246190d6e74a45c1927730cf0f1076",
+      "followup_recorded_environment_seeds": [
+        140000,
+        140001,
+        140002,
+        140003,
+        140004,
+        140005,
+        140006,
+        140007
+      ],
+      "followup_actual_steps": 300032,
+      "core_source_hash_matches": {
+        "src/train.py": true,
+        "src/environment.py": true,
+        "src/customer_model.py": true,
+        "src/accounting.py": true,
+        "src/bayes_filter.py": true,
+        "src/wrappers.py": true,
+        "src/fast_recurrent.py": true
+      },
+      "effective_followup_config_matches_requested": true,
+      "initial_nonfinite_logged_values": {},
+      "followup_nonfinite_logged_values": {},
+      "followup_logged_steps": 300032,
+      "rollout_prefix": {
+        "matched_rows": 98,
+        "largest_matched_index": 100352,
+        "columns": {
+          "rollout/ep_rew_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "economics/episodes": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "economics/profit_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "economics/objective_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "economics/inventory_penalty_total_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "rollout/ep_len_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          }
+        },
+        "all_compared_values_exactly_equal": true
+      },
+      "optimizer_prefix": {
+        "matched_rows": 98,
+        "largest_matched_index": 980,
+        "columns": {
+          "train/learning_rate": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/entropy_loss": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/policy_gradient_loss": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/approx_kl": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/clip_range": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/clip_fraction": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/value_loss": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/post_clip_gradient_norm": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/explained_variance": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/loss": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          }
+        },
+        "all_compared_values_exactly_equal": true
+      },
+      "latest_training_metrics": {
+        "train/learning_rate": 0.0003,
+        "train/entropy_loss": -0.1765135763213038,
+        "train/policy_gradient_loss": -0.0044456892268499,
+        "train/approx_kl": 0.003130454,
+        "train/clip_range": 0.2,
+        "train/clip_fraction": 0.0396484375,
+        "train/value_loss": 0.936684617958963,
+        "train/post_clip_gradient_norm": 0.4999997340142727,
+        "train/explained_variance": 0.9019791483879088,
+        "train/loss": 0.4458507299423218
+      }
+    },
+    {
+      "policy": "history",
+      "seed": 14,
+      "followup_started": true,
+      "followup_completed": true,
+      "initial_checkpoint_sha256": "f544a136980e27a4812d4d139a42ecb892b75ba72421cf4713ca2e90f239dbcd",
+      "initial_recorded_environment_seeds": [
+        140000,
+        140001,
+        140002,
+        140003,
+        140004,
+        140005,
+        140006,
+        140007
+      ],
+      "initial_actual_steps": 100352,
+      "followup_checkpoint_sha256": "3c93c653bd090469755d19d048215dab5cb46ee470b199c211b945b62af09dd8",
+      "followup_recorded_environment_seeds": [
+        140000,
+        140001,
+        140002,
+        140003,
+        140004,
+        140005,
+        140006,
+        140007
+      ],
+      "followup_actual_steps": 300032,
+      "core_source_hash_matches": {
+        "src/train.py": true,
+        "src/environment.py": true,
+        "src/customer_model.py": true,
+        "src/accounting.py": true,
+        "src/bayes_filter.py": true,
+        "src/wrappers.py": true,
+        "src/fast_recurrent.py": true
+      },
+      "effective_followup_config_matches_requested": true,
+      "initial_nonfinite_logged_values": {},
+      "followup_nonfinite_logged_values": {},
+      "followup_logged_steps": 300032,
+      "rollout_prefix": {
+        "matched_rows": 98,
+        "largest_matched_index": 100352,
+        "columns": {
+          "economics/episodes": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "economics/objective_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "rollout/ep_rew_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "economics/profit_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "economics/inventory_penalty_total_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "rollout/ep_len_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          }
+        },
+        "all_compared_values_exactly_equal": true
+      },
+      "optimizer_prefix": {
+        "matched_rows": 98,
+        "largest_matched_index": 980,
+        "columns": {
+          "train/explained_variance": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/entropy_loss": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/clip_range": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/policy_gradient_loss": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/approx_kl": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/learning_rate": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/clip_fraction": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/post_clip_gradient_norm": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/value_loss": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/loss": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          }
+        },
+        "all_compared_values_exactly_equal": true
+      },
+      "latest_training_metrics": {
+        "train/explained_variance": 0.910348653793335,
+        "train/entropy_loss": -0.3214997034519911,
+        "train/clip_range": 0.2,
+        "train/policy_gradient_loss": -0.0127068098081508,
+        "train/approx_kl": 0.009340711,
+        "train/learning_rate": 0.0003,
+        "train/clip_fraction": 0.07490234375,
+        "train/post_clip_gradient_norm": 0.4999996356666086,
+        "train/value_loss": 0.4912943318486213,
+        "train/loss": 0.1863612979650497
+      }
+    },
+    {
+      "policy": "belief",
+      "seed": 14,
+      "followup_started": true,
+      "followup_completed": true,
+      "initial_checkpoint_sha256": "9b0ab30a4b4659f40012ca845faf5a96b6ccda5024e02c7cec91a353b6013ac8",
+      "initial_recorded_environment_seeds": [
+        140000,
+        140001,
+        140002,
+        140003,
+        140004,
+        140005,
+        140006,
+        140007
+      ],
+      "initial_actual_steps": 100352,
+      "followup_checkpoint_sha256": "c452c5b48e277af76e911e596f353b6f373a029347d04f679e1c35fc49b6c4b2",
+      "followup_recorded_environment_seeds": [
+        140000,
+        140001,
+        140002,
+        140003,
+        140004,
+        140005,
+        140006,
+        140007
+      ],
+      "followup_actual_steps": 300032,
+      "core_source_hash_matches": {
+        "src/train.py": true,
+        "src/environment.py": true,
+        "src/customer_model.py": true,
+        "src/accounting.py": true,
+        "src/bayes_filter.py": true,
+        "src/wrappers.py": true,
+        "src/fast_recurrent.py": true
+      },
+      "effective_followup_config_matches_requested": true,
+      "initial_nonfinite_logged_values": {},
+      "followup_nonfinite_logged_values": {},
+      "followup_logged_steps": 300032,
+      "rollout_prefix": {
+        "matched_rows": 98,
+        "largest_matched_index": 100352,
+        "columns": {
+          "rollout/ep_rew_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "economics/episodes": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "economics/profit_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "economics/objective_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "economics/inventory_penalty_total_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "rollout/ep_len_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          }
+        },
+        "all_compared_values_exactly_equal": true
+      },
+      "optimizer_prefix": {
+        "matched_rows": 98,
+        "largest_matched_index": 980,
+        "columns": {
+          "train/learning_rate": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/entropy_loss": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/policy_gradient_loss": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/approx_kl": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/clip_range": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/clip_fraction": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/value_loss": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/post_clip_gradient_norm": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/explained_variance": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/loss": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          }
+        },
+        "all_compared_values_exactly_equal": true
+      },
+      "latest_training_metrics": {
+        "train/learning_rate": 0.0003,
+        "train/entropy_loss": -0.517124667391181,
+        "train/policy_gradient_loss": -0.0055567486109794,
+        "train/approx_kl": 0.00467304,
+        "train/clip_range": 0.2,
+        "train/clip_fraction": 0.04765625,
+        "train/value_loss": 0.5329632420092821,
+        "train/post_clip_gradient_norm": 0.4999826861545444,
+        "train/explained_variance": 0.9287790060043336,
+        "train/loss": 0.2333354651927948
+      }
+    },
+    {
+      "policy": "recurrent",
+      "seed": 15,
+      "followup_started": true,
+      "followup_completed": true,
+      "initial_checkpoint_sha256": "3ca4f0116766be44392042b502950ca84c5a3b88497bc05ab4e81875d65217e2",
+      "initial_recorded_environment_seeds": [
+        150000,
+        150001,
+        150002,
+        150003,
+        150004,
+        150005,
+        150006,
+        150007
+      ],
+      "initial_actual_steps": 100352,
+      "followup_checkpoint_sha256": "edf1cef01015a38a8face784555436269aa46a8416d0fb88a42338d7439584fa",
+      "followup_recorded_environment_seeds": [
+        150000,
+        150001,
+        150002,
+        150003,
+        150004,
+        150005,
+        150006,
+        150007
+      ],
+      "followup_actual_steps": 300032,
+      "core_source_hash_matches": {
+        "src/train.py": true,
+        "src/environment.py": true,
+        "src/customer_model.py": true,
+        "src/accounting.py": true,
+        "src/bayes_filter.py": true,
+        "src/wrappers.py": true,
+        "src/fast_recurrent.py": true
+      },
+      "effective_followup_config_matches_requested": true,
+      "initial_nonfinite_logged_values": {},
+      "followup_nonfinite_logged_values": {},
+      "followup_logged_steps": 300032,
+      "rollout_prefix": {
+        "matched_rows": 98,
+        "largest_matched_index": 100352,
+        "columns": {
+          "economics/episodes": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "economics/objective_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "rollout/ep_rew_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "economics/profit_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "economics/inventory_penalty_total_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "rollout/ep_len_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          }
+        },
+        "all_compared_values_exactly_equal": true
+      },
+      "optimizer_prefix": {
+        "matched_rows": 98,
+        "largest_matched_index": 980,
+        "columns": {
+          "train/explained_variance": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/entropy_loss": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/clip_range": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/policy_gradient_loss": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/approx_kl": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/learning_rate": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/clip_fraction": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/post_clip_gradient_norm": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/value_loss": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/loss": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          }
+        },
+        "all_compared_values_exactly_equal": true
+      },
+      "latest_training_metrics": {
+        "train/explained_variance": 0.9113051295280457,
+        "train/entropy_loss": -0.0006859287273982,
+        "train/clip_range": 0.2,
+        "train/policy_gradient_loss": -1.025732490234077e-06,
+        "train/approx_kl": 0.0,
+        "train/learning_rate": 0.0003,
+        "train/clip_fraction": 0.0,
+        "train/post_clip_gradient_norm": 0.5000000378116969,
+        "train/value_loss": 0.99398806639947,
+        "train/loss": 0.134806290268898
+      }
+    },
+    {
+      "policy": "feedforward",
+      "seed": 15,
+      "followup_started": true,
+      "followup_completed": true,
+      "initial_checkpoint_sha256": "49b9b093c5ae22cb90ae473d48a91765c3ae898e56d85bc0bd40f069856e4c7c",
+      "initial_recorded_environment_seeds": [
+        150000,
+        150001,
+        150002,
+        150003,
+        150004,
+        150005,
+        150006,
+        150007
+      ],
+      "initial_actual_steps": 100352,
+      "followup_checkpoint_sha256": "5d4c0da591e32e3ffbc917d4e84914b1449a85e61781a1ebc89a088982a8a117",
+      "followup_recorded_environment_seeds": [
+        150000,
+        150001,
+        150002,
+        150003,
+        150004,
+        150005,
+        150006,
+        150007
+      ],
+      "followup_actual_steps": 300032,
+      "core_source_hash_matches": {
+        "src/train.py": true,
+        "src/environment.py": true,
+        "src/customer_model.py": true,
+        "src/accounting.py": true,
+        "src/bayes_filter.py": true,
+        "src/wrappers.py": true,
+        "src/fast_recurrent.py": true
+      },
+      "effective_followup_config_matches_requested": true,
+      "initial_nonfinite_logged_values": {},
+      "followup_nonfinite_logged_values": {},
+      "followup_logged_steps": 300032,
+      "rollout_prefix": {
+        "matched_rows": 98,
+        "largest_matched_index": 100352,
+        "columns": {
+          "economics/inventory_penalty_total_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "rollout/ep_len_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "economics/objective_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "economics/episodes": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "economics/profit_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "rollout/ep_rew_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          }
+        },
+        "all_compared_values_exactly_equal": true
+      },
+      "optimizer_prefix": {
+        "matched_rows": 98,
+        "largest_matched_index": 980,
+        "columns": {
+          "train/post_clip_gradient_norm": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/loss": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/clip_range": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/approx_kl": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/explained_variance": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/clip_fraction": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/entropy_loss": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/policy_gradient_loss": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/value_loss": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/learning_rate": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          }
+        },
+        "all_compared_values_exactly_equal": true
+      },
+      "latest_training_metrics": {
+        "train/post_clip_gradient_norm": 0.499999641440809,
+        "train/loss": 0.1618941277265548,
+        "train/clip_range": 0.2,
+        "train/approx_kl": 0.002471881,
+        "train/explained_variance": 0.9488658308982848,
+        "train/clip_fraction": 0.02255859375,
+        "train/entropy_loss": -0.4255713354796171,
+        "train/policy_gradient_loss": -0.0032440900438814,
+        "train/value_loss": 0.5386936942115426,
+        "train/learning_rate": 0.0003
+      }
+    },
+    {
+      "policy": "history",
+      "seed": 15,
+      "followup_started": true,
+      "followup_completed": true,
+      "initial_checkpoint_sha256": "3b565c4e65599d171dd9912c4f44e0845cbc583741eafb173962b14ed749554f",
+      "initial_recorded_environment_seeds": [
+        150000,
+        150001,
+        150002,
+        150003,
+        150004,
+        150005,
+        150006,
+        150007
+      ],
+      "initial_actual_steps": 100352,
+      "followup_checkpoint_sha256": "f10682afd03718c8d554cd1237f6b3c43b39393d1df32db9b62b4fe029ee3b94",
+      "followup_recorded_environment_seeds": [
+        150000,
+        150001,
+        150002,
+        150003,
+        150004,
+        150005,
+        150006,
+        150007
+      ],
+      "followup_actual_steps": 300032,
+      "core_source_hash_matches": {
+        "src/train.py": true,
+        "src/environment.py": true,
+        "src/customer_model.py": true,
+        "src/accounting.py": true,
+        "src/bayes_filter.py": true,
+        "src/wrappers.py": true,
+        "src/fast_recurrent.py": true
+      },
+      "effective_followup_config_matches_requested": true,
+      "initial_nonfinite_logged_values": {},
+      "followup_nonfinite_logged_values": {},
+      "followup_logged_steps": 300032,
+      "rollout_prefix": {
+        "matched_rows": 98,
+        "largest_matched_index": 100352,
+        "columns": {
+          "rollout/ep_rew_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "economics/episodes": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "economics/profit_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "economics/objective_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "economics/inventory_penalty_total_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "rollout/ep_len_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          }
+        },
+        "all_compared_values_exactly_equal": true
+      },
+      "optimizer_prefix": {
+        "matched_rows": 98,
+        "largest_matched_index": 980,
+        "columns": {
+          "train/learning_rate": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/entropy_loss": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/policy_gradient_loss": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/approx_kl": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/clip_range": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/clip_fraction": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/value_loss": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/post_clip_gradient_norm": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/explained_variance": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/loss": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          }
+        },
+        "all_compared_values_exactly_equal": true
+      },
+      "latest_training_metrics": {
+        "train/learning_rate": 0.0003,
+        "train/entropy_loss": -0.2641410841606557,
+        "train/policy_gradient_loss": -0.011443708022125,
+        "train/approx_kl": 0.008301012,
+        "train/clip_range": 0.2,
+        "train/clip_fraction": 0.07666015625,
+        "train/value_loss": 0.4565409105271101,
+        "train/post_clip_gradient_norm": 0.4999996110796927,
+        "train/explained_variance": 0.9553106427192688,
+        "train/loss": 0.1574805676937103
+      }
+    },
+    {
+      "policy": "belief",
+      "seed": 15,
+      "followup_started": true,
+      "followup_completed": true,
+      "initial_checkpoint_sha256": "958b18a26799d9acde158944842c9a2df5c5f2df665a2a00469920769f28a726",
+      "initial_recorded_environment_seeds": [
+        150000,
+        150001,
+        150002,
+        150003,
+        150004,
+        150005,
+        150006,
+        150007
+      ],
+      "initial_actual_steps": 100352,
+      "followup_checkpoint_sha256": "39006b38742182582700129d6c59357371594114f27459c13c3c60aa66c0d820",
+      "followup_recorded_environment_seeds": [
+        150000,
+        150001,
+        150002,
+        150003,
+        150004,
+        150005,
+        150006,
+        150007
+      ],
+      "followup_actual_steps": 300032,
+      "core_source_hash_matches": {
+        "src/train.py": true,
+        "src/environment.py": true,
+        "src/customer_model.py": true,
+        "src/accounting.py": true,
+        "src/bayes_filter.py": true,
+        "src/wrappers.py": true,
+        "src/fast_recurrent.py": true
+      },
+      "effective_followup_config_matches_requested": true,
+      "initial_nonfinite_logged_values": {},
+      "followup_nonfinite_logged_values": {},
+      "followup_logged_steps": 300032,
+      "rollout_prefix": {
+        "matched_rows": 98,
+        "largest_matched_index": 100352,
+        "columns": {
+          "economics/inventory_penalty_total_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "rollout/ep_len_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "economics/objective_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "economics/episodes": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "economics/profit_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "rollout/ep_rew_mean": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          }
+        },
+        "all_compared_values_exactly_equal": true
+      },
+      "optimizer_prefix": {
+        "matched_rows": 98,
+        "largest_matched_index": 980,
+        "columns": {
+          "train/post_clip_gradient_norm": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/loss": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/clip_range": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/approx_kl": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/explained_variance": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/clip_fraction": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/entropy_loss": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/policy_gradient_loss": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/value_loss": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          },
+          "train/learning_rate": {
+            "comparisons": 98,
+            "finite_mask_mismatches": 0,
+            "max_absolute_difference": 0.0,
+            "exactly_equal": true
+          }
+        },
+        "all_compared_values_exactly_equal": true
+      },
+      "latest_training_metrics": {
+        "train/post_clip_gradient_norm": 0.4999996155500411,
+        "train/loss": 0.3019891083240509,
+        "train/clip_range": 0.2,
+        "train/approx_kl": 0.0022401547,
+        "train/explained_variance": 0.9238186478614808,
+        "train/clip_fraction": 0.03115234375,
+        "train/entropy_loss": -0.355736568197608,
+        "train/policy_gradient_loss": -0.0029806889317114,
+        "train/value_loss": 0.8680370964109898,
+        "train/learning_rate": 0.0003
+      }
+    }
+  ],
+  "interpretation": "This is a paired training-budget extension from the same initialization and simulator seeds, not an independent experiment. It replays the initial training prefix. Equal logged economics and optimizer diagnostics support reproducibility but do not directly prove every unlogged observation/action or checkpoint parameter at 100352 steps was identical. Fresh evaluation episodes assess the fixed final checkpoint; they do not erase the exploratory choice to extend training after the initial pilot. No success-based seed or checkpoint selection is performed.",
+  "recreated_initialization_comparison": [
+    {
+      "policy": "recurrent",
+      "seed": 11,
+      "initial_parameters_sha256": "ece5b5deb96cb70d9ea60b173b784fe7d6f3d32d3bb5161befe18ca599d86d73",
+      "followup_parameters_sha256": "ece5b5deb96cb70d9ea60b173b784fe7d6f3d32d3bb5161befe18ca599d86d73",
+      "parameters_identical": true,
+      "environment_streams_identical": true
+    },
+    {
+      "policy": "feedforward",
+      "seed": 11,
+      "initial_parameters_sha256": "c9ba4f8cddda0725a988185e2f97e148ebbcfdf82699fdbd3fc2ee2af17ebb50",
+      "followup_parameters_sha256": "c9ba4f8cddda0725a988185e2f97e148ebbcfdf82699fdbd3fc2ee2af17ebb50",
+      "parameters_identical": true,
+      "environment_streams_identical": true
+    },
+    {
+      "policy": "history",
+      "seed": 11,
+      "initial_parameters_sha256": "78a356756ce3cbb66a414f6e7cef02a4f66e6ac4e6b116ce9ede352021009853",
+      "followup_parameters_sha256": "78a356756ce3cbb66a414f6e7cef02a4f66e6ac4e6b116ce9ede352021009853",
+      "parameters_identical": true,
+      "environment_streams_identical": true
+    },
+    {
+      "policy": "belief",
+      "seed": 11,
+      "initial_parameters_sha256": "11c6e59ad69a24ce4ebcf9e6a5c801ec17696806114a0354fcbbb8a868e1326c",
+      "followup_parameters_sha256": "11c6e59ad69a24ce4ebcf9e6a5c801ec17696806114a0354fcbbb8a868e1326c",
+      "parameters_identical": true,
+      "environment_streams_identical": true
+    },
+    {
+      "policy": "recurrent",
+      "seed": 12,
+      "initial_parameters_sha256": "b8a430fb9b27e15d9165c06380ebf7a0859bb3b958e3c20bdd3f188c068b9501",
+      "followup_parameters_sha256": "b8a430fb9b27e15d9165c06380ebf7a0859bb3b958e3c20bdd3f188c068b9501",
+      "parameters_identical": true,
+      "environment_streams_identical": true
+    },
+    {
+      "policy": "feedforward",
+      "seed": 12,
+      "initial_parameters_sha256": "e42e98778a0a4ed9da713b9afe662bd75852da3078b0c0efbc09ffac1a2815d8",
+      "followup_parameters_sha256": "e42e98778a0a4ed9da713b9afe662bd75852da3078b0c0efbc09ffac1a2815d8",
+      "parameters_identical": true,
+      "environment_streams_identical": true
+    },
+    {
+      "policy": "history",
+      "seed": 12,
+      "initial_parameters_sha256": "29a41d7ddd03fc0846c961f7e2523ef4c61241ad81e20ade829011bbf70a4292",
+      "followup_parameters_sha256": "29a41d7ddd03fc0846c961f7e2523ef4c61241ad81e20ade829011bbf70a4292",
+      "parameters_identical": true,
+      "environment_streams_identical": true
+    },
+    {
+      "policy": "belief",
+      "seed": 12,
+      "initial_parameters_sha256": "56dc6a65f209aad11fe0f4eea9bcd546f78f9eaa93c5568f7973086022f6a4e9",
+      "followup_parameters_sha256": "56dc6a65f209aad11fe0f4eea9bcd546f78f9eaa93c5568f7973086022f6a4e9",
+      "parameters_identical": true,
+      "environment_streams_identical": true
+    },
+    {
+      "policy": "recurrent",
+      "seed": 13,
+      "initial_parameters_sha256": "c2b197b6b88c29b7aa743fb10f156de2cce225b49303ecfc61b70c12947cf1ae",
+      "followup_parameters_sha256": "c2b197b6b88c29b7aa743fb10f156de2cce225b49303ecfc61b70c12947cf1ae",
+      "parameters_identical": true,
+      "environment_streams_identical": true
+    },
+    {
+      "policy": "feedforward",
+      "seed": 13,
+      "initial_parameters_sha256": "59fa10ecbb01b7d1bf2fc9dcc1a4b511b1bfed2a7742723b53653f301f06cdb5",
+      "followup_parameters_sha256": "59fa10ecbb01b7d1bf2fc9dcc1a4b511b1bfed2a7742723b53653f301f06cdb5",
+      "parameters_identical": true,
+      "environment_streams_identical": true
+    },
+    {
+      "policy": "history",
+      "seed": 13,
+      "initial_parameters_sha256": "a16a0f7b70e968dccd37a9de5da389365cf019280bbe7be087d85bdda5404952",
+      "followup_parameters_sha256": "a16a0f7b70e968dccd37a9de5da389365cf019280bbe7be087d85bdda5404952",
+      "parameters_identical": true,
+      "environment_streams_identical": true
+    },
+    {
+      "policy": "belief",
+      "seed": 13,
+      "initial_parameters_sha256": "b779eae6ae3c6e9f69756b89ea15da48894033038775a9915d1c59c7f8f7ea09",
+      "followup_parameters_sha256": "b779eae6ae3c6e9f69756b89ea15da48894033038775a9915d1c59c7f8f7ea09",
+      "parameters_identical": true,
+      "environment_streams_identical": true
+    },
+    {
+      "policy": "recurrent",
+      "seed": 14,
+      "initial_parameters_sha256": "db969289d517be999079630485ef82a5ef5ae2caeab6f4882314975d69f6a81a",
+      "followup_parameters_sha256": "db969289d517be999079630485ef82a5ef5ae2caeab6f4882314975d69f6a81a",
+      "parameters_identical": true,
+      "environment_streams_identical": true
+    },
+    {
+      "policy": "feedforward",
+      "seed": 14,
+      "initial_parameters_sha256": "c273e97d1b2947592e46122b6b21c7cf835a83f4ed7fc0923ba61348f3a68dfd",
+      "followup_parameters_sha256": "c273e97d1b2947592e46122b6b21c7cf835a83f4ed7fc0923ba61348f3a68dfd",
+      "parameters_identical": true,
+      "environment_streams_identical": true
+    },
+    {
+      "policy": "history",
+      "seed": 14,
+      "initial_parameters_sha256": "2390c75a7b9521c98ea56c88aba7de7f7d8e7b71aa173404cb0b98458717a3b4",
+      "followup_parameters_sha256": "2390c75a7b9521c98ea56c88aba7de7f7d8e7b71aa173404cb0b98458717a3b4",
+      "parameters_identical": true,
+      "environment_streams_identical": true
+    },
+    {
+      "policy": "belief",
+      "seed": 14,
+      "initial_parameters_sha256": "1aa8c9d908a37903819352d11485f2d7c280ba96a2eefe5d0dd2b749cf824a90",
+      "followup_parameters_sha256": "1aa8c9d908a37903819352d11485f2d7c280ba96a2eefe5d0dd2b749cf824a90",
+      "parameters_identical": true,
+      "environment_streams_identical": true
+    },
+    {
+      "policy": "recurrent",
+      "seed": 15,
+      "initial_parameters_sha256": "c050a8e559c4bb5865edc47c520ffbf19f3df0e824527f30aebd470a28c233f5",
+      "followup_parameters_sha256": "c050a8e559c4bb5865edc47c520ffbf19f3df0e824527f30aebd470a28c233f5",
+      "parameters_identical": true,
+      "environment_streams_identical": true
+    },
+    {
+      "policy": "feedforward",
+      "seed": 15,
+      "initial_parameters_sha256": "bd83585c2d4d7b043a37f374fad9450b3fcabb57c42cedeb1b1164860e032071",
+      "followup_parameters_sha256": "bd83585c2d4d7b043a37f374fad9450b3fcabb57c42cedeb1b1164860e032071",
+      "parameters_identical": true,
+      "environment_streams_identical": true
+    },
+    {
+      "policy": "history",
+      "seed": 15,
+      "initial_parameters_sha256": "4158827d0f0e8092989be0864ed9d3a86711cde2c342867a6774c10ba17b681f",
+      "followup_parameters_sha256": "4158827d0f0e8092989be0864ed9d3a86711cde2c342867a6774c10ba17b681f",
+      "parameters_identical": true,
+      "environment_streams_identical": true
+    },
+    {
+      "policy": "belief",
+      "seed": 15,
+      "initial_parameters_sha256": "61c7bfda15b23c6ca035bce0392f9a57a484ca6b198f33446c7d3adaa81dcefe",
+      "followup_parameters_sha256": "61c7bfda15b23c6ca035bce0392f9a57a484ca6b198f33446c7d3adaa81dcefe",
+      "parameters_identical": true,
+      "environment_streams_identical": true
+    }
+  ],
+  "initialization_comparison_preserved_from_previous_audit": true
+}

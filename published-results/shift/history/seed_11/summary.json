@@ -1,0 +1,61 @@
+{
+  "policy": "history",
+  "checkpoint": "results\\pilot\\history\\seed_11\\model.zip",
+  "episodes": 1024,
+  "seed_start": 2000000,
+  "seed_stop_exclusive": 2001024,
+  "deterministic": false,
+  "shift": true,
+  "correct_filter": false,
+  "horizon": 64,
+  "inventory_penalty": 0.001,
+  "fee": 0.0,
+  "objective_mean": 1.4934441833496084,
+  "objective_episode_se": 0.14708203663636496,
+  "objective_p05": -4.257921093750001,
+  "objective_lower5_mean": -4.69618028846154,
+  "profit_mean": 1.526953124999999,
+  "inventory_penalty_mean": 0.03350894165039063,
+  "action_fractions": [
+    0.0059661865234375,
+    0.0825958251953125,
+    0.0123443603515625,
+    0.1964874267578125,
+    0.0063934326171875,
+    0.1632537841796875,
+    0.0405731201171875,
+    0.18402099609375,
+    0.224822998046875,
+    0.0835418701171875
+  ],
+  "elapsed_seconds": 2.8644758999580517,
+  "mean_abs_inventory": 4.511993408203125,
+  "mean_q2": 33.508941650390625,
+  "buy_rate": 0.1991119384765625,
+  "sell_rate": 0.053497314453125,
+  "abstain_rate": 0.0835418701171875,
+  "mean_spread": 0.4345337463146559,
+  "mean_center": 0.5566290350871801,
+  "informed_profit_per_execution": -0.2682289977294843,
+  "uninformed_profit_per_execution": 0.17744581353919237,
+  "regimes": [
+    {
+      "value": 0.0,
+      "alpha": 0.05,
+      "p": 0.9,
+      "objective": 6.061397124999999,
+      "profit": 6.078699999999999,
+      "abstain_rate": 0.092125,
+      "mean_abs_inventory": 3.178875
+    },
+    {
+      "value": 1.0,
+      "alpha": 0.05,
+      "p": 0.9,
+      "objective": -2.865289539599238,
+      "profit": -2.8163167938931313,
+      "abstain_rate": 0.0753518606870229,
+      "mean_abs_inventory": 5.784052958015267
+    }
+  ]
+}

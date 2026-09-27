@@ -1,0 +1,436 @@
+{
+  "python": "3.13.7",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "git_revision": null,
+  "source_hashes": {
+    "src/__init__.py": "4057183ab54fa597f6ed42091f33def72f29a7b007420ca0f9b63eeaebb77692",
+    "src/accounting.py": "ea49b0a70533db4f93fb044aa30495a8da55bc5837e06c23db9c9f469266397a",
+    "src/artifacts.py": "791c2219feeba03180f70ad57afb756622aa6e320082d0f9ae95f7bd41de99ac",
+    "src/baselines.py": "fb8b401b77afc05787be2f7ee8597921befb90ce298ca1e3d7f063a2100363ac",
+    "src/bayes_filter.py": "ca8e8a647c699f05594f5cdd4447149938fd3b42a32cf2924d54354aead5c946",
+    "src/collect_activations.py": "6a5d1d10990a5200a26f8da5f836af92f9ee6aeeb42eb06c5e238e5b009ede69",
+    "src/customer_model.py": "8531fc4050b243d40d732bbac28d0d25be73f50ec5ad31bb4d9e4f80155c091b",
+    "src/environment.py": "5fa970e38d4e69a297a0c281bd39b1231cb247864b447d30456a8d042ae9169b",
+    "src/evaluate.py": "0c0f6f0cc6c25f8b61e7b2055d56cd8e949d4c4850e037f97c1a61dec0102024",
+    "src/fast_recurrent.py": "a8013641a4d467c3292d897b0228fee40e5018b4a43a8dea03be9a8c1c3c7063",
+    "src/interventions.py": "8e77b4cd4548b8b032b5c0452d76c3fb287e60b0c8cb1fb6d4dc32f14ae0484e",
+    "src/probes.py": "13a439bf84a9a42f8ce79a07e022a3ab0196f7bd79ef00d722463d0e1edc3723",
+    "src/train.py": "e1c60ac45fc236131c3061b0b33e92c05934f92e62ef7c8fb5ae3fab54e6294a",
+    "src/untrained_control.py": "97d3976b1fa3dfad31c413fc0ac51b76ada56be6fcf9f2ff86e5aaf9587e7856",
+    "src/wrappers.py": "06f76e646e3d1cca7f5452065048577551c7288046a521c7c5539bb36a913c7a",
+    "configs/followup_budget.yaml": "38d82989578cbccda6e7830f11c0583d6229268be1e2d3ede91ae0dd6e0da867",
+    "configs/large.yaml": "b7ab1c169e3bccf8ca04b600ab63cc23c69c1a82c5ff3910dcb31cb2314dc170",
+    "configs/pilot.yaml": "429d48f495281b43839c690585b91e7eb6d4296cb7337f189a0de4862d383bb1",
+    "configs/smoke.yaml": "3c8f38173764d69e740e8c02498e46a170a2048579442c4620a6964130071208",
+    "scripts/analyze_shift.py": "d7483863c1b37235e4f91923f8d097ad397caaa3bb3c3a23124c76748af7752f",
+    "scripts/decision_relevance.py": "84b0a47216270516c760112ab933a4ea39cc50a48d493a4033582abfd6378d2f",
+    "scripts/make_manifest.py": "97e1553b6d5777276014e4edc4f00ed44dcd0f831af350d2cb4841390827f419",
+    "scripts/run_pilot.py": "6da7d9d6dd9ecf3527cfe0ce1d78a7d2f03b15365ecd00a05b2646013a6d2700",
+    "scripts/summarize_results.py": "cc7d4eb56470c7f1ce4477aefd31eface05f512e2bf8f8e94d6692340bed15c7",
+    "tests/test_analysis.py": "912ad745fed73231169d27c18dfff2afbdf1ae91602cd705ada965dd9424ab22",
+    "tests/test_bayes.py": "a463ded6fb7fb0226b628b6d86b54efc5cee149015a3e5ef558f3f5f068ee3d1",
+    "tests/test_decision_relevance.py": "20df0c2f7e95f1f6c62ada54c5dd60c6aa5b44dc213d7b543303431d31524dd0",
+    "tests/test_environment.py": "be000edbcac622c284ca0a089ed0189afa25d39db4408b1ca2c9161d61f705de",
+    "tests/test_summary.py": "e0004db0223685d8e475d3751caa565edf54d7fe4562459a2fae76da2e5a6b6d",
+    "tests/test_training.py": "1c288ba1c0ff94eeb32ee6478b1ab9c395fa0927ec2361043ef05048c2fed653",
+    "tests/test_untrained_control.py": "682323a958354a7b9069701eef8ab1dea88e5c0445a7b1618813994be1c6eb0f"
+  },
+  "dependency_lock_sha256": "9b3c6a215de5777b9077f50cc81a1d8b844a6f89f83b03aa147a2d174203e026",
+  "main_completed_runs": [
+    {
+      "policy": "belief",
+      "seed": 11,
+      "actual_steps": 100352,
+      "elapsed_seconds": 65.30416299996432,
+      "environment_seeds": [
+        110000,
+        110001,
+        110002,
+        110003,
+        110004,
+        110005,
+        110006,
+        110007
+      ],
+      "metadata": "results\\pilot\\belief\\seed_11\\metadata.json",
+      "checkpoint": "results\\pilot\\belief\\seed_11\\model.zip",
+      "checkpoint_sha256": "8741a1699f62b7d346a2c80c192f8c38044de0358fe37042021ccb216e9ab34d"
+    },
+    {
+      "policy": "belief",
+      "seed": 12,
+      "actual_steps": 100352,
+      "elapsed_seconds": 64.71188070008066,
+      "environment_seeds": [
+        120000,
+        120001,
+        120002,
+        120003,
+        120004,
+        120005,
+        120006,
+        120007
+      ],
+      "metadata": "results\\pilot\\belief\\seed_12\\metadata.json",
+      "checkpoint": "results\\pilot\\belief\\seed_12\\model.zip",
+      "checkpoint_sha256": "cae5c07a6772ca9906ea6ef9f96e022f653b1be8d0080b7479d5a0257a5f5547"
+    },
+    {
+      "policy": "belief",
+      "seed": 13,
+      "actual_steps": 100352,
+      "elapsed_seconds": 64.3120149000315,
+      "environment_seeds": [
+        130000,
+        130001,
+        130002,
+        130003,
+        130004,
+        130005,
+        130006,
+        130007
+      ],
+      "metadata": "results\\pilot\\belief\\seed_13\\metadata.json",
+      "checkpoint": "results\\pilot\\belief\\seed_13\\model.zip",
+      "checkpoint_sha256": "e1ee7c2826c5c42cc4d40d903a8a36b67fc34b01d07368a0346e1fb597181915"
+    },
+    {
+      "policy": "belief",
+      "seed": 14,
+      "actual_steps": 100352,
+      "elapsed_seconds": 65.2810592999449,
+      "environment_seeds": [
+        140000,
+        140001,
+        140002,
+        140003,
+        140004,
+        140005,
+        140006,
+        140007
+      ],
+      "metadata": "results\\pilot\\belief\\seed_14\\metadata.json",
+      "checkpoint": "results\\pilot\\belief\\seed_14\\model.zip",
+      "checkpoint_sha256": "9b0ab30a4b4659f40012ca845faf5a96b6ccda5024e02c7cec91a353b6013ac8"
+    },
+    {
+      "policy": "belief",
+      "seed": 15,
+      "actual_steps": 100352,
+      "elapsed_seconds": 66.5422050000634,
+      "environment_seeds": [
+        150000,
+        150001,
+        150002,
+        150003,
+        150004,
+        150005,
+        150006,
+        150007
+      ],
+      "metadata": "results\\pilot\\belief\\seed_15\\metadata.json",
+      "checkpoint": "results\\pilot\\belief\\seed_15\\model.zip",
+      "checkpoint_sha256": "958b18a26799d9acde158944842c9a2df5c5f2df665a2a00469920769f28a726"
+    },
+    {
+      "policy": "feedforward",
+      "seed": 11,
+      "actual_steps": 100352,
+      "elapsed_seconds": 59.5597266999539,
+      "environment_seeds": [
+        110000,
+        110001,
+        110002,
+        110003,
+        110004,
+        110005,
+        110006,
+        110007
+      ],
+      "metadata": "results\\pilot\\feedforward\\seed_11\\metadata.json",
+      "checkpoint": "results\\pilot\\feedforward\\seed_11\\model.zip",
+      "checkpoint_sha256": "5996d652d9d8420f07168b8231a820b5fa77b936afbed6d50a1c212abdc6f466"
+    },
+    {
+      "policy": "feedforward",
+      "seed": 12,
+      "actual_steps": 100352,
+      "elapsed_seconds": 59.18602739996277,
+      "environment_seeds": [
+        120000,
+        120001,
+        120002,
+        120003,
+        120004,
+        120005,
+        120006,
+        120007
+      ],
+      "metadata": "results\\pilot\\feedforward\\seed_12\\metadata.json",
+      "checkpoint": "results\\pilot\\feedforward\\seed_12\\model.zip",
+      "checkpoint_sha256": "d23752031e3526cb9918c6d47522eff444feea1586f97b9204b7c2f9bab14a5c"
+    },
+    {
+      "policy": "feedforward",
+      "seed": 13,
+      "actual_steps": 100352,
+      "elapsed_seconds": 61.29177039989736,
+      "environment_seeds": [
+        130000,
+        130001,
+        130002,
+        130003,
+        130004,
+        130005,
+        130006,
+        130007
+      ],
+      "metadata": "results\\pilot\\feedforward\\seed_13\\metadata.json",
+      "checkpoint": "results\\pilot\\feedforward\\seed_13\\model.zip",
+      "checkpoint_sha256": "ebfcceb9d6305fc9e111e340796def6d08a4e7cec7a1882e13809bb135ec1cac"
+    },
+    {
+      "policy": "feedforward",
+      "seed": 14,
+      "actual_steps": 100352,
+      "elapsed_seconds": 60.109715900034644,
+      "environment_seeds": [
+        140000,
+        140001,
+        140002,
+        140003,
+        140004,
+        140005,
+        140006,
+        140007
+      ],
+      "metadata": "results\\pilot\\feedforward\\seed_14\\metadata.json",
+      "checkpoint": "results\\pilot\\feedforward\\seed_14\\model.zip",
+      "checkpoint_sha256": "14e1ce4031bf12569f3f06fd8d210b1e2d56e36205b8bb8cf6275dd4c1356dc9"
+    },
+    {
+      "policy": "feedforward",
+      "seed": 15,
+      "actual_steps": 100352,
+      "elapsed_seconds": 61.23506209999323,
+      "environment_seeds": [
+        150000,
+        150001,
+        150002,
+        150003,
+        150004,
+        150005,
+        150006,
+        150007
+      ],
+      "metadata": "results\\pilot\\feedforward\\seed_15\\metadata.json",
+      "checkpoint": "results\\pilot\\feedforward\\seed_15\\model.zip",
+      "checkpoint_sha256": "49b9b093c5ae22cb90ae473d48a91765c3ae898e56d85bc0bd40f069856e4c7c"
+    },
+    {
+      "policy": "history",
+      "seed": 11,
+      "actual_steps": 100352,
+      "elapsed_seconds": 62.102479699999094,
+      "environment_seeds": [
+        110000,
+        110001,
+        110002,
+        110003,
+        110004,
+        110005,
+        110006,
+        110007
+      ],
+      "metadata": "results\\pilot\\history\\seed_11\\metadata.json",
+      "checkpoint": "results\\pilot\\history\\seed_11\\model.zip",
+      "checkpoint_sha256": "6275a82d252be7fab9e0a98d6f9d2844f6ab38cf3f3390e8f4ed3cf9120a14d1"
+    },
+    {
+      "policy": "history",
+      "seed": 12,
+      "actual_steps": 100352,
+      "elapsed_seconds": 61.97894000005908,
+      "environment_seeds": [
+        120000,
+        120001,
+        120002,
+        120003,
+        120004,
+        120005,
+        120006,
+        120007
+      ],
+      "metadata": "results\\pilot\\history\\seed_12\\metadata.json",
+      "checkpoint": "results\\pilot\\history\\seed_12\\model.zip",
+      "checkpoint_sha256": "fc5d59f448f6090ca4dbd8f55dd0dd2259eec4e1b2a92eb1bc52f7825262f55b"
+    },
+    {
+      "policy": "history",
+      "seed": 13,
+      "actual_steps": 100352,
+      "elapsed_seconds": 61.55884149996564,
+      "environment_seeds": [
+        130000,
+        130001,
+        130002,
+        130003,
+        130004,
+        130005,
+        130006,
+        130007
+      ],
+      "metadata": "results\\pilot\\history\\seed_13\\metadata.json",
+      "checkpoint": "results\\pilot\\history\\seed_13\\model.zip",
+      "checkpoint_sha256": "ef3404759cc3a5829542210f48f0179f5d5e00861a7c5aa3750f92ff4a885f84"
+    },
+    {
+      "policy": "history",
+      "seed": 14,
+      "actual_steps": 100352,
+      "elapsed_seconds": 61.17709589994047,
+      "environment_seeds": [
+        140000,
+        140001,
+        140002,
+        140003,
+        140004,
+        140005,
+        140006,
+        140007
+      ],
+      "metadata": "results\\pilot\\history\\seed_14\\metadata.json",
+      "checkpoint": "results\\pilot\\history\\seed_14\\model.zip",
+      "checkpoint_sha256": "f544a136980e27a4812d4d139a42ecb892b75ba72421cf4713ca2e90f239dbcd"
+    },
+    {
+      "policy": "history",
+      "seed": 15,
+      "actual_steps": 100352,
+      "elapsed_seconds": 62.333620900055394,
+      "environment_seeds": [
+        150000,
+        150001,
+        150002,
+        150003,
+        150004,
+        150005,
+        150006,
+        150007
+      ],
+      "metadata": "results\\pilot\\history\\seed_15\\metadata.json",
+      "checkpoint": "results\\pilot\\history\\seed_15\\model.zip",
+      "checkpoint_sha256": "3b565c4e65599d171dd9912c4f44e0845cbc583741eafb173962b14ed749554f"
+    },
+    {
+      "policy": "recurrent",
+      "seed": 11,
+      "actual_steps": 100352,
+      "elapsed_seconds": 126.30350619996898,
+      "environment_seeds": [
+        110000,
+        110001,
+        110002,
+        110003,
+        110004,
+        110005,
+        110006,
+        110007
+      ],
+      "metadata": "results\\pilot\\recurrent\\seed_11\\metadata.json",
+      "checkpoint": "results\\pilot\\recurrent\\seed_11\\model.zip",
+      "checkpoint_sha256": "7ae2ebd41be03dd8421438eede91b8260883015bd71e8bd01543f0d50690ae32"
+    },
+    {
+      "policy": "recurrent",
+      "seed": 12,
+      "actual_steps": 100352,
+      "elapsed_seconds": 129.2331704000244,
+      "environment_seeds": [
+        120000,
+        120001,
+        120002,
+        120003,
+        120004,
+        120005,
+        120006,
+        120007
+      ],
+      "metadata": "results\\pilot\\recurrent\\seed_12\\metadata.json",
+      "checkpoint": "results\\pilot\\recurrent\\seed_12\\model.zip",
+      "checkpoint_sha256": "2d018f5672b03065fd08119d86128b793412ad0a0bae1fd691334a0d2423f7f2"
+    },
+    {
+      "policy": "recurrent",
+      "seed": 13,
+      "actual_steps": 100352,
+      "elapsed_seconds": 125.41053550003562,
+      "environment_seeds": [
+        130000,
+        130001,
+        130002,
+        130003,
+        130004,
+        130005,
+        130006,
+        130007
+      ],
+      "metadata": "results\\pilot\\recurrent\\seed_13\\metadata.json",
+      "checkpoint": "results\\pilot\\recurrent\\seed_13\\model.zip",
+      "checkpoint_sha256": "fd91cc9efb2576a8ee129f4ababcf65e2ec6823f58d9f9286fc6cbeaf4d3089a"
+    },
+    {
+      "policy": "recurrent",
+      "seed": 14,
+      "actual_steps": 100352,
+      "elapsed_seconds": 125.34848769998644,
+      "environment_seeds": [
+        140000,
+        140001,
+        140002,
+        140003,
+        140004,
+        140005,
+        140006,
+        140007
+      ],
+      "metadata": "results\\pilot\\recurrent\\seed_14\\metadata.json",
+      "checkpoint": "results\\pilot\\recurrent\\seed_14\\model.zip",
+      "checkpoint_sha256": "7d43815a736f7a0ce8cf8f8ba43538cca6eb87a9ebf38ce3d1204c526dd2a6e9"
+    },
+    {
+      "policy": "recurrent",
+      "seed": 15,
+      "actual_steps": 100352,
+      "elapsed_seconds": 127.92204229999334,
+      "environment_seeds": [
+        150000,
+        150001,
+        150002,
+        150003,
+        150004,
+        150005,
+        150006,
+        150007
+      ],
+      "metadata": "results\\pilot\\recurrent\\seed_15\\metadata.json",
+      "checkpoint": "results\\pilot\\recurrent\\seed_15\\model.zip",
+      "checkpoint_sha256": "3ca4f0116766be44392042b502950ca84c5a3b88497bc05ab4e81875d65217e2"
+    }
+  ],
+  "main_total_transitions": 2007040,
+  "main_training_process_seconds": 1570.9023454999551,
+  "artifact_status": {
+    "results/pilot": "completed main training only",
+    "results/evaluation": "main fixed-budget held-out evaluation",
+    "results/shift": "p=.90, alpha=.05 focused shift; retained and correctly specified references",
+    "results/shift_control": "paired p=.75, alpha=.05 control changing only p",
+    "results/gate1": "constructive simulator/inference evidence",
+    "results/penalty": "reference-policy penalty sensitivity, no learned-policy tuning",
+    "results/smoke": "pipeline validation only, never a scientific probe claim",
+    "results/benchmark": "CPU throughput tests before training",
+    "results/deprecated_seed_overlap": "interrupted partial runs, excluded",
+    "configs/followup_budget.yaml": "recommended, not executed",
+    "configs/large.yaml": "available, not executed"
+  }
+}

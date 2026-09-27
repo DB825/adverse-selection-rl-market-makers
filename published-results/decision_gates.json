@@ -1,0 +1,23 @@
+{
+  "gate_1": {
+    "recommendation": "continue",
+    "finding": "Supported histories have identical recent8 observations/inventory/time, near-matched expected value/preference, different joint beliefs and different myopic decisions.",
+    "limitation": "Constructive existence, not prevalence or trained-policy competence."
+  },
+  "gate_2": {
+    "recommendation": "revise",
+    "finding": "All five recurrent objective point estimates fall below fixed-wide on paired held-out evaluation; three seeds nearly fix the centered wide quote and two favor opposite off-center quotes.",
+    "scope": "Recurrent behavior at100352steps; other learned baselines show useful adaptive behavior."
+  },
+  "gate_3": {
+    "recommendation": "revise",
+    "finding": "No recurrence benefit at this budget. Recurrent-minus-history mean=-1.3732337524 with separate training-seed95%t interval[-2.2624202313,-0.4840472736].",
+    "limitation": "No convergence claim; capacities differ; only five training seeds."
+  },
+  "gate_4": {
+    "recommendation": "stop",
+    "scope": "Substantive representation interpretation and causal experiments in this pilot",
+    "finding": "Deferred after recurrent behavior gate failed. Collection, probes, untrained controls and intervention interfaces are implemented and smoke-tested only.",
+    "next_condition": "Revisit after obtaining meaningful recurrent behavior on a fresh fixed-budget comparison."
+  }
+}

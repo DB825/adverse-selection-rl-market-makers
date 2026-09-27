@@ -1,0 +1,43 @@
+{
+  "experiment": "Fixed 300032-step follow-up, five paired training seeds per family",
+  "evaluation_cohort": {
+    "seed_start": 5000000,
+    "episodes_per_policy_seed": 2048
+  },
+  "gate_1": {
+    "decision": "continue",
+    "reason": "The original supported-history construction still establishes decision relevance of earlier quote evidence. This follow-up does not estimate its prevalence on learned trajectories."
+  },
+  "gate_2": {
+    "decision": "revise recurrent training",
+    "reason": "All five recurrent point estimates are below the predeclared fixed-wide reference. Seeds 11, 14 and 15 favor that quote almost independently of inputs; seed 13 concentrates on directional quoting and time-dependent abstention; seed 12 varies with inputs but performs worse than fixed quoting.",
+    "recurrent_mean_objective": 0.6569551681518568,
+    "fixed_wide_mean_objective": 0.9461864547729508,
+    "recurrent_minus_fixed_training_seed_95_ci": [
+      -0.8982138394892459,
+      0.31975126624705774
+    ],
+    "limitation": "Five-seed uncertainty is broad; failure to demonstrate a useful adaptive family is not proof that recurrence cannot learn."
+  },
+  "gate_3": {
+    "decision": "no recurrence benefit demonstrated; revise",
+    "recurrent_minus_history_mean": -2.0429110763549785,
+    "training_seed_95_ci": [
+      -2.6111994968993413,
+      -1.4746226558106157
+    ],
+    "reason": "Every recurrent seed underperforms both matched-budget current-observation and history-8 policies. Capacity and closed-loop memory channels differ, so this does not isolate a general causal effect of recurrence."
+  },
+  "gate_4": {
+    "decision": "defer substantive representation analysis",
+    "substantive_probes_run": false,
+    "causal_interventions_run": false,
+    "reason": "The recurrent behavior gate failed. The analysis cohort beginning at 6000000 remains unused. Existing smoke probes are implementation checks only."
+  },
+  "next_experiment": {
+    "status": "recommended, not run",
+    "factor": "GAE lambda 0.95 versus 1.0",
+    "controls": "Five paired recurrent seeds, 300032 steps, gamma 1, entropy coefficient 0, unchanged architecture and economic objective; reevaluate both arms and fixed/history references on newly reserved episodes.",
+    "interpretation": "Tests sensitivity to the advantage estimator. Terminal credit assignment and premature commitment remain hypotheses, not diagnosed causes."
+  }
+}
