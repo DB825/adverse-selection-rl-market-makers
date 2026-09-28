@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640">
+<title>Adverse Selection in RL Market Makers</title>
+<rect width="1280" height="640" fill="#102831"/>
+<rect x="68" y="67" width="54" height="7" fill="#57ddba"/>
+<text x="68" y="128" font-family="Segoe UI, sans-serif" font-size="24" font-weight="700" fill="#9db9c3">DB825  /  RESEARCH</text>
+<text x="64" y="262" font-family="Segoe UI, sans-serif" font-size="82" font-weight="700" fill="#ffffff">Adverse Selection</text>
+<text x="64" y="362" font-family="Segoe UI, sans-serif" font-size="82" font-weight="700" fill="#ffffff">in RL Market Makers</text>
+<rect x="68" y="416" width="1144" height="1" fill="#36515a"/>
+<text x="68" y="477" font-family="Segoe UI, sans-serif" font-size="34" font-weight="400" fill="#c6e4e7">Bayesian inference  /  Recurrent PPO</text>
+<text x="68" y="565" font-family="Segoe UI, sans-serif" font-size="23" font-weight="700" fill="#57ddba">CODE + EXPERIMENTS</text>
+</svg>
