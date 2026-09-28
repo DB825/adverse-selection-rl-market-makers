@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "files": {
+    "attempt.json": {
+      "original_sha256": "b311f161b6d8a10688865a771ad2cd630ac1ce77375ec29454895139895045a6",
+      "public_sha256": "b311f161b6d8a10688865a771ad2cd630ac1ce77375ec29454895139895045a6",
+      "bytes": 97,
+      "local_paths_sanitized": false
+    },
+    "episodes.csv": {
+      "original_sha256": "2a370b58ce36fb153c0d27a376469ebc47210982fb7e9aa8bb668e4b86748c2f",
+      "public_sha256": "2a370b58ce36fb153c0d27a376469ebc47210982fb7e9aa8bb668e4b86748c2f",
+      "bytes": 132726,
+      "local_paths_sanitized": false
+    },
+    "groups.csv": {
+      "original_sha256": "a9b30a97080a69989b8a465339a018b7a373ebcdbc860740e3660141a4e10e81",
+      "public_sha256": "a9b30a97080a69989b8a465339a018b7a373ebcdbc860740e3660141a4e10e81",
+      "bytes": 328602,
+      "local_paths_sanitized": false
+    },
+    "run_manifest.json": {
+      "original_sha256": "5cb7e7330d136d742136f98aca748782fde613075dbe26af181e5b87da3eabf4",
+      "public_sha256": "5cb7e7330d136d742136f98aca748782fde613075dbe26af181e5b87da3eabf4",
+      "bytes": 3432,
+      "local_paths_sanitized": false
+    },
+    "summary.json": {
+      "original_sha256": "41d683c0d5c4c767e44414971f813bae6bf15f90cb3009637b815671f619fb7c",
+      "public_sha256": "41d683c0d5c4c767e44414971f813bae6bf15f90cb3009637b815671f619fb7c",
+      "bytes": 3783,
+      "local_paths_sanitized": false
+    },
+    "tests.xml": {
+      "original_sha256": "55f1b703b0c3220a0626757ad03d082b54ce941c790bdc1feb6a91ba3ebce66a",
+      "public_sha256": "55f1b703b0c3220a0626757ad03d082b54ce941c790bdc1feb6a91ba3ebce66a",
+      "bytes": 22177,
+      "local_paths_sanitized": false
+    }
+  },
+  "tests": {
+    "test_cases": 173,
+    "passed": 173,
+    "skipped": 0,
+    "failures": 0,
+    "errors": 0,
+    "sha256": "55f1b703b0c3220a0626757ad03d082b54ce941c790bdc1feb6a91ba3ebce66a"
+  },
+  "scope": "Exact history-8 overlap on all five retained development policies; group and whole-episode aggregates. No new policy training or trajectories.",
+  "provenance": "Original collection manifests identify omitted activation arrays. This manifest verifies the public analysis outputs; historical snapshots remain unchanged."
+}

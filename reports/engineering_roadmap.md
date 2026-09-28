@@ -14,15 +14,11 @@ The [decision audit](decision_quality.md) attributes 81.5% of the mean myopic sc
 
 A candidate next experiment is a small supervised action-score readout of frozen recurrent state, with matched history-only inputs and a fixed evaluation design. It should test center selection directly. This is a proposal, not a completed experiment or evidence that replacing the actor head will improve episode returns.
 
-## Unresolved: prevalence of decision-relevant older history
+## Exact overlap and remaining identification limit
 
-The [constructed history pair](model_design.md#gate-1-earlier-quote-evidence-changes-the-reference-response) establishes existence. It does not measure prevalence under the fitted policies. The next diagnostic should use retained trajectories and report:
+The [exact history-overlap audit](history_overlap.md) now extends the constructed history pair to retained policy trajectories. Of 281,600 eligible decisions, 15,724 have exact history-8 peers; 1,541 have peers with conflicting decisive reference actions. Matching includes inventory, time, previous quotes and outcomes. Overlap ranges from 0.61% to 18.27% by policy seed.
 
-- Matching overlap at fixed inventory, time and recent observations, with tolerances specified before inspecting matched outcomes.
-- Differences in posterior adverse-selection risk and all-action myopic scores, including the best-versus-second-best score margin.
-- The fraction of eligible decisions whose preferred reference action changes, reported per policy seed and with whole episodes as the sampling unit.
-
-Inventory and previous policy actions already transmit historical information. Matches must account for both. Limited overlap should be reported as a limitation rather than addressed by progressively looser matching after seeing outcomes. This diagnostic is exploratory because the trajectories have already been inspected.
+This establishes examples of decision-relevant information omitted by history-8, but leaves overall prevalence unidentified: 94.4% of eligible decisions lack exact peers. The protocol stops at exact matching. Approximate matching requires a separate specification and balance checks, rather than progressively looser matching after seeing outcomes. Counts are descriptive; the audit does not establish recurrent-state representation or causal policy use.
 
 Additional training requires a specified estimand, minimum useful effect and precision target. The current five-pair variance estimate is itself uncertain. Increasing test episodes does not remove initialization variability.
 
